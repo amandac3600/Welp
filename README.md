@@ -1,25 +1,18 @@
-# README
+# Welcome to Welp!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welp is a fullstack clone of Yelp.com, a website that allows users to search for businesses in a specified location and leave ratings and reviews for those businesses.
 
-Things you may want to cover:
+# Key Features
+### Post ratings and reviews
+### Search for businesses
+- name, location, or category
 
-* Ruby version
+# Wireframes
 
-* System dependencies
+# Technologies
+- Ruby on Rails for the backend
+- React and Redux for the frontend
+- Google Maps API as Third Party API
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# Full_Stack_Project_2
+# Bonus Features
+- Add feature for reacting to a review ('helpful', 'funny', etc)
