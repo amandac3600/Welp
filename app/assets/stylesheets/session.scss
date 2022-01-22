@@ -1,0 +1,34 @@
+.login-signup-form {
+  display: flex;
+  justify-content: center;
+}
+
+.login-signup-title {
+  display: flex;
+  color: #d32323;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.switch-form-both {
+  display: flex;
+}
+
+.switch-form-label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.switch-form-link {
+  text-decoration: none;
+  color: #0073bb;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 13px;
+  margin-left: 10px;
+}
+
+.switch-form-link:hover {
+  text-decoration: underline;
+}
+

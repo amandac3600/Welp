@@ -6,21 +6,19 @@ export default class Nav extends React.Component {
   render() {
     let nav;
     if (this.props.currentUser) {
-      nav = <div>
+      nav = <nav>
          <h1>Welcome {this.props.currentUser.username}!</h1>
          <button onClick={() => this.props.logout()}>Log Out</button>
-         </div>
+         </nav>
     } else {
-      nav = <div>
-         <Link to='/signup'>Sign Up</Link> <br />
-         <Link to='/login'>Log In</Link>
-       </div>
+      nav = <nav className='nav'>
+        <Link className="nav-login" to='/login'>Log In</Link> <br />
+        <Link className="nav-signup" to='/signup'>Sign Up</Link>
+       </nav>
     }
 
     return (
-      <div className="login-signup">
-        {nav}
-      </div>
+      nav
     )
   }
 }

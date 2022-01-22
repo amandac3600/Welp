@@ -34,14 +34,17 @@ export default class SessionForm extends React.Component {
       <Redirect to="/"/>
     }
     
-    if (this.props.formType === 'login') {
+    if (this.props.formType === 'Log In') {
       return (
       
-      <div>
-        <h2>Log In to Welp</h2>
+      <div className='login-signup-form'>
         <form onSubmit={this.handleSubmit}>
-          <h3>New to Welp?</h3>
-          <Link className="signup" to='/signup'>Sign Up</Link>
+          <h2 className="login-signup-title">Log In to Welp</h2>
+          <div className='switch-form-both'>
+            <h3 className="switch-form-label">New to Welp?</h3>
+            <Link className="switch-form-link" to='/signup'>Sign Up</Link>
+          </div>
+          
           <br />
             <input type="text" 
               value={this.state.email} 
@@ -55,19 +58,22 @@ export default class SessionForm extends React.Component {
             placeholder='Password'
             required/>
           <br />
-          <button type="submit">Submit</button>
+          <button type="submit">{this.props.formType}</button>
         </form>
         <ul className="errors">
           {errors}
         </ul>
       </div>
-    )} else if (this.props.formType === 'signup') {
+    )} else if (this.props.formType === 'Sign Up') {
       return (
-        <div>
-          <h2>Sign Up for Welp</h2>
+        <div className='login-signup-form'>
           <form onSubmit={this.handleSubmit}>
-            <h3>Already on Welp?</h3>
-            <Link className="login" to='/login'>Log In</Link>
+            <h2 className="login-signup-title">Sign Up for Welp</h2>
+            <div className="switch-form-both">
+              <h3 className="switch-form-label">Already on Welp?</h3>
+              <Link className="switch-form-link" to='/login'>Log In</Link>
+            </div>
+           
             <br />
               <input type="text" 
                 value={this.state.first_name} 
@@ -93,7 +99,7 @@ export default class SessionForm extends React.Component {
               placeholder='Password'
               required/>
             <br />
-            <button type="submit">Submit</button>
+            <button type="submit">{this.props.formType}</button>
           </form>
           <ul>
             {errors}

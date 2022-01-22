@@ -5,7 +5,7 @@ import SessionForm from './session_form';
 
 const mapStateToProps = state => ({
   errors: Object.values(state.errors),
-  formType: 'login'
+  formType: 'Log In'
 })
 
 const mapDispatchToProps = dispatch => ({
