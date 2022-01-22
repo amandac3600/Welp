@@ -5,7 +5,9 @@ export default class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
+      first_name: "",
+      last_name: "",
+      email: "",
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,7 +24,6 @@ export default class SessionForm extends React.Component {
   }
 
   render() {
-    let link = this.props.formType === 'signup' ? 'login' : 'signup';
     let errors;
     if (this.props.errors[0].length) {
       errors = this.props.errors.map((error, index)=> 
@@ -32,23 +33,76 @@ export default class SessionForm extends React.Component {
     if (this.handleSubmit) {
       <Redirect to="/"/>
     }
-    return (
+    
+    if (this.props.formType === 'login') {
+      return (
+      
       <div>
-        <h2>{this.props.formType}</h2>
+        <h2>Log In to Welp</h2>
         <form onSubmit={this.handleSubmit}>
-          <Link to={`/${link}`}>{link}</Link>
+          <h3>New to Welp?</h3>
+          <Link className="signup" to='/signup'>Sign Up</Link>
           <br />
-          <label > Username <br />
-            <input type="text" value={this.state.username} onChange={this.handleChange('username')} /></label><br />
-          <label> Password <br />
-          <input type="password" value={this.state.password} onChange={this.handleChange('password')}/></label><br />
-          <button>Submit</button>
+            <input type="text" 
+              value={this.state.email} 
+              onChange={this.handleChange('email')} 
+              placeholder='Email'
+              required/>
+          <br />
+          <input type="password" 
+            value={this.state.password} 
+            onChange={this.handleChange('password')}
+            placeholder='Password'
+            required/>
+          <br />
+          <button type="submit">Submit</button>
         </form>
-        <ul>
+        <ul className="errors">
           {errors}
         </ul>
       </div>
-    ) 
+    )} else if (this.props.formType === 'signup') {
+      return (
+        <div>
+          <h2>Sign Up for Welp</h2>
+          <form onSubmit={this.handleSubmit}>
+            <h3>Already on Welp?</h3>
+            <Link className="login" to='/login'>Log In</Link>
+            <br />
+              <input type="text" 
+                value={this.state.first_name} 
+                onChange={this.handleChange('first_name')} 
+                placeholder='First Name'
+                required/>
+            <br />
+              <input type="text" 
+                value={this.state.last_name} 
+                onChange={this.handleChange('last_name')} 
+                placeholder='Last Name'
+                required/>
+            <br />
+              <input type="text" 
+                value={this.state.email} 
+                onChange={this.handleChange('email')} 
+                placeholder='Email'
+                required/>
+            <br />
+            <input type="password" 
+              value={this.state.password} 
+              onChange={this.handleChange('password')}
+              placeholder='Password'
+              required/>
+            <br />
+            <button type="submit">Submit</button>
+          </form>
+          <ul>
+            {errors}
+          </ul>
+        </div>
+      )
+    }
+
+    
   }
 
 }
