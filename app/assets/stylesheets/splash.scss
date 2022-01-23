@@ -1,0 +1,37 @@
+.bg {
+  display: flex;
+  position: absolute;
+  opacity: 0.8;
+  width: 100vw;
+  height: auto;
+  z-index: -1000;
+  filter: brightness(75%);
+}
+
+.splash-logo {
+  cursor: pointer;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  vertical-align: baseline;
+  padding: 12px 0;
+}
+
+.splash-logo-link {
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 5px;
+  font-size: 50px;
+}
+
+.logo-2 {
+  margin-top: 4px;
+  filter: drop-shadow(2px 0 0 white) 
+        drop-shadow(0 2px 0 white)
+        drop-shadow(-1.5px 0 0 white) 
+        drop-shadow(0 -1.5px 0 white);
+}

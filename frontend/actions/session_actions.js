@@ -31,6 +31,5 @@ export const signup = formUser => dispatch => {
 export const logout = () => dispatch => {
   return SessionApi.logout()
     .then(() => {
-      debugger
       dispatch(logoutUser())}, error => dispatch(receiveErrors(error)))
 }

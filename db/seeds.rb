@@ -8,4 +8,3 @@
 
 user1 = User.create!(first_name: 'Michael', last_name: 'Scott', email: 'mscott@mail.com', password: 'michael')
 user2 = User.create!(first_name: 'Dwight', last_name: 'Schrute', email: 'dschrute@mail.com', password: 'dwight')
-
