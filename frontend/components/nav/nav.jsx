@@ -12,7 +12,7 @@ export default class Nav extends React.Component {
          </nav>
     } else {
       nav = <nav className='nav'>
-        <h3 className='nav-businesses'>Businesses</h3>
+        <Link className="nav-businesses" to='/businesses'>Businesses</Link>
         <div className="nav-login-signup">
           <Link className="nav-login" to='/login'>Log In</Link>
           <Link className="nav-signup" to='/signup'>Sign Up</Link>

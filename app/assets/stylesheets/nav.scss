@@ -26,7 +26,7 @@ button {
   display: inline-block;
 }
 
-.nav-login {        
+.nav-login, .nav-businesses{        
   color: white;
   display: inline-block;
   font-size: 14px;
@@ -37,12 +37,12 @@ button {
   padding: 7px 15px 8px 15px;
 }
 
-.nav-login:hover { 
+.nav-login:hover, .nav-businesses:hover{ 
   padding: 7px 15px 5px 15px;
   border-bottom: 2px solid white;
 }
 
-.nav-login:active {
+.nav-login:active, .nav-businesses:active {
   color: #999;
   border-bottom: 2px solid transparent;
 }
@@ -68,6 +68,17 @@ button {
 .nav-signup:active {
   background: #fff;
   color: #999;
+}
+
+.red-nav {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 34px;
+  background: #d32323;
+  vertical-align: baseline;
+  padding: 12px 0;
 }
 
 

@@ -41,7 +41,7 @@ export default class SessionForm extends React.Component {
       error.classList.add('errors')
     }
     if (this.handleSubmit) {
-      <Redirect to="/"/>
+      <Redirect to="/businesses"/>
     }
     
     if (this.props.formType === 'Log In') {
@@ -149,8 +149,6 @@ export default class SessionForm extends React.Component {
               </ul>
             </div>
           </form>
-
-          
         </div>
       )
     }
