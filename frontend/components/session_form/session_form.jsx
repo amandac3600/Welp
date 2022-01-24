@@ -13,6 +13,7 @@ export default class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
+    this.clearErrors = this.clearErrors.bind(this);
   }
 
   handleSubmit(e) {
@@ -29,6 +30,10 @@ export default class SessionForm extends React.Component {
     e.preventDefault();
     const user = {email: 'demo@user.com', password: 'demouser'};
     this.props.demologin(user);
+  }
+
+  clearErrors(e) {
+    this.props.clearErrors()
   }
 
   render() {
@@ -56,7 +61,7 @@ export default class SessionForm extends React.Component {
           <h2 className="login-signup-title">Log in to Welp</h2>
           <div className='switch-form-both'>
             <h3 className="switch-form-label">New to Welp?</h3>
-            <Link className="switch-form-link" to='/signup'>Sign up</Link>
+            <Link className="switch-form-link" to='/signup' onClick={this.clearErrors}>Sign up</Link>
           </div>
           <p className='terms'>By logging in, you agree to Welp’s Terms of Service <br></br> and Privacy Policy.</p>
           <div className="demo-user" >
@@ -81,7 +86,7 @@ export default class SessionForm extends React.Component {
           <button className="submit" type="submit">{this.props.formType}</button>
           <div className="switch-form-both-2">
               <h3 className="switch-form-label-2">New to Welp?
-                <Link className="switch-form-link-2" to='/signup'>Sign up</Link>
+                <Link className="switch-form-link-2" to='/signup' onClick={this.clearErrors}>Sign up</Link>
               </h3>
           </div>
           <div className='errors-container'>
@@ -140,7 +145,7 @@ export default class SessionForm extends React.Component {
             <button className="submit" type="submit">{this.props.formType}</button>
             <div className="switch-form-both-2">
               <h3 className="switch-form-label-2">Already on Welp?
-                <Link className="switch-form-link-2" to='/login'>Log in</Link>
+                <Link className="switch-form-link-2" to='/login' onClick={this.clearErrors}>Log in</Link>
               </h3>
             </div>          
             <div className='errors-container'>
