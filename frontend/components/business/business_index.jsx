@@ -14,9 +14,9 @@ class BusinessIndex extends React.Component {
           <NavContainer/>
         </div>
         
-        <ul>
+        <ol>
           {this.props.businesses.map(business => <BusinessIndexItem key={business.id} business={business}/>)}
-        </ul>
+        </ol>
       </div>
     )
   }

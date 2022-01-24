@@ -1,3 +1,54 @@
 // Place all the styles related to the business controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.business-item {
+  display: inline-block;
+  text-decoration: none;
+  width: 610px;
+  height: 210px;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.business-item:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px #0000001a;
+  transition: box-shadow 0.3s;
+}
+
+.business-item:active {
+  background-color: #ebebeb;
+  transition: background-color 0.2s;
+}
+
+.business-item-title {
+  font-weight: bold;
+  color: rgba(45, 47, 47, 1);
+  font-size: 20px;
+  margin: 6px 0;
+}
+
+.business-item-details {
+  display: inline-block;
+}
+
+.business-item-category {
+  box-sizing: border-box;
+  padding: 4px;
+  border-radius: 4px;
+  height: 20px;
+  background-color: rgba(240, 240, 240, 1);
+  font-size: 12px;
+  font-weight: 400;
+  font-weight: bold;
+  color: rgba(110, 112, 114, 1);
+}
+
+.business-item-price {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(110, 112, 114, 1);
+}
