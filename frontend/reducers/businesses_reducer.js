@@ -8,7 +8,6 @@ const businessesReducer = (state = {}, action) => {
       nextState[action.business.id] = action.business;
       return nextState;
     case RECEIVE_BUSINESSES:
-      console.log(action.businesses)
       return action.businesses
     default:
       return state;
