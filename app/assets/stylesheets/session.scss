@@ -146,6 +146,10 @@
   text-decoration: underline;
 }
 
+.switch-form-link:active {
+  color: #025183;
+}
+  
 .switch-form-both-2 {
   color: #333;
   display: block;
@@ -168,6 +172,10 @@
 
 .switch-form-link-2:hover {
   text-decoration: underline;
+}
+
+.switch-form-link-2:active {
+  color: #025183;
 }
 
 .input {
@@ -198,4 +206,28 @@
   background-size: 15000px 15000px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.submit:hover {
+  background-color: #dc4f4f;
+}
+
+.submit:active {
+  background-color: #b93434;
+}
+
+.errors-container {
+  display: flex;
+  justify-content: center;
+}
+
+.errors {
+  position: absolute;
+  width: 400px;
+  background-color: #fcd6d3;
+  padding: 15px 0 15px 30px;
+  border-radius: 3px;
+  top: 120px;
+  color: #333;
+  font-size: 14px;
 }

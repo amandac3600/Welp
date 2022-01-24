@@ -37,9 +37,14 @@ button {
   padding: 7px 15px 8px 15px;
 }
 
-.nav-login:hover {    //fix hover hitbox
+.nav-login:hover { 
   padding: 7px 15px 5px 15px;
   border-bottom: 2px solid white;
+}
+
+.nav-login:active {
+  color: #999;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-signup {
@@ -58,6 +63,11 @@ button {
   background: #fff;
   color: #666;
   transition: all 0.6s;
+}
+
+.nav-signup:active {
+  background: #fff;
+  color: #999;
 }
 
 

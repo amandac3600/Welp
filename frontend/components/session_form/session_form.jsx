@@ -27,7 +27,7 @@ export default class SessionForm extends React.Component {
 
   demoLogin(e) {
     e.preventDefault();
-    const user = {email: 'demouser@demo.com', password: 'demouser'};
+    const user = {email: 'demo@user.com', password: 'demouser'};
     this.props.demologin(user);
   }
 
@@ -37,6 +37,8 @@ export default class SessionForm extends React.Component {
       errors = this.props.errors.map((error, index)=> 
         (<li key={index}>{error}</li>)
       )
+      let error = document.getElementById('errors');
+      error.classList.add('errors')
     }
     if (this.handleSubmit) {
       <Redirect to="/"/>
@@ -81,11 +83,15 @@ export default class SessionForm extends React.Component {
               <h3 className="switch-form-label-2">New to Welp?
                 <Link className="switch-form-link-2" to='/signup'>Sign up</Link>
               </h3>
-            </div>
+          </div>
+          <div className='errors-container'>
+            <ul id="errors">
+              {errors}
+            </ul>
+          </div>
+          
         </form>
-        <ul className="errors">
-          {errors}
-        </ul>
+        
       </div>
     )} else if (this.props.formType === 'Sign Up') {
       return (
@@ -136,11 +142,15 @@ export default class SessionForm extends React.Component {
               <h3 className="switch-form-label-2">Already on Welp?
                 <Link className="switch-form-link-2" to='/login'>Log in</Link>
               </h3>
+            </div>          
+            <div className='errors-container'>
+              <ul id="errors">
+                {errors}
+              </ul>
             </div>
           </form>
-          <ul>
-            {errors}
-          </ul>
+
+          
         </div>
       )
     }
