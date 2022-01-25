@@ -36,6 +36,8 @@ export default class Splash extends React.Component {
             Masa of Echo Park
           </li>
         </ul>
+        <p className='block-3'></p>
+        <h6 className='splash-about'>About</h6>
       </div>
     )
   }

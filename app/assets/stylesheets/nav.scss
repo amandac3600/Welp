@@ -4,7 +4,7 @@ button {
 
 .nav {
   display: flex;
-  align-items: center;
+  justify-content: space-around;
   width: 100%;
   margin: 10px;
   padding: 10px;
@@ -28,12 +28,11 @@ button {
   background: none;
   text-decoration: none;
   padding: 7px 15px 8px 15px;
-  margin-left: 5%;
+  margin-left: -7%;
 }
 
 .nav-login-signup {
   display: flex;
-  margin-left: 55%;
 }
 
 .nav-login{        
@@ -82,11 +81,10 @@ button {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 34px;
+  height: 55px;
   background: #d32323;
-  vertical-align: baseline;
-  padding: 12px 0;
   white-space: nowrap;
+  align-items: center;
 }
 
 

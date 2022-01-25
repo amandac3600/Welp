@@ -12,6 +12,7 @@ require "open-uri"
 User.destroy_all
 user1 = User.create!(first_name: 'Michael', last_name: 'Scott', email: 'mscott@mail.com', password: 'michael')
 user2 = User.create!(first_name: 'Dwight', last_name: 'Schrute', email: 'dschrute@mail.com', password: 'dwight')
+user3 = User.create!(first_name: 'Jim', last_name: 'Halpert', email: 'jhalpert@mail.com', password: 'jimhalpert')
 
 Business.destroy_all
 business1 = Business.create!(name: "MILK+T", address: "310 E 2nd St", city: "Los Angeles", state: "CA", zip_code: "90012", phone_number: "(323) 884-1164", website: "http://www.milkandt.com", open: "12:00PM", close: "10:00PM", category: "Bubble Tea", price: "$")
@@ -64,3 +65,30 @@ business24 = Business.create!(name: "Oakobing", address: "3300 W 6th St", city: 
 business24.photos.attach(io: open("https://welp-dev-bkt.s3.us-west-1.amazonaws.com/Oakobing.jpg"), filename: "Oakobing.jpg")
 business25 = Business.create!(name: "Milk Jar Cookies", address: "5466 Wilshire Blvd", city: "Los Angeles", state: "CA", zip_code: "90036", phone_number: "(323) 634-9800", website: "http://www.milkjarcookies.com/", open: "11:00AM", close: "4:00PM", category: "Desserts", price: "$")
 business25.photos.attach(io: open("https://welp-dev-bkt.s3.us-west-1.amazonaws.com/MilkJar.jpg"), filename: "MilkJar.jpg")
+
+Review.destroy_all
+review1 = Review.create!(rating: 5, body: "The staff was so kind. The bubble tea without the glass bottle was on the expensive side but I'm from NY so LA prices always seem a little higher than I'm used to. Still great quality.", user_id: user1.id, business_id: business1.id)
+review2 = Review.create!(rating: 5, body: "The shop is super vibey and cute and perfect for a date or your afternoon pick-me-up. Can't wait to try the other drinks!", user_id: user2.id, business_id: business2.id)
+review3 = Review.create!(rating: 4, body: "The food is amazing. Service is straight forward. It is a little pricey for what you get but the food is worth it for the experience.", user_id: user3.id, business_id: business3.id)
+review4 = Review.create!(rating: 4, body: "I really liked the sweet and sour pork. It came with a dipping. The pork is super crispy. Highly recommend.", user_id: user1.id, business_id: business4.id)
+review5 = Review.create!(rating: 3, body: "So we saw all the high reviews for this place.  I really don't understand all the hype.  The quality of the food is good, but really lacked flavor.", user_id: user2.id, business_id: business5.id)
+review6 = Review.create!(rating: 5, body: "So impressed with their bossam! Light but well marinated and super tender unlike others I have had, a must try. Loved the kimchi stew, lots of sausage, spam, fish cake, and vegetables.", user_id: user3.id, business_id: business6.id)
+review7 = Review.create!(rating: 5, body: "Al pastor tacos are a must here. Also tried their mulitas and huaraches. The huaraches are huge!", user_id: user1.id, business_id: business7.id)
+review8 = Review.create!(rating: 5, body: "my boys. their specialty is adobada! just go for anything adobada!", user_id: user2.id, business_id: business8.id)
+review9 = Review.create!(rating: 1, body: "Be aware takes very long time to get 4 burgers. I waited over 30mins for my order. They gave 2 people that order after me their food.", user_id: user3.id, business_id: business9.id)
+review10 = Review.create!(rating: 5, body: "We also got the Alvarado thin crust pizza. Although both were good, the deep dish had more flavor and depth to it. I will definitely be back!", user_id: user1.id, business_id: business10.id)
+review11 = Review.create!(rating: 5, body: "I love La Pergoletta, perfect date night spot. Recommend eating in the deli/downstairs area for the best ambiance. I've been twice recently and had the pappardelle puttanesca and spaghetti amatricana. Both delicious but I prefer the puttanesca", user_id: user2.id, business_id: business11.id)
+review12 = Review.create!(rating: 4, body: "Overall, pretty good, and I'm sure it's even better when the food is fresh in the restaurant. If you're in Chinatown or DTLA, and want good Chinese food, I'd say this is your best bet.", user_id: user3.id, business_id: business12.id)
+review13 = Review.create!(rating: 5, body: "Really great Thai place with lots of specials and drink options! This place has great service, food comes quick, happy hour 4-7pm everyday, weekday lunch specials, and lots of seating inside/outside. Free parking in the structure below too!", user_id: user1.id, business_id: business13.id)
+review14 = Review.create!(rating: 5, body: "Super responsive.  Picked locked immediately and came immediately.  Called another locksmith and they were so slow to respond.  Definitely would use Lee's keys again", user_id: user2.id, business_id: business14.id)
+review15 = Review.create!(rating: 5, body: "Community Auto Center is truly the best around! For any/all repairs that I can still make the drive to LA, I'll take it back to Community Auto. And the office cats are cuter than ever", user_id: user3.id, business_id: business15.id)
+review16 = Review.create!(rating: 1, body: "Used to love this hole in the wall even though it's nearly impossible to get a drink because it's crowded and only 1-2 bartenders on shift at any time.", user_id: user1.id, business_id: business16.id)
+review17 = Review.create!(rating: 5, body: "had such a wonderful evening here!! Teddy was by far the best server. All his recommendations were delicious and he was so joyous and helpful! Such beautiful atmosphere and food and quality service!!", user_id: user2.id, business_id: business17.id)
+review18 = Review.create!(rating: 2, body: "went in and bought an almond/strawberry croissant, was delicious and Messy however the staff informed me that they do not carry utensils.", user_id: user3.id, business_id: business18.id)
+review19 = Review.create!(rating: 5, body: "Lovely Indian dine-in place in the big city. We had the meals for two, which was delicious and excellent value as well", user_id: user1.id, business_id: business19.id)
+review20 = Review.create!(rating: 5, body: "The pho was so light and delicious yet packed with so much flavor. I highly recommend adding sriracha and hoisin sauce to add on to the experience. The fish sauce was *chefs kiss* and the fried rolls (not too sure of their name) were the best.", user_id: user2.id, business_id: business20.id)
+review21 = Review.create!(rating: 5, body: "Had a great time! Casey was the best waiter, such fun vibes! Loved the energy and super cute", user_id: user3.id, business_id: business21.id)
+review22 = Review.create!(rating: 5, body: "All I can say is Wow. Everything you've heard about this place is true. Yes the servers bring over the meats to you. Yes the meats are absolutely scrumptious. It literally melts in your mouth.", user_id: user1.id, business_id: business22.id)
+review23 = Review.create!(rating: 3, body: "I'm glad I got to try my very first burger after failing to have time while visiting Vegas in August. I do think this place is slightly overrated, but I did enjoy it.", user_id: user2.id, business_id: business23.id)
+review24 = Review.create!(rating: 5, body: "This place is really yummy! My favorite was definitely the mango melon bingsoo. I opted to get the smaller single shaved ice portion as the large mango melon ice was meant to serve 4 people.", user_id: user3.id, business_id: business24.id)
+review25 = Review.create!(rating: 5, body: "Quite possibly my #1 cookie shop in LA! I like meaty doughy cookies - full of buttery, ooey goodness.  Thin, crispy cookie lovers need not apply", user_id: user1.id, business_id: business25.id)

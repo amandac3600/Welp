@@ -6,6 +6,7 @@
   height: 200px;
   width: 200px;
   border-radius: 4px;
+  object-fit: cover;
 }
 
 .business-item {
@@ -92,6 +93,16 @@
   margin-bottom: 5px;
 }
 
+.business-item-review-container {
+  display: block;
+}
+
+.business-item-review {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(110, 112, 114, 1);
+}
 
 .business-show-photo {
   display: flex;
@@ -99,3 +110,4 @@
   top: 0;
   z-index: -999;
 }
+

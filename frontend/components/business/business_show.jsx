@@ -1,4 +1,6 @@
 import React from "react";
+import ReviewIndex from "../review/review_index";
+import ReviewIndexContainer from "../review/review_index_container";
 
 class BusinessShow extends React.Component {
   componentDidMount() {
@@ -15,6 +17,7 @@ class BusinessShow extends React.Component {
         <h6 className="business-show-details">{this.props.business.price} • {this.props.business.category}</h6>
         <h6 className="business-show-hours">{this.props.business.open} - {this.props.business.close}</h6>
         {this.props.business.photo_urls.map((photo_url, idx) => <img key={idx} className="business-show-photo" src={photo_url} alt=""/>)}
+        <ReviewIndexContainer business={this.props.business}/>
       </div>
     )
   }

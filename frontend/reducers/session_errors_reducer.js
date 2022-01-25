@@ -1,6 +1,6 @@
 import { CLEAR_ERRORS, RECEIVE_CURRENT_USER, RECEIVE_ERRORS } from "../actions/session_actions";
 
-const sessionErrorsReducer = (state = {}, action) => {
+const SessionErrorsReducer = (state = {}, action) => {
   Object.freeze(state);
   let nextState = Object.assign({}, state);
   switch (action.type) {
@@ -17,4 +17,4 @@ const sessionErrorsReducer = (state = {}, action) => {
   }
 }
 
-export default sessionErrorsReducer
+export default SessionErrorsReducer

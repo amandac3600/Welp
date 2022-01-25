@@ -4,6 +4,7 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import BusinessIndexContainer from './business/business_index_container';
 import BusinessShowContainer from "./business/business_show_container";
+import ReviewIndexContainer from "./review/review_index_container";
 import Splash from './splash/splash'
 import { AuthRoute } from "../util/route_util";
 
