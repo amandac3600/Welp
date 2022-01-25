@@ -4,7 +4,6 @@ import BusinessShow from './business_show';
 
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log("mstp", state.entities.businesses)
   return (
     {business: state.entities.businesses[ownProps.match.params.businessId],
     currentUser: state.entities.users[state.session.id],}

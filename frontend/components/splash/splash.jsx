@@ -12,7 +12,7 @@ export default class Splash extends React.Component {
         <NavContainer/>
         <header className='splash-logo'>
             <Link className="splash-logo-link" to="/">welp</Link>
-            <Link className='logo-2' to="/"><img src={logo} width='70' height='50'/></Link>
+            <Link className='logo-2' to="/"><img src={window.logo} width='70' height='50'/></Link>
         </header>
       </div>
     )
