@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.business-index-photo {
+  height: 200px;
+  width: 200px;
+  border-radius: 4px;
+}
+
 .business-item {
   display: inline-block;
   text-decoration: none;
@@ -24,15 +30,25 @@
   transition: background-color 0.2s;
 }
 
+.business-item-container {
+  display: flex;
+}
+
+.business-item-title-container {
+  display: block;
+}
+
 .business-item-title {
+  display: block;
   font-weight: bold;
   color: rgba(45, 47, 47, 1);
   font-size: 20px;
-  margin: 6px 0;
+  margin: 5px 0 10px 20px;
 }
 
 .business-item-details {
   display: flex;
+  margin-left: 20px;
 }
 
 .business-item-category {
@@ -51,17 +67,35 @@
   font-size: 14px;
   font-weight: 400;
   color: rgba(110, 112, 114, 1);
+  margin-left: 5px;
+  margin-top: 3px;
 }
 
 .business-show-title {
-  color: #ebebeb;
+  color: white;
   font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size: 48px;
   font-weight: 700;
   letter-spacing: -0.4px;
-
+  white-space: nowrap;
+  margin-left: 55px;
+  margin-top: 200px;
 }
 
-.business-show-details {
+.business-show-details, .business-show-hours {
   display: flex;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 55px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+
+.business-show-photo {
+  display: flex;
+  position: absolute;
+  top: 0;
+  z-index: -999;
 }

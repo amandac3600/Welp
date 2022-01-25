@@ -5,7 +5,6 @@ button {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 100%;
   margin: 10px;
   padding: 10px;
@@ -22,17 +21,26 @@ button {
   padding: 7px 15px 8px 15px;
 }
 
-.nav-login-signup {
-  display: inline-block;
-}
-
-.nav-login, .nav-businesses{        
+.nav-businesses {
   color: white;
-  display: inline-block;
   font-size: 14px;
   font-weight: 700;
   background: none;
-  margin-right: 10px;
+  text-decoration: none;
+  padding: 7px 15px 8px 15px;
+  margin-left: 5%;
+}
+
+.nav-login-signup {
+  display: flex;
+  margin-left: 55%;
+}
+
+.nav-login{        
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  background: none;
   text-decoration: none;
   padding: 7px 15px 8px 15px;
 }
@@ -49,7 +57,6 @@ button {
 
 .nav-signup {
   color: white;
-  display: inline-block;
   font-size: 14px;
   font-weight: 700;
   background: transparent;
@@ -79,6 +86,7 @@ button {
   background: #d32323;
   vertical-align: baseline;
   padding: 12px 0;
+  white-space: nowrap;
 }
 
 

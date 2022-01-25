@@ -15,7 +15,7 @@ class BusinessIndex extends React.Component {
         </div>
         
         <ol>
-          {this.props.businesses.map(business => <BusinessIndexItem key={business.id} business={business}/>)}
+          {this.props.businesses.map(business => <BusinessIndexItem key={business.id} business={business} fetchBusiness={this.props.fetchBusiness}/>)}
         </ol>
       </div>
     )
