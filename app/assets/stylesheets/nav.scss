@@ -87,4 +87,19 @@ button {
   align-items: center;
 }
 
+.red-nav-logo-link {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin-left: 20px;
+}
+
+.red-nav-logo {
+  filter: drop-shadow(1px 0 0 white) 
+    drop-shadow(0 1px 0 white)
+    drop-shadow(-0.5px 0 0 white) 
+    drop-shadow(0 -0.5px 0 white);
+}
 

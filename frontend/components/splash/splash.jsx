@@ -37,7 +37,16 @@ export default class Splash extends React.Component {
           </li>
         </ul>
         <p className='block-3'></p>
-        <h6 className='splash-about'>About</h6>
+        <div className='splash-about-discover'>
+          <div className='splash-about'>
+            <h6 className='splash-about-title'>About</h6>
+            <a className='splash-about-link' href="https://www.linkedin.com/in/amanda-chen-4b175a146">LinkedIn</a>
+          </div>
+          <div className='splash-discover'>
+            <h6 className='splash-discover-title'>Discover</h6>
+            <a className='splash-discover-link' href="https://github.com/amandac3600">Github</a>
+          </div>
+        </div>
       </div>
     )
   }

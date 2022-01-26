@@ -2,22 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.business-index-list {
+  list-style: upper-alpha;
+}
+
 .business-index-photo {
   height: 200px;
   width: 200px;
   border-radius: 4px;
   object-fit: cover;
+  margin-top: 3px;
 }
 
 .business-item {
   display: inline-block;
   text-decoration: none;
-  width: 610px;
-  height: 210px;
+  width: 50%;
+  min-width: 660px;
+  max-width: 680px;
+  height: 205px;
   border: 1px solid #ebebeb;
   border-radius: 4px;
   padding: 24px;
-  margin: 24px 0;
+  margin: -16px 35px;
+}
+
+.business-item:first-child {
+  margin-top: 40px;
 }
 
 .business-item:hover {
@@ -47,14 +58,48 @@
   margin: 10px 0 10px 20px;
 }
 
-.business-item-rating {
-  font-size: 14px;
-  font-weight: 400;
-  color: white;
+#business-item-rating {
   margin-left: 20px;
-  background-color: #e94427;
-  border-radius: 3px;
-  width: 100px;
+  -webkit-appearance: none;
+  width: 108px;
+  height: 20px;
+  background-image: url(star-ratings.png);
+}
+
+.business-item-rating-5 {
+  background-position: 0px -500px;
+}
+
+.business-item-rating-4-5 {
+  background-position: 0px -460px;
+}
+
+.business-item-rating-4 {
+  background-position: 0px -480px;
+}
+
+.business-item-rating-3-5 {
+  background-position: 0px -420px;
+}
+
+.business-item-rating-3 {
+  background-position: 0px -440px;
+}
+
+.business-item-rating-2-5 {
+  background-position: 0px -380px;
+}
+
+.business-item-rating-2 {
+  background-position: 0px -400px;
+}
+
+.business-item-rating-1-5 {
+  background-position: 0px -340px;
+}
+
+.business-item-rating-1 {
+  background-position: 0px -360px;
 }
 
 .business-item-details {
@@ -98,7 +143,7 @@
   display: flex;
   color: white;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 55px;
   margin-top: 10px;
   margin-bottom: 5px;
@@ -133,9 +178,23 @@
   margin-top: 10px;
 }
 
-.business-show-photo {
+.business-show-photos {
+  display: flex;
+}
+
+.business-show-photo:first-child {
   display: flex;
   position: absolute;
+  width: 50%;
+  top: 0;
+  z-index: -999;
+}
+
+.business-show-photo:last-child {
+  display: flex;
+  position: absolute;
+  margin-left: 50%;
+  width: 50%;
   top: 0;
   z-index: -999;
 }
