@@ -136,7 +136,47 @@
   letter-spacing: -0.4px;
   white-space: nowrap;
   margin-left: 55px;
-  margin-top: 200px;
+  margin-top: 300px;
+}
+
+#business-show-rating {
+  margin-left: 50px;
+  -webkit-appearance: none;
+  width: 108px;
+  height: 20px;
+  background-image: url(star-ratings.png);
+}
+
+.business-show-rating-5 {
+  background-position: 0px -500px;
+}
+
+.business-show-rating-4-5 {
+  background-position: 0px -460px;
+}
+
+.business-show-rating-4 {
+  background-position: 0px -480px;
+}
+
+.business-show-rating-3 {
+  background-position: 0px -440px;
+}
+
+.business-show-rating-2-5 {
+  background-position: 0px -380px;
+}
+
+.business-show-rating-2 {
+  background-position: 0px -400px;
+}
+
+.business-show-rating-1-5 {
+  background-position: 0px -340px;
+}
+
+.business-show-rating-1 {
+  background-position: 0px -360px;
 }
 
 .business-show-details, .business-show-hours {
@@ -147,6 +187,13 @@
   margin-left: 55px;
   margin-top: 10px;
   margin-bottom: 5px;
+}
+
+.business-show-reviews {
+  color: white;
+  margin-left: 55px;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 .business-item-hours {
@@ -178,6 +225,15 @@
   margin-top: 10px;
 }
 
+.business-show-nav {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  background-color: #d23232;
+  top: 0;
+}
+
 .business-show-photos {
   display: flex;
 }
@@ -186,8 +242,8 @@
   display: flex;
   position: absolute;
   width: 50%;
-  top: 0;
   z-index: -999;
+  top: 60px;
 }
 
 .business-show-photo:last-child {
@@ -195,7 +251,7 @@
   position: absolute;
   margin-left: 50%;
   width: 50%;
-  top: 0;
   z-index: -999;
+  top: 60px;
 }
 

@@ -3,9 +3,7 @@ import ReviewIndexItem from './review_index_item'
 
 export default class ReviewIndex extends React.Component {
   componentDidMount() {
-    console.log(this.props.business)
     this.props.fetchUsers()
-    console.log('hello')
     this.props.fetchReviews(this.props.business.id)
   }
 
