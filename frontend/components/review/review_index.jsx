@@ -10,7 +10,6 @@ export default class ReviewIndex extends React.Component {
   }
 
   render() {
-    console.log(this.props.reviews)
     if (!this.props.reviews) return null
     return (
       <div>

@@ -44,12 +44,23 @@
   font-weight: bold;
   color: rgba(45, 47, 47, 1);
   font-size: 20px;
-  margin: 5px 0 10px 20px;
+  margin: 10px 0 10px 20px;
+}
+
+.business-item-rating {
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  margin-left: 20px;
+  background-color: #e94427;
+  border-radius: 3px;
+  width: 100px;
 }
 
 .business-item-details {
   display: flex;
   margin-left: 20px;
+  margin-top: 10px;
 }
 
 .business-item-category {
@@ -68,7 +79,7 @@
   font-size: 14px;
   font-weight: 400;
   color: rgba(110, 112, 114, 1);
-  margin-left: 5px;
+  margin-left: 10px;
   margin-top: 3px;
 }
 
@@ -93,8 +104,24 @@
   margin-bottom: 5px;
 }
 
+.business-item-hours {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  margin-top: 12px;
+  margin-left: 20px;
+}
+
 .business-item-review-container {
-  display: block;
+  display: flex;
+  margin-left: 10px;
+  width: 400px;
+  margin-top: 5px;
+}
+
+.business-item-review-icon {
+  font-size: 12px;
+  margin-top: 12px;
 }
 
 .business-item-review {
@@ -102,6 +129,8 @@
   font-size: 14px;
   font-weight: 400;
   color: rgba(110, 112, 114, 1);
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .business-show-photo {
