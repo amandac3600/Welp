@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-export default class Nav extends React.Component {
+import { withRouter } from 'react-router-dom';
 
+
+class Nav extends React.Component {
+  
   render() {
+    console.log(this.props.match.path)
     let nav;
     if (this.props.currentUser) {
       nav = <nav className='nav-user'>
@@ -35,3 +39,5 @@ export default class Nav extends React.Component {
     )
   }
 }
+
+export default withRouter(Nav)

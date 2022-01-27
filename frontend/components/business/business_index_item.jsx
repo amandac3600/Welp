@@ -34,13 +34,15 @@ class BusinessIndexItem extends React.Component {
   }
 
   render () {
+    let idx = this.props.idx 
+    idx += 1
     return (
       <div>
         <Link to={`/businesses/${this.props.business.id}`} className='business-item'>
           <div className="business-item-container">
             {[this.props.business.photo_urls[0]].map((photo_url, idx) => <img key={idx} className="business-index-photo" src={photo_url} alt=""/>)}
               <div className="business-item-title-container">
-                <h2 className="business-item-title">{this.props.business.name}</h2>
+                <h2 className="business-item-title">{idx}. {this.props.business.name}</h2>
                 <p id="business-item-rating" className={`${this.starRating()}`}></p>
                 
                 <div className="business-item-details">
