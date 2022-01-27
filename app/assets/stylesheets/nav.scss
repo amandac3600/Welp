@@ -2,12 +2,85 @@ button {
   cursor: pointer;
 }
 
+.nav-user {
+  display: flex;
+}
+
+.nav-user-bar {
+  display: flex;
+}
+
+.nav-bar {
+  display: flex;
+}
+
+.nav-user-bar-link {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin-left: 30px;
+  margin-top: 17px;
+}
+
+.nav-bar-link {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.nav-user-bar-logo {
+  filter: drop-shadow(1px 0 0 white) 
+  drop-shadow(0 1px 0 white)
+  drop-shadow(-0.5px 0 0 white) 
+  drop-shadow(0 -0.5px 0 white);
+  margin-top: 12px;
+}
+
+.nav-bar-logo {
+  filter: drop-shadow(1px 0 0 white) 
+  drop-shadow(0 1px 0 white)
+  drop-shadow(-0.5px 0 0 white) 
+  drop-shadow(0 -0.5px 0 white);
+}
+
+.nav-user-logout {
+  display: flex;
+  margin-top: 10px;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.nav-user-welcome {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  margin-top: 10px;
+  white-space: nowrap;
+}
+
+.nav-user-button {
+  color: white;
+  border: hidden;
+  font-size: 14px;
+  font-weight: 700;
+  background: none;
+  text-decoration: none;
+  padding: 7px 15px 8px 15px;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
 .nav {
   display: flex;
   justify-content: space-around;
   width: 100%;
   margin: 10px;
   padding: 10px;
+  top: 0;
 }
 
 .nav-businesses {
@@ -17,6 +90,7 @@ button {
   font-weight: 700;
   background: none;
   margin-right: 10px;
+  margin-top: 5px;
   text-decoration: none;
   padding: 7px 15px 8px 15px;
 }
@@ -33,6 +107,9 @@ button {
 
 .nav-login-signup {
   display: flex;
+  height: 33px;
+  margin-right: 5%;
+  white-space: nowrap;
 }
 
 .nav-login{        
@@ -44,12 +121,12 @@ button {
   padding: 7px 15px 8px 15px;
 }
 
-.nav-login:hover, .nav-businesses:hover{ 
+.nav-login:hover, .nav-businesses:hover, .nav-user-button:hover{ 
   padding: 7px 15px 5px 15px;
   border-bottom: 2px solid white;
 }
 
-.nav-login:active, .nav-businesses:active {
+.nav-login:active, .nav-businesses:active, .nav-user-button:active {
   color: #999;
   border-bottom: 2px solid transparent;
 }
@@ -61,7 +138,7 @@ button {
   background: transparent;
   border: 2px solid white;
   border-radius: 4px;
-  padding: 7px 22px 8px 22px;  //top right bottom left
+  padding: 7px 22px 6px 22px;  //top right bottom left
   text-decoration: none;
 }
 
@@ -77,29 +154,9 @@ button {
 }
 
 .red-nav {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  display: block;
   height: 55px;
-  background: #d32323;
-  white-space: nowrap;
-  align-items: center;
+  width: 100%;
+  background-color: #d23232;
+  top: 0;
 }
-
-.red-nav-logo-link {
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 600;
-  color: white;
-  margin-left: 20px;
-}
-
-.red-nav-logo {
-  filter: drop-shadow(1px 0 0 white) 
-    drop-shadow(0 1px 0 white)
-    drop-shadow(-0.5px 0 0 white) 
-    drop-shadow(0 -0.5px 0 white);
-}
-

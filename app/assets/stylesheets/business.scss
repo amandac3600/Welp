@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.red-nav #hidden-bus {
+  visibility: hidden;
+}
+
 .business-index-list {
   list-style: upper-alpha;
 }
@@ -128,6 +132,10 @@
   margin-top: 3px;
 }
 
+.business-show {
+  top: 0;
+}
+
 .business-show-title {
   color: white;
   font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
@@ -136,47 +144,52 @@
   letter-spacing: -0.4px;
   white-space: nowrap;
   margin-left: 55px;
-  margin-top: 300px;
+  margin-top: 200px;
 }
 
 #business-show-rating {
-  margin-left: 50px;
+  margin-top: 10px;
+  margin-left: 55px;
   -webkit-appearance: none;
-  width: 108px;
-  height: 20px;
+  width: 176px;
+  height: 32px;
   background-image: url(star-ratings.png);
 }
 
 .business-show-rating-5 {
-  background-position: 0px -500px;
+  background-position: 0px -288px;
 }
 
 .business-show-rating-4-5 {
-  background-position: 0px -460px;
+  background-position: 0px -224px;
 }
 
 .business-show-rating-4 {
-  background-position: 0px -480px;
+  background-position: 0px -256px;
+}
+
+.business-show-rating-3-5 {
+  background-position: 0px -160px;
 }
 
 .business-show-rating-3 {
-  background-position: 0px -440px;
+  background-position: 0px -192px;
 }
 
 .business-show-rating-2-5 {
-  background-position: 0px -380px;
+  background-position: 0px -96px;
 }
 
 .business-show-rating-2 {
-  background-position: 0px -400px;
+  background-position: 0px -128px;
 }
 
 .business-show-rating-1-5 {
-  background-position: 0px -340px;
+  background-position: 0px -32px;
 }
 
 .business-show-rating-1 {
-  background-position: 0px -360px;
+  background-position: 0px -64px;
 }
 
 .business-show-details, .business-show-hours {
@@ -187,13 +200,6 @@
   margin-left: 55px;
   margin-top: 10px;
   margin-bottom: 5px;
-}
-
-.business-show-reviews {
-  color: white;
-  margin-left: 55px;
-  margin-top: 10px;
-  font-size: 14px;
 }
 
 .business-item-hours {
@@ -208,7 +214,6 @@
   display: flex;
   margin-left: 10px;
   width: 400px;
-  margin-top: 5px;
 }
 
 .business-item-review-icon {
@@ -222,7 +227,6 @@
   font-weight: 400;
   color: rgba(110, 112, 114, 1);
   margin-left: 10px;
-  margin-top: 10px;
 }
 
 .business-show-nav {
@@ -236,22 +240,141 @@
 
 .business-show-photos {
   display: flex;
+  height: 500px;
 }
 
 .business-show-photo:first-child {
   display: flex;
   position: absolute;
-  width: 50%;
   z-index: -999;
-  top: 60px;
+  top: 30px;
+  min-height: 420px;
+  max-height: 430px;
 }
 
 .business-show-photo:last-child {
   display: flex;
   position: absolute;
   margin-left: 50%;
-  width: 50%;
   z-index: -999;
-  top: 60px;
+  top: 30px;
+  min-height: 420px;
+  max-height: 430px;
 }
 
+.business-show-write-container {
+  display: flex;
+  margin-top: 60px;
+  margin-left: 45px;
+}
+
+.business-show-write-star {
+  position: absolute;
+  font-size: 28px;
+  color: white;
+  margin-left: 12px;
+  margin-top: 24px;
+  z-index: 1000;
+}
+
+.business-show-write {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  width: 170px;
+  height: 38px;
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 999;
+  margin-top: 20px;
+  padding-left: 30px;
+  border-radius: 4px;
+  background-color: rgba(224,7,7,1);
+  color: rgba(255,255,255,1);
+}
+
+.business-show-divider {
+  display: flex;
+  margin-top: 60px;
+  height: 20px;
+  border-bottom: 1.5px solid #ebebeb;
+  z-index: 99999;
+}
+
+.business-show-more-details {
+  margin-left: 45px;
+}
+
+.business-show-location-hours {
+  display: flex;
+  padding-bottom: 45px;
+  border-bottom: 1.5px solid #ebebeb;
+}
+
+.business-show-location-title {
+  font-size: 18px;
+  font-weight: 750;
+  color: rgba(45,46,47,1);
+  margin: 35px 0 30px 0;
+}
+
+.business-show-map-container {
+  width: 290px;
+  height: 200px;
+  border: 1px solid #999;
+}
+
+.business-show-map {
+  width: 290px;
+  height: 150px;
+  border: 1px solid #999;
+}
+
+.business-show-address {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.business-show-address-address {
+  color: rgba(2,122,151,1);
+}
+
+.business-show-address-city {
+  color: rgba(45,46,47,1);
+}
+
+.business-show-more-hours {
+  font-size: 15px;
+  font-weight: 540;
+  color: rgba(45,46,47,1);
+  margin-left: 60px;
+  margin-top: 10px;
+}
+
+.business-show-hours-item {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.business-show-hours-item-day {
+  width: 50px;
+  margin-right: 20px;
+}
+
+.business-show-reviews-title {
+  font-size: 18px;
+  font-weight: 750;
+  color: rgba(45,46,47,1);
+  margin: 35px 0 30px 0;
+}
+
+.business-show-reviews {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.business-show-review {
+  width: 650px;
+  border: 1px solid #999;
+  padding: 10px;
+}

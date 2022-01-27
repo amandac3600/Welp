@@ -39,7 +39,7 @@ export default class SessionForm extends React.Component {
   render() {
     let errors;
     if (this.props.errors[0].length) {
-      errors = this.props.errors.map((error, index)=> 
+      errors = this.props.errors[0].map((error, index)=> 
         (<li key={index}>{error}</li>)
       )
       let error = document.getElementById('errors');

@@ -1,6 +1,6 @@
 import { RECEIVE_REVIEWS, RECEIVE_REVIEW, REMOVE_REVIEW} from "../actions/review_actions";
 
-const reviewsReducer = (state = {}, action) => {
+const ReviewsReducer = (state = {}, action) => {
   Object.freeze(state);
   const nextState = Object.assign({}, state);
   switch (action.type) {
@@ -17,4 +17,4 @@ const reviewsReducer = (state = {}, action) => {
   }
 }
 
-export default reviewsReducer
+export default ReviewsReducer

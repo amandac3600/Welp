@@ -7,7 +7,7 @@ import BusinessShow from './business_show';
 const mapStateToProps = (state, ownProps) => ({
   business: state.entities.businesses[ownProps.match.params.businessId],
   currentUser: state.entities.users[state.session.id],
-  reviews: state.entities.reviews,
+  reviews: Object.values(state.entities.reviews),
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -13,6 +13,7 @@ User.destroy_all
 user1 = User.create!(first_name: 'Michael', last_name: 'Scott', email: 'mscott@mail.com', password: 'michael')
 user2 = User.create!(first_name: 'Dwight', last_name: 'Schrute', email: 'dschrute@mail.com', password: 'dwight')
 user3 = User.create!(first_name: 'Jim', last_name: 'Halpert', email: 'jhalpert@mail.com', password: 'jimhalpert')
+user4 = User.create!(first_name: 'Demo', last_name: 'User', email: 'demo@user.com', password: 'demouser')
 
 Business.destroy_all
 business1 = Business.create!(name: "MILK+T", address: "310 E 2nd St", city: "Los Angeles", state: "CA", zip_code: "90012", phone_number: "(323) 884-1164", website: "http://www.milkandt.com", open: "12:00PM", close: "10:00PM", category: "Bubble Tea", price: "$")

@@ -4,18 +4,19 @@ import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import BusinessIndexContainer from './business/business_index_container';
 import BusinessShowContainer from "./business/business_show_container";
-import ReviewIndexContainer from "./review/review_index_container";
+import CreateReviewFormContainer from './review/create_review_form_container';
 import Splash from './splash/splash'
-import { AuthRoute } from "../util/route_util";
+import { AuthRoute, ProtectedRoute } from "../util/route_util";
 
 const App = () => (
   <div>
     <Switch>
-      <Route exact path="/" component={Splash}/>
-      <Route exact path="/businesses" component={BusinessIndexContainer}/>
+      <AuthRoute exact path="/login" component={LoginFormContainer}/>
+      <AuthRoute exact path="/signup" component={SignupFormContainer}/>
+      <ProtectedRoute exact path="/businesses/:businessId/reviews/new" component={CreateReviewFormContainer} />
       <Route exact path="/businesses/:businessId" component={BusinessShowContainer}></Route>
-      <AuthRoute path="/login" component={LoginFormContainer}/>
-      <AuthRoute path="/signup" component={SignupFormContainer}/>
+      <Route exact path="/businesses" component={BusinessIndexContainer}/>
+      <Route exact path="/" component={Splash}/>
     </Switch>
   </div>
 );

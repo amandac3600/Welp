@@ -10,12 +10,9 @@ class BusinessIndex extends React.Component {
 
   render () {
     if (!this.props.businesses) return null;
-    // if (!this.props.business.photo_urls) return null;
     return (
       <div>
         <div className="red-nav">
-          <Link className="red-nav-logo-link" to="/">welp</Link>
-          <Link className='red-nav-logo' to="/"><img src={window.logo} width='40' height='25'/></Link>
           <NavContainer/>
         </div>
         
