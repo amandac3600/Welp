@@ -14,6 +14,10 @@ export default class CreateReviewForm extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
+  componentDidMount() {
+    this.props.fetchBusiness(this.props.match.params.businessId)
+  }
+
   handleSubmit(e) {
     e.preventDefault();
 
@@ -24,9 +28,10 @@ export default class CreateReviewForm extends React.Component {
   }
 
   render () {
+    if (!this.props.business) return null;
     return (
       <div>
-
+        <h1 className="create-review-title">{this.props.business.name}</h1>
       </div>
     )
   }
