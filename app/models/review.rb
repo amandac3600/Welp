@@ -5,7 +5,7 @@ class Review < ApplicationRecord
   has_one :business,
     class_name: :Business
     
-  has_one :author,
+  belongs_to :author,
     class_name: :User
 
 end
