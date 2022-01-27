@@ -7,11 +7,10 @@ class BusinessIndexItem extends React.Component {
     let avgRating = 0;
     Object.keys(this.props.business).forEach(key => {
       if (key === "reviews") {
-        avgRating += this.props.business.reviews.rating
+        avgRating += Object.values(this.props.business.reviews)[0].rating
       }
     })
-
-    let rating = avgRating.toFixed(2)
+    let rating = (avgRating/this.props.business.reviews.length).toFixed(2)
     if (rating >= 4.75) {
       return "business-item-rating-5"
     } else if (rating >= 4.25) {
@@ -49,8 +48,8 @@ class BusinessIndexItem extends React.Component {
                 </div>
                 <p className="business-item-hours">Hours: {this.props.business.open} - {this.props.business.close}</p>
                 <div className="business-item-review-container">
-                  <p className="business-item-review">💬</p>
-                  <p className="business-item-review">"{this.props.business.reviews.body}"</p>
+                  <p className="business-item-review-icon">💬</p>
+                  <p className="business-item-review">"{Object.values(this.props.business.reviews)[0].body}"</p>
                 </div>
               </div>
           </div>

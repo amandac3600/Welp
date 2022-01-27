@@ -63,6 +63,7 @@
 }
 
 #business-item-rating {
+  margin-top: -2px;
   margin-left: 20px;
   -webkit-appearance: none;
   width: 108px;
@@ -122,6 +123,7 @@
   font-weight: 400;
   font-weight: bold;
   color: rgba(110, 112, 114, 1);
+  margin-top: 2px;
 }
 
 .business-item-price {
@@ -129,7 +131,7 @@
   font-weight: 400;
   color: rgba(110, 112, 114, 1);
   margin-left: 10px;
-  margin-top: 3px;
+  margin-top: 5px;
 }
 
 .business-show {
@@ -198,7 +200,7 @@
   font-weight: bold;
   font-size: 14px;
   margin-left: 55px;
-  margin-top: 10px;
+  margin-top: 12px;
   margin-bottom: 5px;
 }
 
@@ -214,15 +216,18 @@
   display: flex;
   margin-left: 10px;
   width: 400px;
-}
-
-.business-item-review-icon {
-  font-size: 12px;
   margin-top: 12px;
 }
 
+.business-item-review-icon {
+  display: flex;
+  font-size: 12px;
+  margin-top: 2.5px;
+  margin-left: 9px;
+}
+
 .business-item-review {
-  display: block;
+  display: flex;
   font-size: 14px;
   font-weight: 400;
   color: rgba(110, 112, 114, 1);
