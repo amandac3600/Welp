@@ -55,7 +55,11 @@ class BusinessShow extends React.Component {
         </div>
         <h1 className="business-show-title">{this.props.business.name}</h1>
         <p id="business-show-rating" className={`${this.starRating()}`}></p>
-        <h6 className="business-show-details">{this.props.business.price} • {this.props.business.category}</h6>
+        <div className="business-show-details-container">
+          <p className="business-show-details-icon"></p>
+          <h6 className="business-show-details-claimed">Claimed</h6>
+          <h6 className="business-show-details">• &nbsp; {this.props.business.price} &nbsp; • &nbsp; {this.props.business.category}</h6>
+        </div>
         <h6 className="business-show-hours">{this.props.business.open} - {this.props.business.close}</h6>
         <div className="business-show-write-container">
           <p className="business-show-write-star">☆</p>

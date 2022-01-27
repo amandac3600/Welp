@@ -140,13 +140,13 @@
 
 .business-show-title {
   color: white;
-  font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Roboto','Helvetica Neue',Helvetica,Arial,sans-serif;
   font-size: 48px;
   font-weight: 700;
   letter-spacing: -0.4px;
   white-space: nowrap;
   margin-left: 55px;
-  margin-top: 200px;
+  margin-top: 210px;
 }
 
 #business-show-rating {
@@ -194,14 +194,39 @@
   background-position: 0px -64px;
 }
 
-.business-show-details, .business-show-hours {
+.business-show-details-container {
+  display: flex;
+}
+
+.business-show-details-icon {
+  z-index: 1000;
+  margin-top: 11px;
+  margin-left: 60px;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background-image: url(rsz_verified.png);
+  background-position: -1.5px -1px;
+  border-radius: 20px;
+}
+
+.business-show-details, .business-show-hours, .business-show-details-claimed {
   display: flex;
   color: white;
   font-weight: bold;
   font-size: 14px;
-  margin-left: 55px;
+  margin-left: 10px;
   margin-top: 12px;
   margin-bottom: 5px;
+}
+
+.business-show-details-claimed {
+  margin-left: 10px;
+  color: rgb(30, 182, 253);
+}
+
+.business-show-hours {
+  margin-left: 55px;
 }
 
 .business-item-hours {
