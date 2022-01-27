@@ -2,7 +2,7 @@ import { RECEIVE_REVIEW_ERRORS, CLEAR_REVIEW_ERRORS } from "../actions/review_ac
 
 const ReviewsErrorsReducer = (state = {}, action) => {
   Object.freeze(state);
-  const nextState = Object.assign({}, state)
+  let nextState = Object.assign({}, state)
   switch (action.type) {
     case RECEIVE_REVIEW_ERRORS:
       nextState = action.errors.responseJSON;

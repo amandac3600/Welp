@@ -8,7 +8,7 @@ export default class Nav extends React.Component {
       nav = <nav className='nav-user'>
         <div id="hidden" className='nav-user-bar'>
           <Link className="nav-user-bar-link" to="/">welp</Link>
-          <Link className='nav-user-bar-logo' to="/"><img src={window.logo} width='40' height='25'/></Link>
+          <Link className='nav-user-bar-logo' to="/"><img src={window.logo} width='35' height='25'/></Link>
         </div>
         <Link id="hidden-bus" className="nav-businesses" to='/businesses'>Businesses</Link>
         <div className='nav-user-logout'>

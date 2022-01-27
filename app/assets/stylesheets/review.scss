@@ -1,19 +1,21 @@
 .create-review-form {
   margin-top: 30px;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .create-review-title {
   font-size: 28px;
   font-weight: 700;
   color: rgba(45,46,47,1);
+  text-decoration: none;
 }
 
 .create-form-rating-container {
   width: 625px;
-  height: 370px;
+  height: 350px;
   border: 1px solid #c8c9ca;
   border-radius: 4px;
+  margin-top: 30px;
 }
 
 // .create-form-rating-container input{
@@ -75,5 +77,20 @@
   color: rgba(255,255,255,1);
   font-size: 15px;
   font-weight: 500;
-  margin-top: 50px;
+  margin-top: 40px;
+}
+
+.review-errors {
+  position: absolute;
+  width: 500px;
+  top: 450px;
+  left: 40px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(224, 7, 7);
+}
+
+.review-error {
+  margin-bottom: 10px;
 }

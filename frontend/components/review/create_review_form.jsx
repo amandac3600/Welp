@@ -1,5 +1,7 @@
 import React from "react";
 import NavContainer from '../nav/nav_container'
+import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 export default class CreateReviewForm extends React.Component {
   constructor(props) {
@@ -13,6 +15,7 @@ export default class CreateReviewForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.clearErrors = this.clearErrors.bind(this);
   }
 
   componentDidMount() {
@@ -21,22 +24,39 @@ export default class CreateReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
+    const review = Object.assign({}, this.state);
+    this.props.createReview(review);
+    <Redirect to={`/businesses/${this.props.business.id}`}/>
   }
 
   handleChange(field) {
     return e => this.setState({[field]: e.currentTarget.value})
   }
 
+  clearErrors(e) {
+    this.props.clearReviewErrors()
+  }
+
   render () {
+    let errors;
+    if (this.props.errors.length) {
+      errors = this.props.errors.map((error, index)=> 
+        (<li key={index} className="review-error">{error}</li>)
+      )
+      let error = document.getElementById('errors');
+      error.classList.add('review-errors')
+    }
     if (!this.props.business) return null;
+    // if (this.handleSubmit) {
+    //   <Redirect to={`/businesses/${this.props.business.id}`}/>
+    // }
     return (
       <div>
         <div className="red-nav">
           <NavContainer/>
         </div>
         <form onSubmit={this.handleSubmit} className="create-review-form">
-          <h1 className="create-review-title">{this.props.business.name}</h1>
+          <Link className="create-review-title" to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
           <div className="create-form-rating-container">
             <div>
               <input id="radio5" type="radio" value="5" name="rating" onChange={this.handleChange("rating")} />
@@ -54,9 +74,14 @@ export default class CreateReviewForm extends React.Component {
               <input id="radio1" type="radio" value="1" name="rating" onChange={this.handleChange("rating")} />
               <label htmlFor="radio1" id="create-form-rating" className="create-form-rating-1"></label>
             </div>
-            <textarea className="create-review-body"></textarea>
+            <textarea className="create-review-body" onChange={this.handleChange('body')}></textarea>
           </div>
           <button type="submit" className="create-review-submit">Post Review</button>
+          <div className='errors-container'>
+            <ul id="errors">
+              {errors}
+            </ul>
+          </div>
         </form>
       </div>
     )

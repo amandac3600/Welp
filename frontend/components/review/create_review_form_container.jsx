@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => ({
   business: state.entities.businesses[ownProps.match.params.businessId],
   currentUser: state.entities.users[state.session.id],
   user_id: state.session.id,
-  errors: state.errors.review
+  errors: Object.values(state.errors.review),
 })
 
 const mapDispatchToProps = dispatch => ({
