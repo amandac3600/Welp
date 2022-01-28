@@ -7,7 +7,9 @@ class BusinessIndexItem extends React.Component {
     let avgRating = 0;
     Object.keys(this.props.business).forEach(key => {
       if (key === "reviews") {
-        avgRating += Object.values(this.props.business.reviews)[0].rating
+        Object.values(this.props.business.reviews).forEach(review => {
+          avgRating += review.rating
+        })
       }
     })
     let rating = (avgRating/this.props.business.reviews.length).toFixed(2)

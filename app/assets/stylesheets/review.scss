@@ -18,6 +18,11 @@
   margin-top: 30px;
 }
 
+.create-form-rating-container-2 {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
 // .create-form-rating-container input{
 //   margin:0;padding:0;
 //   -webkit-appearance:none;
@@ -61,11 +66,9 @@
 .create-review-body {
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   cursor: text;
-  width: 620px;
-  height: 300px;
-  border: 1px solid #ebebeb;
-  font-size: 16px;
-  color: #333;
+  width: 580px;
+  height: 270px;
+  // border: 1px solid #ebebeb;
 }
 
 .create-review-submit {
@@ -103,6 +106,10 @@
 .business-show-review {
   width: 650px;
   padding: 10px;
+}
+
+.review-index-item {
+  margin-bottom: 35px;
 }
 
 .review-item-profile {
@@ -155,9 +162,24 @@
 }
 
 .review-item-body {
+  font-family: "Poppins", Helvetica, sans-serif;
   margin-top: 15px;
-  color: #2D2E2F;
-  font-size: 14px;
-  font-weight: 400;
   margin-left: -4.5px;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+}
+
+textarea {
+  font-size: 15px;
+  color: #2D2E2F;
+  font-weight: 400;
+  padding: 20px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+::placeholder {
+  color: #d3d3d3;
+  font-size: 15px;
+  font-weight: 400;
 }

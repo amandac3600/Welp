@@ -28,7 +28,7 @@ export default class ReviewIndexItem extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className='review-index-item'>
         <div className='review-item-profile'>
           <h2 className='review-item-pic'></h2>
           <h2 className='review-item-profile-name'>{this.props.review.author_first_name} {this.props.review.author_last_name}</h2>
