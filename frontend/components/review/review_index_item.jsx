@@ -1,4 +1,5 @@
 import React from 'react';
+import { AiOutlineEllipsis } from 'react-icons/ai'
 
 export default class ReviewIndexItem extends React.Component {
   starRating () {
@@ -32,8 +33,8 @@ export default class ReviewIndexItem extends React.Component {
         <div className='review-item-profile'>
           <h2 className='review-item-pic'></h2>
           <h2 className='review-item-profile-name'>{this.props.review.author_first_name} {this.props.review.author_last_name}</h2>
+          <AiOutlineEllipsis/>
         </div>
-        
         <h2 id="review-item-rating" className={`${this.starRating()}`}></h2>
         <p className='review-item-body'>{this.props.review.body}</p>
       </div>

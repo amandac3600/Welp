@@ -4,6 +4,8 @@ button {
 
 .nav-user {
   display: flex;
+  margin-left: 15%;
+  margin-top: 10px;
 }
 
 .nav-user-bar {
@@ -96,7 +98,19 @@ button {
   font-weight: 700;
   background: none;
   margin-right: 10px;
-  margin-top: 5px;
+  margin-top: 8px;
+  text-decoration: none;
+  padding: 7px 15px 8px 15px;
+}
+
+.splash-businesses {
+  color: white;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  background: none;
+  margin-right: 10px;
+  margin-top: 2px;
   text-decoration: none;
   padding: 7px 15px 8px 15px;
 }
@@ -124,17 +138,23 @@ button {
   font-weight: 700;
   background: none;
   text-decoration: none;
-  padding: 7px 15px 8px 15px;
+  padding: 7px 15px 7px 15px;
 }
 
-.nav-login:hover, .nav-businesses:hover, .nav-user-button:hover{ 
+.nav-login:hover, .nav-businesses:hover, .nav-user-button:hover, .splash-businesses:hover { 
   padding: 7px 15px 5px 15px;
   border-bottom: 2px solid white;
 }
 
-.nav-login:active, .nav-businesses:active, .nav-user-button:active {
+.nav-login:active, .nav-businesses:active, .nav-user-button:active, .splash-businesses:active, .red-nav-user-button:active {
   color: #999;
   border-bottom: 2px solid transparent;
+}
+
+.red-nav-user-button:hover {
+  margin-bottom: 5px;
+  padding: 7px 15px 0px 15px;
+  border-bottom: 2px solid white;
 }
 
 .nav-signup {
@@ -165,4 +185,65 @@ button {
   width: 100%;
   background-color: #d23232;
   top: 0;
+}
+
+.bus-nav-bar {
+  margin-left: 10%;
+  padding-top: 12px;
+}
+
+.bus-nav-bar-link {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+}
+
+.bus-nav-bar-logo {
+  filter: drop-shadow(1px 0 0 white) 
+  drop-shadow(0 1px 0 white)
+  drop-shadow(-0.5px 0 0 white) 
+  drop-shadow(0 -0.5px 0 white);
+  margin-top: 15px;
+}
+
+.bus-nav-login-signup {
+  margin-left: 70%;
+  margin-top: -18px;
+}
+
+.red-nav-user {
+  display: flex;
+  height: 55px;
+  width: 100%;
+  background-color: #d23232;
+  top: 0;
+}
+
+.red-nav-user-logout {
+  margin-left: 55%;
+  display: flex;
+}
+
+.red-nav-user-welcome {
+   font-size: 14px;
+  font-weight: 600;
+  color: white;
+  margin-top: 21px;
+  white-space: nowrap;
+}
+
+.red-nav-user-button {
+  color: white;
+  border: hidden;
+  font-size: 14px;
+  font-weight: 700;
+  background: none;
+  text-decoration: none;
+  padding: 7px 15px 8px 15px;
+  white-space: nowrap;
+  margin-top: 2px;
 }

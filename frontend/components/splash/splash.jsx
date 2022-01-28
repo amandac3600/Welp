@@ -5,6 +5,10 @@ import bg from '../../../app/assets/images/bg.jpg'
 import logo from '../../../app/assets/images/logo.png'
 
 export default class Splash extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   render () {
     return (
       <div>
@@ -28,15 +32,16 @@ export default class Splash extends React.Component {
         <h4 className='splash-welp-la'>Welp Los Angeles</h4>
         <h5 className='splash-hot-new'>Hot &amp; New Businesses</h5>
         <ul className='splash-hot-new-list'>
-          <li className='splash-hot-new-item'>
-            Milk Jar Cookies
-          </li>
-          <li className='splash-hot-new-item'>
-            Woodcat Coffee &amp; Tea
-          </li>
-          <li className='splash-hot-new-item'>
-            Masa of Echo Park
-          </li>
+          <Link to='' className='splash-hot-new-item'>
+            <div className='hot-new-pic-1'></div>
+            <p></p>
+          </Link>
+          <Link to='' className='splash-hot-new-item'>
+            <div className='hot-new-pic-2'></div>
+          </Link>
+          <Link to='' className='splash-hot-new-item'>
+            <div className='hot-new-pic-3'></div>
+          </Link>
         </ul>
         <p className='block-3'></p>
         <div className='splash-about-discover'>

@@ -53,23 +53,32 @@ class BusinessShow extends React.Component {
         <div className="red-nav">
           <NavContainer/>
         </div>
-        <h1 className="business-show-title">{this.props.business.name}</h1>
-        <p id="business-show-rating" className={`${this.starRating()}`}></p>
-        <div className="business-show-details-container">
-          <p className="business-show-details-icon"></p>
-          <h6 className="business-show-details-claimed">Claimed</h6>
-          <h6 className="business-show-details">• &nbsp; {this.props.business.price} &nbsp; • &nbsp; {this.props.business.category}</h6>
-        </div>
-        <h6 className="business-show-hours">{this.props.business.open} - {this.props.business.close}</h6>
+        <div className="business-show-photos">
+          {this.props.business.photo_urls.map((photo_url, idx) => <img key={idx} className="business-show-photo" src={photo_url} alt="" />)}
         
+          <div className="business-show-info">
+            <h1 className="business-show-title">{this.props.business.name}</h1>
+            <div className="business-show-rating-container">
+              <p id="business-show-rating" className={`${this.starRating()}`}></p>
+              <p className="business-show-rating-length">{this.props.business.reviews.length} reviews</p>
+            </div>
+            
+            <div className="business-show-details-container">
+              <p className="business-show-details-icon"></p>
+              <h6 className="business-show-details-claimed">Claimed</h6>
+              <h6 className="business-show-details">• &nbsp; {this.props.business.price} &nbsp; • &nbsp; {this.props.business.category}</h6>
+            </div>
+            <h6 className="business-show-hours">{this.props.business.open} - {this.props.business.close}</h6>
+          </div>
+        </div>
         <div className="business-show-write-container">
           <p className="business-show-write-star">☆</p>
           <Link to={`/businesses/${this.props.business.id}/reviews/new`}>
             <button className="business-show-write">Write a Review</button>
           </Link>
         </div>
-        
         <p className="business-show-divider"></p>
+
         <div className="show-details-website-container">
             <div className="business-show-more-details">
             <h2 className="business-show-location-title">Location &amp; Hours</h2>
@@ -121,7 +130,6 @@ class BusinessShow extends React.Component {
                   <h2 className="show-address">{this.props.business.address} {this.props.business.city}, CA</h2>
                   <h2 className="show-zip">{this.props.business.zip_code}</h2>
                 </div>
-                
               </div>
             </div>
             <h2 className="business-show-reviews-title">Recommended Reviews</h2>
@@ -145,9 +153,7 @@ class BusinessShow extends React.Component {
               <a className='splash-discover-link' href="https://github.com/amandac3600">Github</a>
             </div>
           </div>
-        <div className="business-show-photos">
-          {this.props.business.photo_urls.map((photo_url, idx) => <img key={idx} className="business-show-photo" src={photo_url} alt=""/>)}
-        </div>
+        
       </div>
     )
   }

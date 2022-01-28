@@ -2,7 +2,7 @@
   display: flex;
   position: absolute;
   top: 0;
-  opacity: 0.85;
+  opacity: 0.80;
   z-index: -1000;
   width: 100vw;
   min-width: 800px;
@@ -141,12 +141,18 @@
   width: 250px;
   height: 250px;
   color: #666;
-  border: 1px solid #999;
+  border: 1px solid #ebebeb;
   border-radius: 3px;
   margin: 10px;
   z-index: 999;
   text-align: center;
   padding-top: 10px;
+}
+
+.splash-hot-new-item:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px #0000001a;
+  transition: box-shadow 0.3s;
 }
 
 .block-3 {
@@ -186,5 +192,29 @@
   font-size: 14px;
   font-weight: normal;
   color: rgba(110,112,114,1);
+}
+
+.hot-new-pic-1 {
+  margin-top: -10px;
+  width: 250px;
+  height: 180px;
+  background-image: url(MilkJar);
+  background-position: -20px;
+}
+
+.hot-new-pic-2 {
+  margin-top: -10px;
+  width: 250px;
+  height: 180px;
+  background-image: url(wood);
+  background-position: -15px -25px;
+}
+
+.hot-new-pic-3 {
+  margin-top: -10px;
+  width: 250px;
+  height: 180px;
+  background-image: url(MilkJar);
+  background-position: -20px;
 }
 
