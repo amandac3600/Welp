@@ -1,43 +1,21 @@
-import React from "react";
+import { connect } from "react-redux";
+import { fetchReview, updateReview, clearReviewErrors } from "../../actions/review_actions";
+import { fetchBusiness } from "../../actions/business_actions";
+import UpdateReviewForm from './create_review_form'
 
-export default class UpdateReviewForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      body: this.props.review.body,
-      rating: this.props.review.rating,
-      user_id: this.props.review.user_id,
-      business_id: this.props.match.params.businessId,
-      reviewId: this.props.review.id
-    }
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-  }
+const mapStateToProps = (state, ownProps) => ({
+  formType: 'Update Review',
+  review: state.entities.reviews[ownProps.match.params.reviewId],
+  business: state.entities.businesses[ownProps.match.params.businessId],
+  currentUser: state.entities.users[state.session.id],
+  user_id: state.session.id,
+  errors: Object.values(state.errors.review),
+})
 
-  componentDidMount() {
-    this.props.fetchReviews();
-    this.props.fetchBusiness(this.props.match.params.businessId);
-    this.props.clearReviewErrors();
-  };
+const mapDispatchToProps = dispatch => ({
+  updateReview: (review, businessId) => dispatch(updateReview(review, businessId)),
+  fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
+  clearReviewErrors: () => dispatch(clearReviewErrors())
+})
 
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.updateReview(this.state, this.props.match.params.businessId)
-  }
-
-  handleChange(field) {
-    return (e) => {this.setState({[field]: e.currentTarget.value})}
-  }
-
-  render () {
-    return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          
-        </form>
-      </div>
-    )
-  }
-
-}
-
+export default connect(mapStateToProps, mapDispatchToProps)(UpdateReviewForm)
