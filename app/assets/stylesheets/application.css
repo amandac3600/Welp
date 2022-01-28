@@ -14,9 +14,9 @@
  *= require_self
  */
 
- body {
-   height: 100%;
-   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-    letter-spacing: 0.3px;
-    font-size: 90%;
-  }
+body {
+  height: 100%;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  letter-spacing: 0.3px;
+  font-size: 90%;
+}

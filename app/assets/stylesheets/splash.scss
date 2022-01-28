@@ -97,9 +97,9 @@
   display: flex;
   position: absolute;
   width: 100vw;
-  height: 500px;
+  height: 510px;
   z-index: 997;
-  margin-top: 40px;
+  margin-top: 30px;
   background-color: white;
 }
 
@@ -171,7 +171,7 @@
   font-size: 16px;
   font-weight: 600;
   color: rgb(54, 55, 56);
-  margin: 100px 20px 20px 40px;
+  margin: 100px 20px 15px 40px;
   margin-left: 25%;
 }
 
@@ -184,6 +184,14 @@
 }
 
 .splash-about-title, .splash-discover-title {
+  margin-bottom: 15px;
+}
+
+.splash-discover-links {
+  display: block;
+}
+
+.splash-discover-link {
   margin-bottom: 20px;
 }
 
@@ -192,6 +200,10 @@
   font-size: 14px;
   font-weight: normal;
   color: rgba(110,112,114,1);
+}
+
+.splash-discover-link-2 {
+  margin-top: 8px;
 }
 
 .hot-new-pic-1 {

@@ -151,6 +151,10 @@ class BusinessShow extends React.Component {
             <div className='splash-discover'>
               <h6 className='splash-discover-title'>Discover</h6>
               <a className='splash-discover-link' href="https://github.com/amandac3600">Github</a>
+              <br />
+              <div className='splash-discover-link-2'>
+                <a className='splash-discover-link' href="mailto:amandac3600@gmail.com?subject=Let's talk about a job!">Email</a>
+              </div>
             </div>
           </div>
         

@@ -3,14 +3,14 @@
   margin-left: 20px;
 }
 
-.create-review-title {
+.create-review-title, .update-review-title {
   font-size: 28px;
   font-weight: 700;
   color: rgba(45,46,47,1);
   text-decoration: none;
 }
 
-.create-form-rating-container {
+.create-form-rating-container, .update-form-rating-container {
   width: 625px;
   height: 350px;
   border: 1px solid #c8c9ca;
@@ -18,7 +18,7 @@
   margin-top: 30px;
 }
 
-.create-form-rating-container-2 {
+.create-form-rating-container-2, .update-form-rating-container-2 {
   margin-left: 20px;
   margin-top: 15px;
 }
@@ -30,7 +30,7 @@
 //       appearance:none;
 // }
 
-#create-form-rating {
+#create-form-rating, #update-form-rating {
   margin-top: 10px;
   margin-left: 55px;
   -webkit-appearance: none;
@@ -43,27 +43,27 @@
   background-image: url(star-ratings.png);
 }
 
-.create-form-rating-5 {
+.create-form-rating-5, .update-form-rating-5 {
   background-position: 0px -288px;
 }
 
-.create-form-rating-4 {
+.create-form-rating-4, .update-form-rating-4 {
   background-position: 0px -256px;
 }
 
-.create-form-rating-3 {
+.create-form-rating-3, .update-form-rating-3 {
   background-position: 0px -192px;
 }
 
-.create-form-rating-2 {
+.create-form-rating-2, .update-form-rating-2 {
   background-position: 0px -128px;
 }
 
-.create-form-rating-1 {
+.create-form-rating-1, .update-form-rating-1 {
   background-position: 0px -64px;
 }
 
-.create-review-body {
+.create-review-body, .update-review-body {
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   cursor: text;
   width: 580px;
@@ -71,7 +71,7 @@
   // border: 1px solid #ebebeb;
 }
 
-.create-review-submit {
+.create-review-submit, .update-review-submit {
   width: 200px;
   height: 40px;
   border: none;
@@ -132,11 +132,37 @@
   margin-left: 5px;
 }
 
-.ellipsis {
+.review-dropdown {
   position: absolute;
+  display: inline-block;
+  margin-left: 650px;
+}
+
+.ellipsis {
   font-size: 24px;
-  margin-left: 640px;
   margin-top: 15px;
+  color: #333;
+  border: none;
+}
+
+.review-dropdown-links {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.review-dropdown-links .review-dropdown-link {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.review-dropdown:hover, .review-dropdown-links:hover {
+  display: block;
 }
 
 #review-item-rating {
