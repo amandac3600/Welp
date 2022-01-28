@@ -9,6 +9,7 @@ export default class ReviewIndex extends React.Component {
 
   render() {
     if (!this.props.reviews) return null
+    console.log(this.props.reviews)
     return (
       <div>
         {this.props.reviews.map(review => <ReviewIndexItem key={review.id} review={review} business={this.props.business} users={this.props.users} deleteReview={this.props.deleteReview}/>)}
