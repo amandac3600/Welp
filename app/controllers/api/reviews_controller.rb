@@ -7,8 +7,6 @@ class Api::ReviewsController < ApplicationController
   end
 
   def show
-    puts "==============================="
-    p params
     @review = Review.find(params[:id])
     render :show
   end

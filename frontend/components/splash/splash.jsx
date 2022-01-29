@@ -34,13 +34,22 @@ export default class Splash extends React.Component {
         <ul className='splash-hot-new-list'>
           <Link to='' className='splash-hot-new-item'>
             <div className='hot-new-pic-1'></div>
-            <p></p>
+            <div className='hot-new-pic-info'>
+              <p>Milk Jar Cookies</p>
+            </div>
+            
           </Link>
           <Link to='' className='splash-hot-new-item'>
             <div className='hot-new-pic-2'></div>
+            <div className='hot-new-pic-info'>
+              <p>Woodcat Coffee Bar</p>
+            </div>
           </Link>
           <Link to='' className='splash-hot-new-item'>
             <div className='hot-new-pic-3'></div>
+            <div className='hot-new-pic-info'>
+              <p>Milk Jar Cookies</p>
+            </div>
           </Link>
         </ul>
         <p className='block-3'></p>

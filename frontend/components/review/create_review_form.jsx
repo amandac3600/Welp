@@ -23,7 +23,6 @@ export default class CreateReviewForm extends React.Component {
   }
 
   handleSubmit(e) {
-    let length = this.props.business.reviews.length;
     e.preventDefault();
     const review = Object.assign({}, this.state);
     this.props.createReview(review, this.props.business.id).then(() => this.props.history.push(`/businesses/${this.props.business.id}`))

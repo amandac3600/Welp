@@ -22,7 +22,7 @@
   cursor: pointer;
   display: flex;
   position: absolute;
-  margin-left: 41%;
+  margin-left: 42%;
   vertical-align: baseline;
   padding: 12px 0;
   margin-top: 40px;
@@ -137,6 +137,7 @@
 }
 
 .splash-hot-new-item {
+  display: block;
   height: 174px;
   width: 250px;
   height: 250px;
@@ -145,8 +146,9 @@
   border-radius: 3px;
   margin: 10px;
   z-index: 999;
-  text-align: center;
+  text-align: left;
   padding-top: 10px;
+  text-decoration: none;
 }
 
 .splash-hot-new-item:hover {
@@ -226,7 +228,11 @@
   margin-top: -10px;
   width: 250px;
   height: 180px;
-  background-image: url(MilkJar);
-  background-position: -20px;
+  background-image: url(masa);
+  background-position: -10px -160px;
 }
 
+.hot-new-pic-info {
+  padding: 10px;
+  margin-top: 5px;
+}

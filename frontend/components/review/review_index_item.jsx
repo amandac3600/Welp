@@ -28,12 +28,14 @@ export default class ReviewIndexItem extends React.Component {
   }
 
   hidden() {
-    if (this.props.review.user_id !== this.props.currentUser.id) {
+    if (!this.props.currentUser || this.props.review.user_id !== this.props.currentUser.id) {
       return "edit-hidden"
     }
   }
 
   render () {
+    if (!this.props.business) return null;
+    if (!this.props.review) return null;
     return (
       <div className='review-index-item'>
         <div className='review-item-profile'>
