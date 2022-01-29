@@ -7,6 +7,8 @@ class Api::ReviewsController < ApplicationController
   end
 
   def show
+    puts "==============================="
+    p params
     @review = Review.find(params[:id])
     render :show
   end
@@ -42,6 +44,6 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:rating, :body, :business_id, :user_id)
+    params.require(:review).permit(:id, :rating, :body, :business_id, :user_id)
   end
 end

@@ -6,7 +6,6 @@ export default class ReviewIndexItem extends React.Component {
   starRating () {
     if (!this.props.review) return null;
     let rating = this.props.review.rating
-    console.log(rating)
     if (rating >= 4.75) {
       return "review-item-rating-5"
     } else if (rating >= 4.25) {
@@ -28,19 +27,24 @@ export default class ReviewIndexItem extends React.Component {
     } 
   }
 
+  hidden() {
+    if (this.props.review.user_id !== this.props.currentUser.id) {
+      return "edit-hidden"
+    }
+  }
+
   render () {
     return (
       <div className='review-index-item'>
         <div className='review-item-profile'>
           <h2 className='review-item-pic'></h2>
           <h2 className='review-item-profile-name'>{this.props.review.author_first_name} {this.props.review.author_last_name}</h2>
-          <div className='review-dropdown'>
-            <div className='ellipsis'><AiOutlineEllipsis/></div>
-            <div className='review-dropdown-links'>
-              <Link className='review-dropdown-link' to={`/businesses/${this.props.business.id}/reviews/${this.props.review.id}/edit`}>Edit Review</Link>
+            <div id={this.hidden()} className='ellipsis'><AiOutlineEllipsis/>
+              <div className='review-dropdown-links'>
+                <Link className='review-dropdown-link' to={`/businesses/${this.props.business.id}/reviews/${this.props.review.id}/edit`}>Edit review</Link>
+                <button onClick={this.props.deleteReview} className='review-dropdown-link'>Remove review</button>
+              </div>
             </div>
-          </div>
-          
         </div>
         <h2 id="review-item-rating" className={`${this.starRating()}`}></h2>
         <p className='review-item-body'>{this.props.review.body}</p>

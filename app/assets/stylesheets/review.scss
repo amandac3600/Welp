@@ -1,4 +1,4 @@
-.create-review-form {
+.create-review-form, .update-review-form {
   margin-top: 30px;
   margin-left: 20px;
 }
@@ -132,37 +132,62 @@
   margin-left: 5px;
 }
 
-.review-dropdown {
-  position: absolute;
-  display: inline-block;
-  margin-left: 650px;
+#edit-hidden {
+  visibility: hidden;
 }
 
 .ellipsis {
+  position: absolute;
+  display: inline-block;
+  margin-left: 650px;
   font-size: 24px;
   margin-top: 15px;
-  color: #333;
+  color: rgb(45, 46, 47);
   border: none;
+}
+
+.ellipsis:hover {
+  background-color: rgb(226, 226, 230);
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
 }
 
 .review-dropdown-links {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
-  width: 100px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  width: 120px;
+  background-color: white;
+  box-shadow: 0 0 18px #00000026;
   z-index: 1000;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 10px;
 }
 
 .review-dropdown-links .review-dropdown-link {
   color: black;
-  padding: 12px 16px;
+  padding: 5px 5px;
   text-decoration: none;
+  border: none;
   display: block;
+  background-color: white;
+  text-align: left;
 }
 
-.review-dropdown:hover, .review-dropdown-links:hover {
+.review-dropdown-links .review-dropdown-link:nth-child(2) {
+  width: 120px;
+}
+
+.ellipsis:hover .review-dropdown-links {
+  padding: 10px;
   display: block;
+  margin-top: -2px;
+  right: 1px;
+}
+
+.review-dropdown-link:hover {
+  background-color: rgb(226, 226, 230);
 }
 
 #review-item-rating {
