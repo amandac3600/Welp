@@ -21,7 +21,6 @@ export default class UpdateReviewForm extends React.Component {
 
   componentDidMount() {
     // this.props.fetchReviews()
-    console.log(this.props.match.params.reviewId)
     this.props.fetchReview(this.props.match.params.businessId, this.props.match.params.reviewId).then((e)=> this.reviewState());
     this.props.fetchBusiness(this.props.match.params.businessId);
   };
@@ -64,8 +63,6 @@ export default class UpdateReviewForm extends React.Component {
       let error = document.getElementById('errors');
       error.classList.add('review-errors')
     }
-    console.log(this.state.rating)
-    console.log(this.state.body)
     return (
       <div>
         <div className="red-nav">

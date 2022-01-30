@@ -48,7 +48,6 @@ class BusinessShow extends React.Component {
     if (!this.props.business) return null;
     if (!this.props.business.photo_urls) return null;
     if (!this.props.business.reviews) return null;
-    console.log(this.props.business.photo_urls)
     return (
       <div className="business-show">
         <div className="red-nav">

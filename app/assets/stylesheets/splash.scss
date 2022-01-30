@@ -5,7 +5,7 @@
   opacity: 0.80;
   z-index: -1000;
   width: 100vw;
-  min-width: 800px;
+  min-width: 830px;
   height: auto;
   filter: brightness(70%);
 }
@@ -21,8 +21,9 @@
 .splash-logo {
   cursor: pointer;
   display: flex;
-  position: absolute;
-  margin-left: 42%;
+  position: relative;
+  justify-content: center;
+  // margin-left: 43%;
   vertical-align: baseline;
   padding: 12px 0;
   margin-top: 40px;
@@ -60,14 +61,14 @@
   font-weight: 700;
   color: #d32323;
   justify-content: center;
-  margin-top: 520px;
+  margin-top: 320px;
   z-index: 999;
 }
 
 .block {
   display: flex;
   position: absolute;
-  margin-top: 475px;
+  margin-top: 275px;
   width: 100vw;
   height: 330px;
   z-index: 996;

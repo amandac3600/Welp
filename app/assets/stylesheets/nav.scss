@@ -62,11 +62,28 @@ button {
   z-index: 1000;
 }
 
+.red-nav-user-logout {
+  display: flex;
+  margin-top: 10px;
+  font-size: 14px;
+  z-index: 1000;
+}
+
 .nav-user-welcome {
   font-size: 14px;
   font-weight: 600;
   color: white;
   margin-top: 10px;
+  white-space: nowrap;
+}
+
+.red-nav-user-welcome {
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #d32323;
+  margin-top: 15px;
   white-space: nowrap;
 }
 
@@ -141,20 +158,39 @@ button {
   padding: 7px 15px 7px 15px;
 }
 
+.red-nav, .red-nav-user {
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 10px;
+}
+
+.red-nav-login {
+  color: #2D2E2F;
+  font-size: 14px;
+  font-weight: 700;
+  background: none;
+  text-decoration: none;
+  padding: 7px 15px 7px 15px;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.red-nav-login:hover {
+  background-color: rgba(0,0,0,0.12);
+  color: rgba(45,46,47,1);
+}
+
 .nav-login:hover, .nav-businesses:hover, .nav-user-button:hover, .splash-businesses:hover { 
   padding: 7px 15px 5px 15px;
   border-bottom: 2px solid white;
 }
 
-.nav-login:active, .nav-businesses:active, .nav-user-button:active, .splash-businesses:active, .red-nav-user-button:active {
+.nav-login:active, .nav-businesses:active, .nav-user-button:active, .splash-businesses:active {
   color: #999;
   border-bottom: 2px solid transparent;
 }
 
 .red-nav-user-button:hover {
-  margin-bottom: 5px;
-  padding: 7px 15px 0px 15px;
-  border-bottom: 2px solid white;
+  box-shadow: 0 1px 4px 0 rgba(27, 27, 27, 0.3);
 }
 
 .nav-signup {
@@ -168,6 +204,34 @@ button {
   text-decoration: none;
 }
 
+.red-nav-signup {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #E00707;
+  border-radius: 4px;
+  padding: 8px 15px 8px 15px;  //top right bottom left
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.red-nav-user-button {
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #E00707;
+  border-radius: 4px;
+  padding: -5px 10px; 
+  margin-bottom: 8px;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+.red-nav-signup:hover {
+  box-shadow: 0 1px 4px 0 rgba(27, 27, 27, 0.3);
+}
+
 .nav-signup:hover {
   background: #fff;
   color: #666;
@@ -179,19 +243,20 @@ button {
   color: #999;
 }
 
-.red-nav {
-  display: block;
+.red-nav, .red-nav-user{
+  display: flex;
   height: 55px;
   width: 100%;
-  background-color: #d23232;
   top: 0;
   min-width: 1100px;
 }
 
 .bus-nav-bar {
-  margin-left: 10%;
+  margin-left: 3%;
   padding-top: 12px;
   white-space: nowrap;
+  margin-top: 5px;
+  margin-right: 20px;
 }
 
 .bus-nav-bar-link {
@@ -199,53 +264,19 @@ button {
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
-  color: white;
+  color: black;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   margin-top: 20px;
 }
 
 .bus-nav-bar-logo {
-  filter: drop-shadow(1px 0 0 white) 
-  drop-shadow(0 1px 0 white)
-  drop-shadow(-0.5px 0 0 white) 
-  drop-shadow(0 -0.5px 0 white);
   margin-top: 15px;
 }
 
 .bus-nav-login-signup {
-  margin-left: 70%;
-  margin-top: -18px;
-}
-
-.red-nav-user {
-  display: flex;
-  height: 55px;
-  width: 100%;
-  background-color: #d23232;
-  top: 0;
-}
-
-.red-nav-user-logout {
-  margin-left: 55%;
-  display: flex;
-}
-
-.red-nav-user-welcome {
-   font-size: 14px;
-  font-weight: 600;
-  color: white;
-  margin-top: 21px;
+  margin-left: 5%;
+  margin-top: 22px;
   white-space: nowrap;
 }
 
-.red-nav-user-button {
-  color: white;
-  border: hidden;
-  font-size: 14px;
-  font-weight: 700;
-  background: none;
-  text-decoration: none;
-  padding: 7px 15px 8px 15px;
-  white-space: nowrap;
-  margin-top: 2px;
-}
+
