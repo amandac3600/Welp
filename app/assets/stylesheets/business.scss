@@ -368,6 +368,7 @@
   display: flex;
   position: relative;
   height: 420px;
+  min-width: 1100px;
   // flex-wrap: wrap;
 }
 
@@ -558,6 +559,7 @@
 .show-block-3 {
   display: flex;
   position: absolute;
+  min-width: 1100px;
   width: 100vw;
   height: 200px;
   z-index: 997;
