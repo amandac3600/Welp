@@ -513,6 +513,7 @@
 }
 
 .business-show-map {
+  cursor: pointer;
   width: 290px;
   height: 150px;
   margin-bottom: 20px;
@@ -525,6 +526,8 @@
 
 .business-show-address-address {
   color: rgba(2,122,151,1);
+  cursor: pointer;
+  margin-bottom: 3px;
 }
 
 .business-show-address-city {

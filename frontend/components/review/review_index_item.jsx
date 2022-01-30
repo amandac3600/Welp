@@ -44,7 +44,7 @@ export default class ReviewIndexItem extends React.Component {
             <div id={this.hidden()} className='ellipsis'><AiOutlineEllipsis/>
               <div className='review-dropdown-links'>
                 <Link className='review-dropdown-link' to={`/businesses/${this.props.business.id}/reviews/${this.props.review.id}/edit`}>Edit review</Link>
-                <button onClick={this.props.deleteReview} className='review-dropdown-link'>Remove review</button>
+                <button onClick={() => this.props.deleteReview(this.props.review)} className='review-dropdown-link'>Remove review</button>
               </div>
             </div>
         </div>
