@@ -7,3 +7,4 @@ json.reviews @business.reviews.map { |review| review }
 
 
 
+

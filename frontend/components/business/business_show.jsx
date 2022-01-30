@@ -48,13 +48,14 @@ class BusinessShow extends React.Component {
     if (!this.props.business) return null;
     if (!this.props.business.photo_urls) return null;
     if (!this.props.business.reviews) return null;
+    console.log(this.props.business.photo_urls)
     return (
       <div className="business-show">
         <div className="red-nav">
           <NavContainer/>
         </div>
         <div className="business-show-photos">
-          {this.props.business.photo_urls.map((photo_url, idx) => <img key={idx} className="business-show-photo" src={photo_url} alt="" />)}
+          {this.props.business.photo_urls.slice(0, 2).map((photo_url, idx) => <img key={idx} className="business-show-photo" src={photo_url} alt="" />)}
         
           <div className="business-show-info">
             <h1 className="business-show-title">{this.props.business.name}</h1>
@@ -85,7 +86,7 @@ class BusinessShow extends React.Component {
             <div className="business-show-location-hours">
               <div className="business-show-map-container">
                 <div className="business-show-map">
-                  <p>Map Here</p>
+                  <img src={this.props.business.photo_urls[this.props.business.photo_urls.length - 1]} alt="" />
                 </div>
                 <div className="business-show-address">
                   <p className="business-show-address-address">{this.props.business.address}</p>

@@ -11,8 +11,20 @@ class BusinessIndex extends React.Component {
   render () {
     if (!this.props.businesses) return null;
     return (
-      <div>
+      <div className="business-index">
         <NavContainer/>
+
+        <aside className="business-index-sidebar">
+          <p className="business-index-filters-title">Filters</p>
+          <div className="price-filter">
+            <button className="price-filter-item">$</button>
+            <button className="price-filter-item">$$</button>
+            <button className="price-filter-item">$$$</button>
+            <button className="price-filter-item">$$$$</button>
+          </div>
+        </aside>
+        
+        <p className="all-results">All Results</p>
         
         <ol className="business-index-list">
           {this.props.businesses.map((business, idx) => 

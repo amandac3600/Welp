@@ -32,7 +32,7 @@
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   color: black;
   margin-top: 46px;
   font-size: 46px;
@@ -235,4 +235,14 @@
 .hot-new-pic-info {
   padding: 10px;
   margin-top: 5px;
+}
+
+.hot-new-info-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0073bb;
+}
+
+.hot-new-info-title:hover {
+  text-decoration: underline;
 }

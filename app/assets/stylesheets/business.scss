@@ -6,8 +6,82 @@
   visibility: hidden;
 }
 
+.business-index-sidebar {
+  width: 200px;
+}
+
+.business-index-filters-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2D2E2F;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.price-filter {
+  display: flex;
+  margin-left: 30px;
+  margin-top: 20px;
+  padding-right: 20px;
+  margin-right: -19px;
+}
+
+.price-filter-item {
+  font-size: 10px;
+  font-weight: 500;
+  background-color: white;
+  border: none;
+  border: 1px solid rgba(200, 201, 202, 1);
+}
+
+.price-filter-item:first-child {
+  border-radius: 15px 0 0 15px;
+  padding: 7px 20px;
+}
+
+.price-filter-item:first-child:hover {
+  background-color: rgb(226,226,230);
+}
+
+.price-filter-item:nth-child(2) {
+  border-left: none;
+  padding: 7px 17px;
+}
+
+.price-filter-item:nth-child(2):hover {
+  background-color: rgb(226,226,230);
+}
+
+.price-filter-item:nth-child(3) {
+  border-left: none;
+  padding: 7px 14px;
+}
+
+.price-filter-item:nth-child(3):hover {
+  background-color: rgb(226,226,230);
+}
+
+.price-filter-item:nth-child(4) {
+  border-left: none;
+  border-radius: 0 15px 15px 0;
+  padding: 7px 11px;
+}
+
+.price-filter-item:nth-child(4):hover {
+  background-color: rgb(226,226,230);
+}
+
+.all-results {
+  margin-left: 260px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2D2E2F;
+  margin-top: -60px;
+}
+
 .business-index-list {
-  list-style: upper-alpha;
+  margin-left: 220px;
+  margin-top: -20px;
 }
 
 .business-index-photo {
@@ -434,13 +508,13 @@
 .business-show-map-container {
   width: 290px;
   height: 200px;
-  border: 1px solid #999;
+  margin-top: -5px;
 }
 
 .business-show-map {
   width: 290px;
   height: 150px;
-  border: 1px solid #999;
+  margin-bottom: 20px;
 }
 
 .business-show-address {
@@ -461,7 +535,7 @@
   font-weight: 500;
   color: rgba(45,46,47,1);
   margin-left: 80px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .business-show-hours-item {
