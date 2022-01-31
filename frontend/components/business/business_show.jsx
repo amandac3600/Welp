@@ -80,6 +80,15 @@ class BusinessShow extends React.Component {
           </div>
           <p className="business-show-divider"></p>
 
+          <div className="show-website-container">
+            <h2 className="show-website">{this.props.business.website}</h2>
+            <h2 className="show-phone-number">{this.props.business.phone_number}</h2>
+            <div className="show-address-container">
+              <h2 className="show-address-label">Get Directions</h2>
+              <h2 className="show-address">{this.props.business.address} {this.props.business.city}, CA</h2>
+              <h2 className="show-zip">{this.props.business.zip_code}</h2>
+            </div>
+          </div>
           <div className="show-details-website-container">
               <div className="business-show-more-details">
               <h2 className="business-show-location-title">Location &amp; Hours</h2>
@@ -123,15 +132,7 @@ class BusinessShow extends React.Component {
                     <p>{this.props.business.open} - {this.props.business.close}</p>
                   </div>
                 </div>
-                <div className="show-website-container">
-                  <h2 className="show-website">{this.props.business.website}</h2>
-                  <h2 className="show-phone-number">{this.props.business.phone_number}</h2>
-                  <div className="show-address-container">
-                    <h2 className="show-address-label">Get Directions</h2>
-                    <h2 className="show-address">{this.props.business.address} {this.props.business.city}, CA</h2>
-                    <h2 className="show-zip">{this.props.business.zip_code}</h2>
-                  </div>
-                </div>
+  
               </div>
               <h2 className="business-show-reviews-title">Recommended Reviews</h2>
                 <div className="business-show-reviews">

@@ -2,6 +2,7 @@ import React from "react";
 import BusinessIndexItem from "./business_index_item";
 import NavContainer from "../nav/nav_container";
 import { Link } from "react-router-dom";
+import BusinessMap from "./business_map";
 
 class BusinessIndex extends React.Component {
   componentDidMount() {
@@ -13,7 +14,6 @@ class BusinessIndex extends React.Component {
     return (
       <div className="business-index">
         <NavContainer/>
-
         <aside className="business-index-sidebar">
           <p className="business-index-filters-title">Filters</p>
           <div className="price-filter">
@@ -33,9 +33,7 @@ class BusinessIndex extends React.Component {
             </li>)}
           </ol>
           <div className="index-map-container">
-            <div className="index-map">
-
-            </div>
+            <BusinessMap businesses={this.props.businesses}/>
           </div>
         </div>
         

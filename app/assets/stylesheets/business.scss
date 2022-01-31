@@ -439,12 +439,13 @@
 
 .show-website-container {
   display: block;
-  position: absolute;
+  position: sticky;
   width: 300px;
   border: 1px solid #ebebeb;
   border-radius: 4px;
-  margin-left: 700px;
-  margin-top: -140px;
+  margin-left: 750px;
+  margin-top: -60px;
+  top: 100px;
   z-index: 999;
   padding: 15px;
 }
@@ -497,6 +498,7 @@
 
 .business-show-more-details {
   margin-left: 45px;
+  margin-top: -150px;
 }
 
 .business-show-location-hours {
@@ -597,11 +599,11 @@
 
 .index-map-container {
   position: sticky;
-  top: 50px;
+  top: 77px;
   min-width: 300px;
   width: 100%;
   height: 100vh;
-  border: 1px solid #333;
+  border: 1px solid #999;
 }
 
 .show-body {
