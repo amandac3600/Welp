@@ -12,7 +12,7 @@ export default class MarkerManager {
       }
     })
   }
-
+   
   createMarkerFromBusiness(business) {
     const latLng = { lat: parseFloat(business.lat), lng: parseFloat(business.lng) }
     // console.log(parseFloat(business.lat))
@@ -29,8 +29,9 @@ export default class MarkerManager {
       content: content,
     });
 
+    
     marker.addListener('mouseover', function () {
-      
+
       infowindow.open(this.map, marker);
     });
 
