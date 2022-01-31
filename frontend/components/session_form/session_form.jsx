@@ -55,7 +55,7 @@ export default class SessionForm extends React.Component {
       <div className='login-signup-form'>
         <header className='form-header'>
             <Link className="form-header-link" to="/">welp</Link>
-            <Link className='logo' to="/"><img src={logo} width='35' height='25'/></Link>
+            <Link className='logo' to="/"><img src={window.logo} width='35' height='25'/></Link>
         </header>
         <form className="form" onSubmit={this.handleSubmit}>
           <h2 className="login-signup-title">Log in to Welp</h2>
@@ -103,7 +103,7 @@ export default class SessionForm extends React.Component {
         <div className='login-signup-form'>
           <header className='form-header'>
             <Link className="form-header-link" to="/">welp</Link>
-            <Link className='logo' to="/"><img src={logo} width='35' height='25'/></Link>
+            <Link className='logo' to="/"><img src={window.logo} width='35' height='25'/></Link>
           </header>
           <form className="form" onSubmit={this.handleSubmit}>
             <h2 className="login-signup-title">Sign Up for Welp</h2>
