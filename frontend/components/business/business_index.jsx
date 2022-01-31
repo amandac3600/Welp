@@ -23,15 +23,22 @@ class BusinessIndex extends React.Component {
             <button className="price-filter-item">$$$$</button>
           </div>
         </aside>
-        
         <p className="all-results">All Results</p>
+
+        <div className="index-body">
+          <ol className="business-index-list">
+            {this.props.businesses.map((business, idx) => 
+            <li key={idx}>
+              <BusinessIndexItem idx={idx} business={business} fetchBusiness={this.props.fetchBusiness}/>
+            </li>)}
+          </ol>
+          <div className="index-map-container">
+            <div className="index-map">
+
+            </div>
+          </div>
+        </div>
         
-        <ol className="business-index-list">
-          {this.props.businesses.map((business, idx) => 
-          <li key={idx}>
-            <BusinessIndexItem idx={idx} business={business} fetchBusiness={this.props.fetchBusiness}/>
-          </li>)}
-        </ol>
         <p className='show-block-3'></p>
         <div className='show-about-discover'>
           <div className='splash-about'>

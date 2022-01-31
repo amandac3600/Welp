@@ -30,7 +30,7 @@ class Nav extends React.Component {
           <Link className='bus-nav-bar-logo' to="/"><img src={window.logo} width='40' height='25' /></Link>
         </div>
         <div className='red-nav-search'>
-          {/* <SearchBar/> */}
+          <SearchBar/>
         </div>
         <div className="bus-nav-login-signup">
           <Link className="red-nav-login" to='/login'>Log In</Link>
@@ -44,7 +44,7 @@ class Nav extends React.Component {
           <Link className='bus-nav-bar-logo' to="/"><img src={window.logo} width='40' height='25' /></Link>
         </div>
         <div className='red-nav-search'>
-          {/* <SearchBar/> */}
+          <SearchBar/>
         </div>
         <div className='red-nav-user-logout'>
           <h1 className='red-nav-user-welcome'>Welcome, {this.props.currentUser.first_name}!</h1>

@@ -21,20 +21,32 @@ export default class Splash extends React.Component {
             <Link className="splash-logo-link" to="/">welp</Link>
             <Link className='logo-2' to="/"><img src={window.logo} width='70' height='50'/></Link>
         </header>
-        {/* <SearchBar/>   */}
+        <SearchBar/>  
         <p className='block'></p>
         <h4 className='splash-best-bus'>Find the Best Restaurants In Town</h4>
-        <ul className='splash-best-bus-list'>
-          <li className='splash-best-bus-item'>Chinese</li>
-          <li className='splash-best-bus-item'>Korean</li>
-          <li className='splash-best-bus-item'>Mexican</li>
-          <li className='splash-best-bus-item'>Italian</li>
-        </ul>
+        <div className='splash-best-bus-list'>
+          <Link to='' className='splash-best-bus-item-1'>
+            <div id='splash-best-bus-item-1-pic'></div>
+            <p className='splash-best-bus-item-1-label'>Chinese</p>
+          </Link>
+          <Link to='' className='splash-best-bus-item-2'>
+            <div id='splash-best-bus-item-2-pic'></div>
+            <p className='splash-best-bus-item-2-label'>Korean</p>
+          </Link>
+          <Link to='' className='splash-best-bus-item-3'>
+            <div id='splash-best-bus-item-3-pic'></div>
+            <p className='splash-best-bus-item-3-label'>Mexican</p>
+          </Link>
+          <Link to='' className='splash-best-bus-item-4'>
+            <div id='splash-best-bus-item-4-pic'></div>
+            <p className='splash-best-bus-item-4-label'>Italian</p>
+          </Link>
+        </div>
         <p className='block-2'></p>
         <h4 className='splash-welp-la'>Welp Los Angeles</h4>
         <h5 className='splash-hot-new'>Hot &amp; New Businesses</h5>
         <ul className='splash-hot-new-list'>
-          <Link to='' className='splash-hot-new-item'>
+          <Link to='/businesses/25' className='splash-hot-new-item'>
             <div className='hot-new-pic-1'></div>
             <div className='hot-new-pic-info'>
               <p className='hot-new-info-title'>Milk Jar Cookies</p>
@@ -42,14 +54,14 @@ export default class Splash extends React.Component {
             </div>
             
           </Link>
-          <Link to='' className='splash-hot-new-item'>
+          <Link to='/businesses/18' className='splash-hot-new-item'>
             <div className='hot-new-pic-2'></div>
             <div className='hot-new-pic-info'>
               <p className='hot-new-info-title'>Woodcat Coffee Bar</p>
               <p className='hot-new-info-rating'></p>
             </div>
           </Link>
-          <Link to='' className='splash-hot-new-item'>
+          <Link to='/businesses/10' className='splash-hot-new-item'>
             <div className='hot-new-pic-3'></div>
             <div className='hot-new-pic-info'>
               <p className='hot-new-info-title'>Masa of Echo Park</p>
