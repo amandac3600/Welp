@@ -9,13 +9,17 @@
 # "arn:aws:iam::268911112477:user/welp-master"
 require "open-uri"
 
+Review.destroy_all
 User.destroy_all
+Business.destroy_all
+
+
 user1 = User.create!(first_name: 'Michael', last_name: 'Scott', email: 'mscott@mail.com', password: 'michael')
 user2 = User.create!(first_name: 'Dwight', last_name: 'Schrute', email: 'dschrute@mail.com', password: 'dwight')
 user3 = User.create!(first_name: 'Jim', last_name: 'Halpert', email: 'jhalpert@mail.com', password: 'jimhalpert')
 user4 = User.create!(first_name: 'Demo', last_name: 'User', email: 'demo@user.com', password: 'demouser')
 
-Business.destroy_all
+
 business1 = Business.create!(name: "MILK+T", lat: 34.04902647130193, lng: -118.24157912402251, address: "310 E 2nd St", city: "Los Angeles", state: "CA", zip_code: "90012", phone_number: "(323) 884-1164", website: "http://www.milkandt.com", open: "12:00PM", close: "10:00PM", category: "Bubble Tea", price: "$")
 business1.photos.attach(io: open('https://welp-dev-bkt.s3.us-west-1.amazonaws.com/MILK%2BT.jpg'), filename: 'MILK+T.jpg')
 business1.photos.attach(io: open('https://welp-dev-bkt.s3.us-west-1.amazonaws.com/MILK%2BT2.jpg'), filename: 'MILK+T2.jpg')
@@ -167,7 +171,7 @@ business25.photos.attach(io: open('https://welp-dev-bkt.s3.us-west-1.amazonaws.c
 business25.photos.attach(io: open('https://welp-dev-bkt.s3.us-west-1.amazonaws.com/milkjarmap.png'), filename: 'milkjarmap.png')
 
 
-Review.destroy_all
+
 review1 = Review.create!(rating: 5, body: "The staff was so kind. The bubble tea without the glass bottle was on the expensive side but I'm from NY so LA prices always seem a little higher than I'm used to. Still great quality.", user_id: user1.id, business_id: business1.id)
 review2 = Review.create!(rating: 5, body: "The shop is super vibey and cute and perfect for a date or your afternoon pick-me-up. Can't wait to try the other drinks!", user_id: user2.id, business_id: business2.id)
 review3 = Review.create!(rating: 4, body: "The food is amazing. Service is straight forward. It is a little pricey for what you get but the food is worth it for the experience.", user_id: user3.id, business_id: business3.id)
