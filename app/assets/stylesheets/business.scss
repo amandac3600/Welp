@@ -75,7 +75,7 @@
 }
 
 .all-results {
-  margin-left: 260px;
+  margin-left: 250px;
   font-size: 16px;
   font-weight: 700;
   color: #2D2E2F;
@@ -595,6 +595,7 @@
   display: flex;
   position: sticky;
   margin-top: 10px;
+  margin-left: -10px;
 }
 
 .index-map-container {
@@ -603,7 +604,6 @@
   min-width: 300px;
   width: 100%;
   height: 100vh;
-  border: 1px solid #999;
 }
 
 .show-body {
