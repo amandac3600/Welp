@@ -13,7 +13,7 @@ export default class Splash extends React.Component {
   render () {
     return (
       <div>
-        <img src={bg} className='bg' />
+        <img src={window.bg} className='bg' />
         <div className='splash-nav'>
           <NavContainer/>
         </div>
