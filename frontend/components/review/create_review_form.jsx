@@ -46,6 +46,7 @@ export default class CreateReviewForm extends React.Component {
       error.classList.add('review-errors')
     }
     if (!this.props.business) return null;
+    console.log(this.props)
     return (
       <div>
         <div className="red-nav">
@@ -55,8 +56,9 @@ export default class CreateReviewForm extends React.Component {
           <Link className="create-review-title" to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
           <div className="create-form-rating-container">
             <div className="create-form-rating-container-2">
-              <input id="radio1" type="radio" value="1" name="rating" onChange={this.handleChange("rating")} />
-              <label htmlFor="radio1" id="create-form-rating" className="create-form-rating-1"></label>
+              <label htmlFor="radio1" id="create-form-rating" className="create-form-rating-1">
+                <input id="radio1" type="radio" value="1" name="rating" onChange={this.handleChange("rating")} />
+              </label>
 
               <input id="radio2" type="radio" value="2" name="rating" onChange={this.handleChange("rating")} />
               <label htmlFor="radio2" id="create-form-rating" className="create-form-rating-2"></label>

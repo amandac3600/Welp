@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 import BusinessMap from "../business/business_map";
 
 class SearchResultIndex extends React.Component {
+  componentDidMount() {
+    this.props.searchBusinesses(this.props.match.params.query)
+  }
+
   render() {
     if (!this.props.businesses) return null;
     return (
