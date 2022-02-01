@@ -81,10 +81,14 @@ class BusinessShow extends React.Component {
           <p className="business-show-divider"></p>
 
           <div className="show-website-container">
-            <h2 className="show-website">{this.props.business.website}</h2>
+            <div className="show-website">
+              <a className="show-website-link" href={`${this.props.business.website}`} target="_blank" rel="noopener noreferrer">{this.props.business.website}</a>
+            </div>
             <h2 className="show-phone-number">{this.props.business.phone_number}</h2>
             <div className="show-address-container">
-              <h2 className="show-address-label">Get Directions</h2>
+              <div className="show-address-label">
+                <a className="show-address-link" href={`https://maps.google.com/?q=${this.props.business.lat},${this.props.business.lng}`} target="_blank" rel="noopener noreferrer">Get Directions</a>
+              </div>
               <h2 className="show-address">{this.props.business.address} {this.props.business.city}, CA</h2>
               <h2 className="show-zip">{this.props.business.zip_code}</h2>
             </div>
@@ -98,7 +102,9 @@ class BusinessShow extends React.Component {
                     <img src={this.props.business.photo_urls[this.props.business.photo_urls.length - 1]} alt="" />
                   </div>
                   <div className="business-show-address">
-                    <p className="business-show-address-address">{this.props.business.address}</p>
+                    <div className="business-show-address-address">
+                      <a className="business-show-address-address-link" href={`https://maps.google.com/?q=${this.props.business.lat},${this.props.business.lng}`} target="_blank" rel="noopener noreferrer">{this.props.business.address}</a>
+                    </div>
                     <p className="business-show-address-city">{this.props.business.city}, CA {this.props.business.zip_code}</p>
                   </div>
                 </div>

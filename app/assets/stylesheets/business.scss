@@ -457,6 +457,11 @@
   border-bottom: 1px solid #ebebeb;
 }
 
+.show-website-link, .show-address-link, .show-website-link:visited, .show-address-link:visited, .business-show-address-address-link, .business-show-address-address-link:visited {
+  color: rgba(2,122,151,1);
+  text-decoration: none;
+}
+
 .show-website:hover, .show-address-label:hover, .business-show-address-address:hover {
   text-decoration: underline;
 }

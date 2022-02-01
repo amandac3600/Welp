@@ -31,19 +31,19 @@ export default class Splash extends React.Component {
         <p className='block'></p>
         <h4 className='splash-best-bus'>Find the Best Restaurants In Town</h4>
         <div className='splash-best-bus-list'>
-          <Link to='' className='splash-best-bus-item-1'>
+          <Link to='/businesses' className='splash-best-bus-item-1'>
             <div id='splash-best-bus-item-1-pic'></div>
             <p className='splash-best-bus-item-1-label'>Chinese</p>
           </Link>
-          <Link to='' className='splash-best-bus-item-2'>
+          <Link to='/businesses' className='splash-best-bus-item-2'>
             <div id='splash-best-bus-item-2-pic'></div>
             <p className='splash-best-bus-item-2-label'>Korean</p>
           </Link>
-          <Link to='' className='splash-best-bus-item-3'>
+          <Link to='/businesses' className='splash-best-bus-item-3'>
             <div id='splash-best-bus-item-3-pic'></div>
             <p className='splash-best-bus-item-3-label'>Mexican</p>
           </Link>
-          <Link to='' className='splash-best-bus-item-4'>
+          <Link to='/businesses' className='splash-best-bus-item-4'>
             <div id='splash-best-bus-item-4-pic'></div>
             <p className='splash-best-bus-item-4-label'>Italian</p>
           </Link>
