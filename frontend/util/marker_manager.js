@@ -23,7 +23,20 @@ export default class MarkerManager {
     })
     this.markers[business.id] = marker
 
-    const content = '<div>business.name<div/>'
+    const content = '<div id="map-info-container">' + 
+                      '<div id="map-info-pic-container">' +
+                        '<img id="map-info-pic" src=' +
+                          business.photo_urls[0] +
+                        '/>' + 
+                        '<div id="map-info-title">' +
+                          business.name +
+                        '<div/>' + 
+                        '<div id="map-info-category">' +
+                          business.category +
+                        '<div/>'
+                      '<div/>'
+                    '</div>'
+
 
     const infowindow = new google.maps.InfoWindow({
       content: content,
@@ -31,7 +44,6 @@ export default class MarkerManager {
 
 
     marker.addListener('mouseover', function () {
-
       infowindow.open(this.map, marker);
     });
 

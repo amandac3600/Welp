@@ -609,3 +609,30 @@
 .show-body {
   margin-top: 70px;
 }
+
+#map-info-container {
+  height: 170px;
+  width: 160px;
+  padding: 5px;
+  border-radius: -3px;
+}
+
+#map-info-pic {
+  width: 160px;
+  height: 130px;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+#map-info-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+}
+
+#map-info-category {
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+  margin-top: 3px;
+}
