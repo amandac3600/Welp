@@ -22,3 +22,8 @@ export const fetchBusinesses = () => dispatch => (
   BusinessUtil.fetchBusinesses()
     .then(businesses => dispatch(receiveBusinesses(businesses)))
 )
+
+export const searchBusinesses = query => (
+  BusinessUtil.searchBusinesses(query)
+    .then(businesses => dispatch(receiveBusinesses(businesses)))
+)

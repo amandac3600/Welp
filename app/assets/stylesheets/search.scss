@@ -26,6 +26,7 @@
 }
 
 .search-near-container {
+  display: flex;
   background-color: white;
   width: 360px;
   min-width: 310px;
@@ -68,6 +69,24 @@
   margin-left: 10px;
 }
 
+.search-near-input {
+  color: #999;
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: -17px;
+  margin-left: 60px;
+}
+
+.red-search-near-input {
+  color: #999;
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 0px;
+  margin-left: -10px;
+  padding-left: 15px;
+  border-left: 1px solid rgb(199, 199, 199);
+}
+
 .search-find-input:focus, .search-near-input:focus {
   border: none;
   outline: none;
@@ -75,10 +94,6 @@
 
 .search-find-input::placeholder {
   color: #999;
-}
-
-.search-near-input::placeholder {
-  color: #666;
 }
 
 .search-button {

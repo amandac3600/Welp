@@ -4,13 +4,19 @@ import NavContainer from '../nav/nav_container'
 import bg from '../../../app/assets/images/bg.jpg'
 import logo from '../../../app/assets/images/logo.png'
 import SearchBar from '../search/search_bar';
+import SearchBarContainer from '../search/search_bar_container';
 
 export default class Splash extends React.Component {
+  componentDidMount() {
+    this.props.searchBusinesses
+  }
+
   constructor(props) {
     super(props);
   }
 
   render () {
+    console.log(this.props)
     return (
       <div>
         <img src={window.bg} className='bg' />
@@ -21,7 +27,7 @@ export default class Splash extends React.Component {
             <Link className="splash-logo-link" to="/">welp</Link>
             <Link className='logo-2' to="/"><img src={window.logo} width='70' height='50'/></Link>
         </header>
-        <SearchBar/>  
+        <SearchBarContainer/>  
         <p className='block'></p>
         <h4 className='splash-best-bus'>Find the Best Restaurants In Town</h4>
         <div className='splash-best-bus-list'>

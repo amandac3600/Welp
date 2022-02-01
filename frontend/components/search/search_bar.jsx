@@ -6,8 +6,7 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      find: '',
-      near: ''
+      find: ''
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -15,11 +14,13 @@ class SearchBar extends React.Component {
   }
 
   handleChange(field) {
+    console.log(this.state.find)
     return (e) => this.setState({[field]: e.currentTarget.value})
   }
 
   handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
+    this.props.searchBusinesses(this.state.find).then(this.props.history.push(`/businesses/search?find=${this.state.find}`))
   }
 
   render() {
@@ -34,7 +35,7 @@ class SearchBar extends React.Component {
           </div>
           <div className="search-near-container">
             <label className="search-near-label">Near
-              <input className="search-near-input" type="text" placeholder="Los Angeles, CA" onChange={this.handleChange("near")} />
+              <p className="search-near-input">Los Angeles, CA ONLY for now</p>
             </label>
           </div>
           <button className="search-button" type="submit"><AiOutlineSearch /></button>
@@ -47,7 +48,7 @@ class SearchBar extends React.Component {
             <input className="search-find-input" type="text" onChange={this.handleChange('find')} placeholder="food trucks, barbeque, bubble tea..." />
           </div>
           <div className="red-search-near-container">
-            <input className="search-near-input" type="text" placeholder="Los Angeles, CA" onChange={this.handleChange("near")} />
+              <p className="red-search-near-input">Los Angeles, CA ONLY for now</p>
           </div>
           <button className="red-search-button" type="submit"><AiOutlineSearch /></button>
         </form>

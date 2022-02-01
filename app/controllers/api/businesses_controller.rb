@@ -14,6 +14,16 @@ class Api::BusinessesController < ApplicationController
     end
   end
 
+  def search 
+    query = params[:query]
+    @businesses = Business.where("name ILIKE ? OR category ILIKE ?", "%#{query}%", "%#{query}%")
+    if (@businesses.length > 0) 
+      render :index
+    else 
+      render json: ["No results found for #{query}"], status: 404
+    end
+  end
+
   private
 
   def business_params
