@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SearchResultIndex from './search_result_index'
-import { fetchBusiness, fetchBusinesses } from "../../actions/business_actions";
+import { fetchBusiness, fetchBusinesses, searchBusinesses } from "../../actions/business_actions";
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = state => ({
@@ -10,6 +10,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   fetchBusinesses: () => dispatch(fetchBusinesses()),
   fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
+  searchBusinesses: query => dispatch(searchBusinesses(query))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchResultIndex)

@@ -17,10 +17,10 @@ class BusinessIndex extends React.Component {
         <aside className="business-index-sidebar">
           <p className="business-index-filters-title">Filters</p>
           <div className="price-filter">
-            <button className="price-filter-item">$</button>
-            <button className="price-filter-item">$$</button>
-            <button className="price-filter-item">$$$</button>
-            <button className="price-filter-item">$$$$</button>
+            <button className="price-filter-item" onClick={() => this.props.searchBusinesses('$').then(() => this.props.history.push(`/search/$`))}>$</button>
+            <button className="price-filter-item" onClick={() => this.props.searchBusinesses('$$').then(() => this.props.history.push(`/search/$$`))}>$$</button>
+            <button className="price-filter-item" onClick={() => this.props.searchBusinesses('$$$').then(() => this.props.history.push(`/search/$$$`))}>$$$</button>
+            <button className="price-filter-item" onClick={() => this.props.searchBusinesses('$$$$').then(() => this.props.history.push(`/search/$$$$`))}>$$$$</button>
           </div>
         </aside>
         <p className="all-results">All Results</p>
