@@ -2,6 +2,7 @@ import React from "react";
 import ReviewIndexContainer from "../review/review_index_container";
 import NavContainer from "../nav/nav_container";
 import { Link } from "react-router-dom";
+import { AiOutlineStar } from 'react-icons/ai';
 
 class BusinessShow extends React.Component {
   componentDidMount() {
@@ -73,7 +74,7 @@ class BusinessShow extends React.Component {
             </div>
           </div>
           <div className="business-show-write-container">
-            <p className="business-show-write-star">☆</p>
+            <AiOutlineStar className="business-show-write-star"/>
             <Link to={`/businesses/${this.props.business.id}/reviews/new`}>
               <button className="business-show-write">Write a Review</button>
             </Link>

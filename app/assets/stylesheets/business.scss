@@ -187,6 +187,10 @@
   background-position: 0px -360px;
 }
 
+#radio1, #radio2, #radio3, #radio4, #radio5 {
+  visibility: hidden;
+}
+
 .business-item-details {
   display: flex;
   margin-left: 20px;
@@ -416,10 +420,10 @@
 
 .business-show-write-star {
   position: absolute;
-  font-size: 28px;
+  font-size: 25px;
   color: white;
-  margin-left: 11px;
-  margin-top: 25px;
+  margin-left: 9px;
+  margin-top: 26px;
   z-index: 1000;
 }
 
