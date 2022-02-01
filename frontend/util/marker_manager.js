@@ -5,20 +5,21 @@ export default class MarkerManager {
   }
 
   updateMarkers(businesses) {
-    console.log(this.markers)
     businesses.forEach(business => {
       if (!this.markers[business.id]) {
-        this.createMarkerFromBusiness(business)
+        let index = businesses.indexOf(business) + 1
+        this.createMarkerFromBusiness(business, index)
       }
     })
   }
    
-  createMarkerFromBusiness(business) {
+  createMarkerFromBusiness(business, index) {
     const latLng = { lat: parseFloat(business.lat), lng: parseFloat(business.lng) }
     // console.log(parseFloat(business.lat))
+
     let marker = new google.maps.Marker({
       position: latLng,
-      label: {text: business.id.toString(), color: 'white'},
+      label: {text: index.toString(), color: 'white'},
       map: this.map
     })
     this.markers[business.id] = marker

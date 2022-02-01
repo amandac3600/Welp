@@ -99,7 +99,7 @@ class BusinessShow extends React.Component {
               <div className="business-show-location-hours">
                 <div className="business-show-map-container">
                   <div className="business-show-map">
-                    <img src={this.props.business.photo_urls[this.props.business.photo_urls.length - 1]} alt="" />
+                    <a href={`https://maps.google.com/?q=${this.props.business.lat},${this.props.business.lng}`} target="_blank" rel="noopener noreferrer"><img src={this.props.business.photo_urls[this.props.business.photo_urls.length - 1]} alt="" /></a>
                   </div>
                   <div className="business-show-address">
                     <div className="business-show-address-address">
