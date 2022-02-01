@@ -33,6 +33,7 @@ Welp is a fullstack clone of Yelp.com, a website that allows users to search for
   - Hours
   - Website, with a clickable link
   - Address, with a clickable Google Maps link
+  - Image showing their location on Google Maps
   - Phone number
   - Reviews
 
