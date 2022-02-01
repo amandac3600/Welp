@@ -14,13 +14,12 @@ class SearchBar extends React.Component {
   }
 
   handleChange(field) {
-    console.log(this.state.find)
     return (e) => this.setState({[field]: e.currentTarget.value})
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.searchBusinesses(this.state.find).then(this.props.history.push(`/businesses/search?find=${this.state.find}`))
+    this.props.searchBusinesses(this.state.find).then(() => this.props.history.push(`/search/${this.state.find}`))
   }
 
   render() {
@@ -30,7 +29,7 @@ class SearchBar extends React.Component {
         <form className="search-bar-form" onSubmit={this.handleSubmit}>
           <div className="search-find-container">
             <label className="search-find-label">Find
-              <input className="search-find-input" type="text" onChange={this.handleChange('find')} placeholder="food trucks, barbeque, bubble tea..." />
+              <input className="search-find-input" type="text" value={this.state.find} onChange={this.handleChange('find')} placeholder="food trucks, barbeque, bubble tea..." />
             </label>
           </div>
           <div className="search-near-container">

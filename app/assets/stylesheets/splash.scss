@@ -91,6 +91,7 @@
   z-index: 999;
   text-align: center;
   padding-top: 10px;
+  text-decoration: none;
 }
 
 .splash-best-bus-item-1:hover, .splash-best-bus-item-2:hover, .splash-best-bus-item-3:hover, .splash-best-bus-item-4:hover {
@@ -115,8 +116,8 @@
 }
 
 #splash-best-bus-item-3-pic {
-  background-image: url(mexican.jpg);
-  background-position: -10px -20px;
+  background-image: url(bingsoo.jpg);
+  background-position: -25px -30px;
 }
 
 #splash-best-bus-item-4-pic {
@@ -184,7 +185,7 @@
   display: block;
   height: 174px;
   width: 250px;
-  height: 250px;
+  height: 230px;
   color: #666;
   border: 1px solid #ebebeb;
   border-radius: 3px;
@@ -199,6 +200,13 @@
   cursor: pointer;
   box-shadow: 0 0 10px #0000001a;
   transition: box-shadow 0.3s;
+}
+
+.hot-new-info-category {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
 }
 
 .block-3 {

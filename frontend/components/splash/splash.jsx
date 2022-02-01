@@ -41,7 +41,7 @@ export default class Splash extends React.Component {
           </Link>
           <Link to='/businesses' className='splash-best-bus-item-3'>
             <div id='splash-best-bus-item-3-pic'></div>
-            <p className='splash-best-bus-item-3-label'>Mexican</p>
+            <p className='splash-best-bus-item-3-label'>Desserts</p>
           </Link>
           <Link to='/businesses' className='splash-best-bus-item-4'>
             <div id='splash-best-bus-item-4-pic'></div>
@@ -57,6 +57,7 @@ export default class Splash extends React.Component {
             <div className='hot-new-pic-info'>
               <p className='hot-new-info-title'>Milk Jar Cookies</p>
               <p className='hot-new-info-rating'></p>
+              <p className='hot-new-info-category'>Desserts</p>
             </div>
             
           </Link>
@@ -65,6 +66,7 @@ export default class Splash extends React.Component {
             <div className='hot-new-pic-info'>
               <p className='hot-new-info-title'>Woodcat Coffee Bar</p>
               <p className='hot-new-info-rating'></p>
+              <p className='hot-new-info-category'>Coffee &amp; Tea</p>
             </div>
           </Link>
           <Link to='/businesses/10' className='splash-hot-new-item'>
@@ -72,6 +74,7 @@ export default class Splash extends React.Component {
             <div className='hot-new-pic-info'>
               <p className='hot-new-info-title'>Masa of Echo Park</p>
               <p className='hot-new-info-rating'></p>
+              <p className='hot-new-info-category'>Pizza</p>
             </div>
           </Link>
         </ul>

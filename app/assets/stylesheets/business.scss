@@ -618,7 +618,7 @@
 
 #map-info-container {
   height: 170px;
-  width: 160px;
+  width: 155px;
   padding: 5px;
   border-radius: -3px;
 }
@@ -641,4 +641,8 @@
   font-weight: 400;
   color: #333;
   margin-top: 3px;
+}
+
+.gm-ui-hover-effect {
+    display: none !important;
 }

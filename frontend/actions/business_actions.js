@@ -8,10 +8,11 @@ export const receiveBusiness = business => ({
   business
 })
 
-export const receiveBusinesses = businesses => ({
+export const receiveBusinesses = businesses => {
+  return {
   type: RECEIVE_BUSINESSES,
   businesses
-})
+}}
 
 export const fetchBusiness = businessId => dispatch => (
   BusinessUtil.fetchBusiness(businessId)
@@ -23,7 +24,7 @@ export const fetchBusinesses = () => dispatch => (
     .then(businesses => dispatch(receiveBusinesses(businesses)))
 )
 
-export const searchBusinesses = query => (
+export const searchBusinesses = query => dispatch => (
   BusinessUtil.searchBusinesses(query)
     .then(businesses => dispatch(receiveBusinesses(businesses)))
 )
