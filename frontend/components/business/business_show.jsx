@@ -56,8 +56,10 @@ class BusinessShow extends React.Component {
         </div>
         <div className="show-body">
           <div className="business-show-photos">
-            {this.props.business.photo_urls.slice(0, 2).map((photo_url, idx) => <img key={idx} className="business-show-photo" src={photo_url} alt="" />)}
-          
+            {this.props.business.photo_urls.slice(0, 3).map((photo_url, idx) => <img key={idx} className="business-show-photo" src={photo_url} alt="" />)}
+            <div className="gradient">
+              
+            </div>
             <div className="business-show-info">
               <h1 className="business-show-title">{this.props.business.name}</h1>
               <div className="business-show-rating-container">

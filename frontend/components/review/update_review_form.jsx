@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NavContainer from "../nav/nav_container";
+import { AiFillStar } from 'react-icons/ai';
+
 
 export default class UpdateReviewForm extends React.Component {
   constructor(props) {
@@ -72,20 +74,22 @@ export default class UpdateReviewForm extends React.Component {
           <Link className="update-review-title" to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
           <div className="update-form-rating-container">
             <div className="update-form-rating-container-2">
-              <input id="radio1" type="radio" value="1" name="rating" onChange={this.handleChange("rating")} checked={parseInt(this.state.rating) === 1} />
-              <label htmlFor="radio1" id="update-form-rating" className="update-form-rating-1"></label>
+
+              <input id="radio5" type="radio" value="5" name="rating" onChange={this.handleChange("rating")} checked={parseInt(this.state.rating) === 5} />
+              <label htmlFor="radio5" id="update-form-rating" className="update-form-rating-5"><AiFillStar className="rating-star" /></label>
+
+              <input id="radio4" type="radio" value="4" name="rating" onChange={this.handleChange("rating")} checked={parseInt(this.state.rating) === 4} />
+              <label htmlFor="radio4" id="update-form-rating" className="update-form-rating-4"><AiFillStar className="rating-star" /></label>
+
+              <input id="radio3" type="radio" value="3" name="rating" onChange={this.handleChange("rating")} checked={parseInt(this.state.rating) === 3} />
+              <label htmlFor="radio3" id="update-form-rating" className="update-form-rating-3"><AiFillStar className="rating-star" /></label>
 
               <input id="radio2" type="radio" value="2" name="rating" onChange={this.handleChange("rating")} checked={parseInt(this.state.rating) === 2}/>
-              <label htmlFor="radio2" id="update-form-rating" className="update-form-rating-2"></label>
+              <label htmlFor="radio2" id="update-form-rating" className="update-form-rating-2"><AiFillStar className="rating-star" /></label>
 
-              <input id="radio3" type="radio" value="3" name="rating" onChange={this.handleChange("rating")} checked={parseInt(this.state.rating) === 3}/>
-              <label htmlFor="radio3" id="update-form-rating" className="update-form-rating-3"></label>
+              <input id="radio1" type="radio" value="1" name="rating" onChange={this.handleChange("rating")} checked={parseInt(this.state.rating) === 1} />
+              <label htmlFor="radio1" id="update-form-rating" className="update-form-rating-1"><AiFillStar className="rating-star" /></label>
 
-              <input id="radio4" type="radio" value="4" name="rating" onChange={this.handleChange("rating")} checked={parseInt(this.state.rating) === 4}/>
-              <label htmlFor="radio4" id="update-form-rating" className="update-form-rating-4"></label>
-
-              <input id="radio5" type="radio" value="5" name="rating" onChange={this.handleChange("rating")} checked={parseInt(this.state.rating) === 5}/>
-              <label htmlFor="radio5" id="update-form-rating" className="update-form-rating-5"></label>
             </div>
             <textarea className="update-review-body" onChange={this.handleChange('body')} value={this.state.body}></textarea>
           </div>

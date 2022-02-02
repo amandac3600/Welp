@@ -2,12 +2,12 @@
   display: flex;
   position: absolute;
   top: 0;
-  opacity: 0.80;
+  opacity: 0.85;
   z-index: -1000;
   width: 100vw;
   min-width: 830px;
   height: auto;
-  filter: brightness(70%);
+  filter: brightness(60%) saturate(110%);
 }
 
 .splash-nav #hidden{

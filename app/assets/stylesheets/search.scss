@@ -18,7 +18,7 @@
 
 .search-find-container {
   background-color: white;
-  width: 420px;
+  width: 410px;
   min-width: 310px;
   height: 16px;
   border-radius: 4px 0 0 4px;
@@ -28,7 +28,7 @@
 .search-near-container {
   display: flex;
   background-color: white;
-  width: 360px;
+  width: 350px;
   min-width: 310px;
   height: 16px;
   padding: 12px;
@@ -99,10 +99,11 @@
 .search-button {
   padding-top: 5px;
   font-size: 22px;
+  font-weight: 500;
   color: white;
   background-color: #d32323;
   border: none;
-  width: 64px;
+  width: 58px;
   border-radius: 0 4px 4px 0;
 }
 

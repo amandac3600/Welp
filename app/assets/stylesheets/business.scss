@@ -99,11 +99,11 @@
 }
 
 .business-item {
-  display: inline-block;
+  display: block;
   text-decoration: none;
   width: 50%;
-  min-width: 660px;
-  max-width: 680px;
+  min-width: 680px;
+  max-width: 800px;
   height: 205px;
   border: 1px solid #ebebeb;
   border-radius: 4px;
@@ -388,24 +388,51 @@
   top: 30px;
   min-height: 420px;
   max-height: 430px;
-  width: 50%;
+  width: 33.33333%;
   object-fit: cover;
+  filter: saturate(110%);
 }
 
 .business-show-photo:nth-child(2) {
   display: flex;
-  // margin-left: 50%;
   z-index: -999;
   top: 30px;
   min-height: 420px;
   max-height: 430px;
-  width: 50%;
+  width: 33.33333%;
   object-fit: cover;
+  filter: saturate(110%);
+}
+
+.business-show-photo:nth-child(3) {
+  display: flex;
+  z-index: -999;
+  top: 30px;
+  min-height: 420px;
+  max-height: 430px;
+  width: 33.33333%;
+  object-fit: cover;
+  filter: saturate(110%);
+}
+
+.gradient {
+  position: absolute;
+  display: flex;
+  z-index: -998;
+  min-height: 420px;
+  max-height: 430px;
+  width: 100%;
+  // background-image: linear-gradient(0deg, rgb(5, 5, 5) 0%, rgba(255,255,255,0) 100%);
+  background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(48,48,48,0.16290266106442575) 50%, rgba(255,255,255,0) 100%);
 }
 
 .business-show-info {
   position: absolute;
   top: 20px;
+}
+
+.business-show-info, .business-show-write-container, .business-show-write, .business-show-write-star, .show-website-container, .show-details-website-container {
+  margin-left: 55px;
 }
 
 .show-details-website-container {
@@ -422,7 +449,7 @@
   position: absolute;
   font-size: 25px;
   color: white;
-  margin-left: 9px;
+  margin-left: 64px;
   margin-top: 26px;
   z-index: 1000;
 }
@@ -450,7 +477,7 @@
   width: 300px;
   border: 1px solid #ebebeb;
   border-radius: 4px;
-  margin-left: 750px;
+  margin-left: 840px;
   margin-top: -60px;
   top: 100px;
   z-index: 999;
@@ -503,14 +530,15 @@
   display: flex;
   margin-top: 60px;
   height: 20px;
-  width: 700px;
-  border-bottom: 1.5px solid #ebebeb;
+  width: 755px;
+  // border-bottom: 1.5px solid #ebebeb;
   z-index: 99999;
 }
 
 .business-show-more-details {
   margin-left: 45px;
   margin-top: -150px;
+  border-top: 1.5px solid #ebebeb;
 }
 
 .business-show-location-hours {
@@ -612,10 +640,11 @@
 
 .index-map-container {
   position: sticky;
-  top: 77px;
+  top: 76px;
   min-width: 300px;
   width: 100%;
   height: 100vh;
+  margin-top: -52px;
 }
 
 .show-body {
