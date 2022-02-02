@@ -5,10 +5,18 @@ import { Link } from "react-router-dom";
 import { AiOutlineStar } from 'react-icons/ai';
 
 class BusinessShow extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      loading: true,
+    }
+  }
+
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchBusiness(this.props.match.params.businessId);
     this.props.fetchReviews(this.props.match.params.businessId)
+    this.setState({ loading: false })
   };
 
   componentDidUpdate(prevProps) {
@@ -46,10 +54,13 @@ class BusinessShow extends React.Component {
   }
 
   render () {
-    
     if (!this.props.business) return null;
     if (!this.props.business.photo_urls) return null;
     if (!this.props.business.reviews) return null;
+    if (this.state.loading === true) {
+      return <div className="loader"></div>
+    }
+
     return (
       <div className="business-show">
         <div className="red-nav">

@@ -7,9 +7,17 @@ import SearchBar from '../search/search_bar';
 import SearchBarContainer from '../search/search_bar_container';
 
 export default class Splash extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      loading: true,
+    }
+  }
+
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.searchBusinesses
+    this.setState({ loading: false })
   }
 
   constructor(props) {
@@ -17,7 +25,9 @@ export default class Splash extends React.Component {
   }
 
   render () {
-    console.log(this.props)
+    if (this.state.loading === true) {
+      return <div className="loader"></div>
+    }
     return (
       <div>
         <img src={window.bg} className='bg' />

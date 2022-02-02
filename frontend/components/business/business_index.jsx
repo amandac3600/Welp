@@ -5,9 +5,17 @@ import { Link } from "react-router-dom";
 import BusinessMap from "./business_map";
 
 class BusinessIndex extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      loading: true,
+    }
+  }
+
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchBusinesses();
+    this.setState({loading: false})
 
     this.clearErrors = this.clearErrors.bind(this);
   }
@@ -18,6 +26,10 @@ class BusinessIndex extends React.Component {
 
   render () {
     if (!this.props.businesses) return null;
+    if (this.state.loading === true) {
+      return <div className="loader"></div>
+    }
+    
     return (
       <div className="business-index">
         <NavContainer/>
