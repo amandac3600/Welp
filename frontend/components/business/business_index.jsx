@@ -6,7 +6,14 @@ import BusinessMap from "./business_map";
 
 class BusinessIndex extends React.Component {
   componentDidMount() {
-    this.props.fetchBusinesses()
+    window.scrollTo(0, 0);
+    this.props.fetchBusinesses();
+
+    this.clearErrors = this.clearErrors.bind(this);
+  }
+
+  clearErrors(e) {
+    this.props.clearErrors()
   }
 
   render () {

@@ -22,7 +22,7 @@ export default class UpdateReviewForm extends React.Component {
   }
 
   componentDidMount() {
-    // this.props.fetchReviews()
+    window.scrollTo(0, 0);
     this.props.fetchReview(this.props.match.params.businessId, this.props.match.params.reviewId).then((e)=> this.reviewState());
     this.props.fetchBusiness(this.props.match.params.businessId);
   };
@@ -62,8 +62,6 @@ export default class UpdateReviewForm extends React.Component {
       errors = this.props.errors.map((error, index) =>
         (<li key={index} className="review-error">{error}</li>)
       )
-      let error = document.getElementById('errors');
-      error.classList.add('review-errors')
     }
     return (
       <div>
@@ -91,11 +89,11 @@ export default class UpdateReviewForm extends React.Component {
               <label htmlFor="radio1" id="update-form-rating" className="update-form-rating-1"><AiFillStar className="rating-star" /></label>
 
             </div>
-            <textarea className="update-review-body" onChange={this.handleChange('body')} value={this.state.body}></textarea>
+            <textarea className="update-review-body" onChange={this.handleChange('body')} value={this.state.body} placeholder="If you want to find the world's best street burrito, look no further. Whenever I'm craving a California Burrito, I immediately head to this food truck. For $12, they stuff in fries, guacamole, sour cream, and your choice of meat. The employees like to keep the line moving, which is great especially during lunch. There's so many things to try outside of burritos though. Better to place your order ahead of time to skip the line."></textarea>
           </div>
-          <button type="submit" className="update-review-submit">Update Review</button>
+          <button type="submit" className="update-review-submit" onClick={this.clearErrors}>Update Review</button>
           <div className='errors-container'>
-            <ul id="errors">
+            <ul id="errors" className="review-errors">
               {errors}
             </ul>
           </div>

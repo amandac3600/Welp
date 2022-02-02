@@ -11,6 +11,7 @@ class SearchBar extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.clearErrors = this.clearErrors.bind(this);
   }
 
   handleChange(field) {
@@ -19,7 +20,13 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.searchBusinesses(this.state.find).then(() => this.props.history.push(`/search/${this.state.find}`))
+    this.props.searchBusinesses(this.state.find)
+      .then(() => this.props.history.push(`/search/${this.state.find}`))
+      .fail(() => this.props.history.push(`/search/${this.state.find}`))
+  }
+
+  clearErrors(e) {
+    this.props.clearErrors()
   }
 
   render() {
@@ -37,7 +44,7 @@ class SearchBar extends React.Component {
               <p className="search-near-input">Los Angeles, CA ONLY for now</p>
             </label>
           </div>
-          <button className="search-button" type="submit"><AiOutlineSearch /></button>
+          <button className="search-button" type="submit" onClick={this.clearErrors}><AiOutlineSearch /></button>
         </form>
       </div>
     } else {
@@ -49,12 +56,13 @@ class SearchBar extends React.Component {
           <div className="red-search-near-container">
               <p className="red-search-near-input">Los Angeles, CA ONLY for now</p>
           </div>
-          <button className="red-search-button" type="submit"><AiOutlineSearch /></button>
+          <button className="red-search-button" type="submit" onClick={this.clearErrors}><AiOutlineSearch /></button>
         </form>
       </div>
     }
     return (
-      searchBar
+      <div>{searchBar}</div>
+      
     )
   }
 }

@@ -5,32 +5,72 @@ import { Link } from "react-router-dom";
 import BusinessMap from "../business/business_map";
 
 class SearchResultIndex extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.clearErrors = this.clearErrors.bind(this);
+  }
+  
   componentDidMount() {
+    window.scrollTo(0, 0)
     this.props.searchBusinesses(this.props.match.params.query)
+  }
+
+  clearErrors(e) {
+    this.props.clearErrors()
+  }
+
+  pricefilter(price) {
+    this.clearErrors()
+    this.props.searchBusinesses(`${price}`).then(() => this.props.history.push(`/search/${price}`));
   }
 
   render() {
     if (!this.props.businesses) return null;
+    let businesses = this.props.businesses;
+    let errors;
+    let suggestion;
+    let suggestionList
+    if (this.props.errors.length) {
+      errors = this.props.errors.map((error, index) =>
+        (<li key={index}>{error}</li>)
+      ) 
+      suggestion = 'Suggestions for improving your results:'
+      let suggestionarr = ['Check the spelling or try alternate spellings', 'Try a more general search, e.g. "pizza" instead of "pepperoni"']
+      
+      suggestionList = suggestionarr.map((suggestion, idx) => 
+        (<li key={idx}>{suggestion}</li>))
+      businesses = [];
+    }
     return (
       <div className="business-index">
         <NavContainer />
         <aside className="business-index-sidebar">
           <p className="business-index-filters-title">Filters</p>
           <div className="price-filter">
-            <button className="price-filter-item" onClick={() => this.props.searchBusinesses('$').then(() => this.props.history.push(`/search/$`))}>$</button>
-            <button className="price-filter-item" onClick={() => this.props.searchBusinesses('$$').then(() => this.props.history.push(`/search/$$`))}>$$</button>
-            <button className="price-filter-item" onClick={() => this.props.searchBusinesses('$$$').then(() => this.props.history.push(`/search/$$$`))}>$$$</button>
-            <button className="price-filter-item" onClick={() => this.props.searchBusinesses('$$$$').then(() => this.props.history.push(`/search/$$$$`))}>$$$$</button>
+            <button className="price-filter-item" onClick={() => this.pricefilter('$')}>$</button>
+            <button className="price-filter-item" onClick={() => this.pricefilter('$$')}>$$</button>
+            <button className="price-filter-item" onClick={() => this.pricefilter('$$$')}>$$$</button>
+            <button className="price-filter-item" onClick={() => this.pricefilter('$$$$')}>$$$$</button>
           </div>
         </aside>
         <p className="all-results">All Results</p>
 
         <div className="index-body">
           <ol className="business-index-list">
-            {this.props.businesses.map((business, idx) =>
+            {businesses.map((business, idx) =>
               <li key={idx}>
                 <BusinessIndexItem idx={idx} business={business} fetchBusiness={this.props.fetchBusiness} />
               </li>)}
+            <ul id="errors" className="search-errors">
+              {errors}
+              <div className="suggestion">
+                {suggestion}
+                <ul className="suggestion-list">
+                  {suggestionList}
+                </ul>
+              </div>
+            </ul> 
           </ol>
           <div className="index-map-container">
             <BusinessMap businesses={this.props.businesses} />

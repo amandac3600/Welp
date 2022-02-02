@@ -20,6 +20,7 @@ export default class CreateReviewForm extends React.Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchBusiness(this.props.match.params.businessId)
   }
 
@@ -43,8 +44,6 @@ export default class CreateReviewForm extends React.Component {
       errors = this.props.errors.map((error, index)=> 
         (<li key={index} className="review-error">{error}</li>)
       )
-      let error = document.getElementById('errors');
-      error.classList.add('review-errors')
     }
     if (!this.props.business) return null;
     
@@ -75,9 +74,9 @@ export default class CreateReviewForm extends React.Component {
             </div>
             <textarea className="create-review-body" onChange={this.handleChange('body')} placeholder="If you want to find the world's best street burrito, look no further. Whenever I'm craving a California Burrito, I immediately head to this food truck. For $12, they stuff in fries, guacamole, sour cream, and your choice of meat. The employees like to keep the line moving, which is great especially during lunch. There's so many things to try outside of burritos though. Better to place your order ahead of time to skip the line."></textarea>
           </div>
-          <button type="submit" className="create-review-submit">Post Review</button>
+          <button type="submit" className="create-review-submit" onClick={this.clearErrors}>Post Review</button>
           <div className='errors-container'>
-            <ul id="errors">
+            <ul id="errors" className="review-errors">
               {errors}
             </ul>
           </div>

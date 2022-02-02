@@ -6,6 +6,7 @@ import { AiOutlineStar } from 'react-icons/ai';
 
 class BusinessShow extends React.Component {
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchBusiness(this.props.match.params.businessId);
     this.props.fetchReviews(this.props.match.params.businessId)
   };

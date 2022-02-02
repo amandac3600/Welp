@@ -8,6 +8,7 @@ import SearchBarContainer from '../search/search_bar_container';
 
 export default class Splash extends React.Component {
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.searchBusinesses
   }
 

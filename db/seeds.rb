@@ -10,8 +10,8 @@
 require "open-uri"
 
 Review.destroy_all
-User.destroy_all
 Business.destroy_all
+User.destroy_all
 
 
 user1 = User.create!(first_name: 'Michael', last_name: 'Scott', email: 'mscott@mail.com', password: 'michael')
