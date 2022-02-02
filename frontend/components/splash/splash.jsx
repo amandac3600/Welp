@@ -20,10 +20,6 @@ export default class Splash extends React.Component {
     this.setState({ loading: false })
   }
 
-  constructor(props) {
-    super(props);
-  }
-
   render () {
     if (this.state.loading === true) {
       return <div className="loader"></div>
