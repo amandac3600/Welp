@@ -1,8 +1,6 @@
 # Welcome to Welp!
 
-Welp is a fullstack clone of Yelp.com, a website that allows users to search for businesses in a specified location and leave ratings and reviews for those businesses.
-
-[Experience Welp here!](https://welp0.herokuapp.com/#/)
+[Welp](https://welp0.herokuapp.com/#/) is a fullstack clone of Yelp.com, a website that allows users to search for businesses in a specified location and leave ratings and reviews for those businesses.
 
 # Key Features
 ### Post ratings and reviews
