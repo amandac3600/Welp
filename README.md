@@ -3,11 +3,7 @@
 [Welp](https://welp0.herokuapp.com/#/) is a fullstack clone of Yelp.com, a website that allows users to search for businesses in a specified location and leave ratings and reviews for those businesses.
 
 # Key Features
-### Post ratings and reviews
-### Search for businesses
-- name, location, or category
 
-# Highlights
 ### User Auth
 - Users can signup for an account and login (or login as a demo user with the corresponding button)
 - Errors are styled and do not persist
