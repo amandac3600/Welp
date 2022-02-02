@@ -14,10 +14,10 @@
 - Editing a review prefills with their previous rating and review body
 - Error handling to show rating and review must be provided for a valid submission
 
-## Business Index 
+### Business Index 
 - Shows a list of businesses with their average rating, number of reviews, category, a sample review, a link to their show page, and their locations on a map
 
-## Business Show
+### Business Show
 - Shows the business's information including their:
   - Name
   - Rating
@@ -31,7 +31,7 @@
   - Phone number
   - Reviews
 
-## Search bar
+### Search bar
 - Users can search for businesses based on their name or category
 
 
@@ -39,18 +39,12 @@
 
 
 # Technologies
-#### Backend
-- Ruby on Rails
-#### Frontend
-- React/Redux
-#### atabase
-- PostgreSQL
-#### Design and Styling
-- HTML and CSS
-#### Third Party API
-- Google Maps JavsScript API
-#### Image Hosting
-- Amazon S3
+#### Backend: Ruby on Rails
+#### Frontend: React/Redux
+#### Database: PostgreSQL
+#### Third Party API: Google Maps JavsScript API
+#### Image Hosting: Amazon S3
+#### Design and Styling: HTML and CSS
 
 
 # Bonus Features
