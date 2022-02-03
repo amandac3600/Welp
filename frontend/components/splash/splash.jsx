@@ -12,6 +12,12 @@ export default class Splash extends React.Component {
     this.state = {
       loading: true,
     }
+
+    this.clearErrors = this.clearErrors.bind(this)
+  }
+
+  clearErrors(e) {
+    this.props.clearErrors()
   }
 
   componentDidMount() {
@@ -24,6 +30,7 @@ export default class Splash extends React.Component {
     if (this.state.loading === true) {
       return <div className="loader"></div>
     }
+    console.log(this.props)
     return (
       <div>
         <img src={window.bg} className='bg' />
@@ -38,19 +45,19 @@ export default class Splash extends React.Component {
         <p className='block'></p>
         <h4 className='splash-best-bus'>Find the Best Restaurants In Town</h4>
         <div className='splash-best-bus-list'>
-          <Link to='/search/chinese' className='splash-best-bus-item-1'>
+          <Link to='/search/chinese' className='splash-best-bus-item-1' onClick={this.clearErrors}>
             <div id='splash-best-bus-item-1-pic'></div>
             <p className='splash-best-bus-item-1-label'>Chinese</p>
           </Link>
-          <Link to='/search/korean' className='splash-best-bus-item-2'>
+          <Link to='/search/korean' className='splash-best-bus-item-2' onClick={this.clearErrors}>
             <div id='splash-best-bus-item-2-pic'></div>
             <p className='splash-best-bus-item-2-label'>Korean</p>
           </Link>
-          <Link to='/search/desserts' className='splash-best-bus-item-3'>
+          <Link to='/search/desserts' className='splash-best-bus-item-3' onClick={this.clearErrors}>
             <div id='splash-best-bus-item-3-pic'></div>
             <p className='splash-best-bus-item-3-label'>Desserts</p>
           </Link>
-          <Link to='/search/italian' className='splash-best-bus-item-4'>
+          <Link to='/search/italian' className='splash-best-bus-item-4' onClick={this.clearErrors}>
             <div id='splash-best-bus-item-4-pic'></div>
             <p className='splash-best-bus-item-4-label'>Italian</p>
           </Link>
