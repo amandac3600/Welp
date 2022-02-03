@@ -1,6 +1,6 @@
 # Welcome to Welp!
 
-<img width="1024" src="/images/readmelogo.png">
+![Logo](app/assets/images/readmelogo.png)
 
 [Welp](https://welp0.herokuapp.com/#/) is a fullstack clone of Yelp.com, a website that allows users to search for businesses in a specified location and leave ratings and reviews for those businesses.
 
@@ -20,7 +20,7 @@
 - Users can signup for an account and login (or login as a demo user with the corresponding button)
 - Errors are styled and do not persist
 
-<img width="1024" src="/images/userauth_gif.gif">
+![UserAuth](app/assets/images/userauth_gif.gif)
 
 
 ### Create, Edit, and Delete Reviews
@@ -30,10 +30,12 @@
 - Editing a review prefills with their previous rating and review body
 - Errors will appear if either the rating or body aren't filled out
 
-<img width="1024" src="/images/crud_gif.gif">
+![Reviews](app/assets/images/crud_gif.gif)
 
-### Business Index 
-- Shows a list of businesses based on a search query if specified with: 
+
+### Business Index & Search Bar
+- Users can search for businesses based on their name, category, or price
+- Shows a list of businesses based on filters or a search query, if specified, with: 
   - business name 
   - average rating
   - number of reviews
@@ -42,6 +44,9 @@
   - sample review
   - link to their show page
   - businesses' locations on a map
+
+![BusinessIndex](app/assets/images/busindex_gif.gif)
+
 
 ### Business Show
 - Shows the business's information including:
@@ -57,9 +62,7 @@
   - phone number
   - all reviews
 
-### Search bar
-- Users can search for businesses based on their name or category
-- Returns a list of businesses, along with their corresponding locations marked on a Google Map
+![BusinessShow](app/assets/images/busshow_gif.gif)
 
 
 # Bonus Features
