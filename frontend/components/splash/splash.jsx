@@ -30,7 +30,6 @@ export default class Splash extends React.Component {
     if (this.state.loading === true) {
       return <div className="loader"></div>
     }
-    console.log(this.props)
     return (
       <div>
         <img src={window.bg} className='bg' />
