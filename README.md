@@ -1,6 +1,6 @@
 # Welcome to Welp!
 
-![Welp logo]("/app/assets/images/readmelogo.png")
+<img width="1024" src="/images/readmelogo.png">
 
 [Welp](https://welp0.herokuapp.com/#/) is a fullstack clone of Yelp.com, a website that allows users to search for businesses in a specified location and leave ratings and reviews for those businesses.
 
