@@ -20,6 +20,9 @@
 - Users can signup for an account and login (or login as a demo user with the corresponding button)
 - Errors are styled and do not persist
 
+<img src="/images/userauth_gif.gif">
+
+
 ### Create, Edit, and Delete Reviews
 - Users must be logged in to be able to create, edit, or delete reviews
 - Users can see all reviews but are only able to edit and delete their own reviews
