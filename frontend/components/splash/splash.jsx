@@ -63,7 +63,11 @@ export default class Splash extends React.Component {
             <div className='hot-new-pic-1'></div>
             <div className='hot-new-pic-info'>
               <p className='hot-new-info-title'>Milk Jar Cookies</p>
-              <p className='hot-new-info-rating'></p>
+              <div className='hot-new-info-rating-container-1'>
+                <p className='hot-new-info-rating-1'></p>
+                <p className='hot-new-info-reviews-1'>2 reviews</p>
+              </div>
+              
               <p className='hot-new-info-category'>Desserts</p>
             </div>
             
@@ -72,7 +76,10 @@ export default class Splash extends React.Component {
             <div className='hot-new-pic-2'></div>
             <div className='hot-new-pic-info'>
               <p className='hot-new-info-title'>Woodcat Coffee Bar</p>
-              <p className='hot-new-info-rating'></p>
+              <div className='hot-new-info-rating-container-2'>
+                <p className='hot-new-info-rating-2'></p>
+                <p className='hot-new-info-reviews-2'>2 reviews</p>
+              </div>
               <p className='hot-new-info-category'>Coffee &amp; Tea</p>
             </div>
           </Link>
@@ -80,7 +87,10 @@ export default class Splash extends React.Component {
             <div className='hot-new-pic-3'></div>
             <div className='hot-new-pic-info'>
               <p className='hot-new-info-title'>Masa of Echo Park</p>
-              <p className='hot-new-info-rating'></p>
+              <div className='hot-new-info-rating-container-3'>
+                <p className='hot-new-info-rating-3'></p>
+                <p className='hot-new-info-reviews-3'>2 reviews</p>
+              </div>
               <p className='hot-new-info-category'>Pizza</p>
             </div>
           </Link>
@@ -89,11 +99,11 @@ export default class Splash extends React.Component {
         <div className='splash-about-discover'>
           <div className='splash-about'>
             <h6 className='splash-about-title'>About</h6>
-            <a className='splash-about-link' href="https://www.linkedin.com/in/amanda-chen-4b175a146">LinkedIn</a>
+            <a className='splash-about-link' href="https://www.linkedin.com/in/amanda-chen-4b175a146" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
           <div className='splash-discover'>
             <h6 className='splash-discover-title'>Discover</h6>
-            <a className='splash-discover-link' href="https://github.com/amandac3600">Github</a>
+            <a className='splash-discover-link' href="https://github.com/amandac3600" target="_blank" rel="noopener noreferrer">Github</a>
             <br />
             <div className='splash-discover-link-2'>
               <a className='splash-discover-link' href="mailto:amandac3600@gmail.com?subject=Let's talk about a job!">Email</a>

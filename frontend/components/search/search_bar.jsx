@@ -62,7 +62,6 @@ class SearchBar extends React.Component {
     }
     return (
       <div>{searchBar}</div>
-      
     )
   }
 }

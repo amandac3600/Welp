@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import logo from '../../../app/assets/images/logo.png'
+import { withRouter } from 'react-router-dom';
 
-export default class SessionForm extends React.Component {
+
+class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,7 +21,7 @@ export default class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user).then(() => this.props.history.push('/businesses'));
   }
 
   handleChange(field) {
@@ -29,7 +31,7 @@ export default class SessionForm extends React.Component {
   demoLogin(e) {
     e.preventDefault();
     const user = {email: 'demo@user.com', password: 'demouser'};
-    this.props.demologin(user);
+    this.props.demologin(user).then(() => this.props.history.push('/businesses'));
   }
 
   clearErrors(e) {
@@ -37,6 +39,7 @@ export default class SessionForm extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     let errors;
     if (this.props.errors[0].length) {
       errors = this.props.errors[0].map((error, index)=> 
@@ -44,9 +47,6 @@ export default class SessionForm extends React.Component {
       )
       let error = document.getElementById('errors');
       error.classList.add('errors')
-    }
-    if (this.handleSubmit) {
-      <Redirect to="/businesses"/>
     }
     
     if (this.props.formType === 'Log In') {
@@ -162,3 +162,5 @@ export default class SessionForm extends React.Component {
   }
 
 }
+
+export default withRouter(SessionForm)

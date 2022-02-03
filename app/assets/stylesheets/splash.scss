@@ -35,7 +35,7 @@
   text-align: center;
   font-weight: 600;
   color: black;
-  margin-top: 46px;
+  margin-top: 48px;
   font-size: 46px;
   filter: drop-shadow(3px 0 0 white) 
     drop-shadow(0 3px 0 white)
@@ -70,7 +70,7 @@
   position: absolute;
   margin-top: 275px;
   width: 100vw;
-  height: 480px;
+  height: 500px;
   z-index: 996;
   background-color: #f5f5f5;
 }
@@ -144,7 +144,7 @@
   width: 100vw;
   height: 510px;
   z-index: 997;
-  margin-top: 30px;
+  margin-top: 50px;
   background-color: white;
 }
 
@@ -156,7 +156,8 @@
   font-weight: 700;
   color: #d32323;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 90px;
+  padding-bottom: 40px;
   z-index: 999;
   padding-bottom: 20px;
   border-bottom: 1px solid #cccccc;
@@ -178,14 +179,14 @@
   display: flex;
   position: relative;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .splash-hot-new-item {
   display: block;
   height: 174px;
   width: 250px;
-  height: 230px;
+  height: 265px;
   color: #666;
   border: 1px solid #ebebeb;
   border-radius: 3px;
@@ -206,16 +207,16 @@
   margin-top: 5px;
   font-size: 14px;
   font-weight: 400;
-  color: #333;
+  color: #444;
 }
 
 .block-3 {
   display: flex;
   position: absolute;
   width: 100vw;
-  height: 200px;
+  height: 230px;
   z-index: 997;
-  margin-top: 50px;
+  margin-top: 70px;
   background-color: #f5f5f5;
 }
 
@@ -297,4 +298,36 @@
 
 .hot-new-info-title:hover {
   text-decoration: underline;
+}
+
+.hot-new-info-rating-container-1, .hot-new-info-rating-container-2, .hot-new-info-rating-container-3 {
+  display: flex;
+}
+
+.hot-new-info-rating-1, .hot-new-info-rating-2, .hot-new-info-rating-3 {
+  height: 20px;
+  width: 120px;
+  background-image: url(star-ratings.png);
+}
+
+.hot-new-info-rating-1 {
+  margin-top: 8px;
+  background-position: 0 -500px;
+  margin-bottom: 3px;
+}
+
+.hot-new-info-rating-2 {
+  margin-top: 8px;
+  background-position: 0 -420px;
+  margin-bottom: 3px;
+}
+
+.hot-new-info-rating-3 {
+  margin-top: 8px;
+  background-position: 0 -460px;
+  margin-bottom: 3px;
+}
+
+.hot-new-info-reviews-1, .hot-new-info-reviews-2, .hot-new-info-reviews-3 {
+  margin-top: 12px;
 }
