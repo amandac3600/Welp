@@ -29,7 +29,6 @@ class BusinessIndex extends React.Component {
     if (this.state.loading === true) {
       return <div className="loader"></div>
     }
-    console.log(this.props.businessErrors)
     return (
       <div className="business-index">
         <NavContainer/>
