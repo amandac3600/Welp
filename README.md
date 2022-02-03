@@ -20,7 +20,7 @@
 - Users can signup for an account and login (or login as a demo user with the corresponding button)
 - Errors are styled and do not persist
 
-<img src="/images/userauth_gif.gif">
+<img width="1024" src="/images/userauth_gif.gif">
 
 
 ### Create, Edit, and Delete Reviews
@@ -29,6 +29,8 @@
 - Rating a business will accordingly affect the business' rating on the index and show pages
 - Editing a review prefills with their previous rating and review body
 - Errors will appear if either the rating or body aren't filled out
+
+<img width="1024" src="/images/crud_gif.gif">
 
 ### Business Index 
 - Shows a list of businesses based on a search query if specified with: 
