@@ -33,7 +33,7 @@
 ![Reviews](app/assets/images/crud_gif.gif)
 
 
-### Business Index & Search Bar
+### Business Index, Search Bar, and Map
 - Users can search for businesses based on their name, category, or price
 - Shows a list of businesses based on filters or a search query, if specified, with: 
   - business name 
