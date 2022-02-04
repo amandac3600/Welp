@@ -37,7 +37,7 @@
 
 ![BusinessIndex](app/assets/images/busindex_gif.gif)
 
-The left-side price filters initially caused markers to keep getting added to the map, leading to too many map markers and duplicate numbers, so I had to figure out a way to remove the previous filters' markers.
+The left-side price filters initially caused markers to keep getting added to the map, leading to too many map markers and duplicate numbers, so I had to remove the previous filters' markers upon the user clicking a new filter.
 ```js
   updateMarkers(businesses) {
     Object.keys(this.markers).forEach(markerKey => {
