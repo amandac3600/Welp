@@ -27,40 +27,19 @@
 - Users must be logged in to be able to create, edit, or delete reviews
 - Users can see all reviews but are only able to edit and delete their own reviews
 - Rating a business will accordingly affect the business' rating on the index and show pages
-- Editing a review prefills with their previous rating and review body
-- Errors will appear if either the rating or body aren't filled out
 
 ![Reviews](app/assets/images/crud_gif.gif)
 
 
 ### Business Index, Search Bar, and Map
 - Users can search for businesses based on their name, category, or price
-- Shows a list of businesses based on filters or a search query, if specified, with: 
-  - business name 
-  - average rating
-  - number of reviews
-  - category
-  - price
-  - sample review
-  - link to their show page
-  - businesses' locations on a map
+- Shows a list of businesses based on filters or a search query, if specified, with their basic information and their locations on a map
 
 ![BusinessIndex](app/assets/images/busindex_gif.gif)
 
 
 ### Business Show
-- Shows the business's information including:
-  - business name
-  - average rating
-  - number of reviews
-  - category
-  - price
-  - hours
-  - website, with a clickable link that opens in a new tab
-  - address, with a clickable Google Maps link that opens in a new tab
-  - image showing their location on Google Maps
-  - phone number
-  - all reviews
+- Shows all the business's information and reviews
 
 ![BusinessShow](app/assets/images/busshow_gif.gif)
 
