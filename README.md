@@ -3,7 +3,7 @@
 ![Logo](app/assets/images/readmelogo.png)
 
 [Welp](https://welp0.herokuapp.com/#/) is a fullstack clone of Yelp.com, a website that allows users to search for businesses in a specified location and leave ratings and reviews for those businesses.  
-\
+<br>
 
 # Technologies
 #### Backend: Ruby on Rails
@@ -13,7 +13,7 @@
 #### Image Hosting: Amazon S3
 #### Design and Styling: HTML and CSS  
 
-\
+<br>
 # Key Features
 
 ### User Auth
@@ -22,7 +22,7 @@
 
 ![UserAuth](app/assets/images/userauth_gif.gif)  
 
-\
+<br>
 ### Create, Edit, and Delete Reviews
 - Users must be logged in to be able to create, edit, or delete reviews
 - Users can see all reviews but are only able to edit and delete their own reviews
