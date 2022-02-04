@@ -53,7 +53,38 @@ The left-side price filters initially posed a bit of a challenge as each time a 
     })
   }
  ```
-
+I also wanted the picture of the star ratings to dynamically change based on the ratings for a particular business, so I created a function that returns a className string based on the business's average rating.  Then, I used CSS on each className to render the corresponding part of a star-ratings sprite sheet image I pulled from Yelp.
+```js
+    Object.keys(this.props.business).forEach(key => {
+      if (key === "reviews") {
+        Object.values(this.props.business.reviews).forEach(review => {
+          avgRating += review.rating
+        })
+      }
+    })
+    let rating = (avgRating/this.props.business.reviews.length).toFixed(2)
+    if (rating >= 4.75) {
+      return "business-item-rating-5"
+    } else if (rating >= 4.25) {
+      return "business-item-rating-4-5"
+    } else if (rating >= 3.75) {
+      return "business-item-rating-4"
+    } else if (rating >= 3.25) {
+      return "business-item-rating-3-5"
+    } else if (rating >= 2.75) {
+      return "business-item-rating-3"
+    } else if (rating >= 2.25) {
+      return "business-item-rating-2-5"
+    } else if (rating >= 1.75) {
+      return "business-item-rating-2"
+    } else if (rating >= 1.25) {
+      return "business-item-rating-1-5"
+    } else if (rating >= 0.75) {
+      return "business-item-rating-1"
+    } 
+  }
+ ```
+ 
 
 # Bonus Features
 - Add feature for reacting to a review ('helpful', 'funny', etc)
