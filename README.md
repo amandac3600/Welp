@@ -38,12 +38,6 @@
 ![BusinessIndex](app/assets/images/busindex_gif.gif)
 
 
-### Business Show
-- Shows all the business's information and reviews
-
-![BusinessShow](app/assets/images/busshow_gif.gif)
-
-
 # Bonus Features
 - Add feature for reacting to a review ('helpful', 'funny', etc)
 - Add a user show page to display all their reviews
