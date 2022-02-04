@@ -13,7 +13,6 @@
 #### Image Hosting: Amazon S3
 #### Design and Styling: HTML and CSS  
 
-<br/>
 # Key Features
 
 ### User Auth
@@ -22,7 +21,6 @@
 
 ![UserAuth](app/assets/images/userauth_gif.gif)  
 
-<br>
 ### Create, Edit, and Delete Reviews
 - Users must be logged in to be able to create, edit, or delete reviews
 - Users can see all reviews but are only able to edit and delete their own reviews
@@ -62,7 +60,6 @@ I wanted the picture of the star ratings to dynamically change based on the rati
   }
  ```  
 
-<br/>
 ### Business Index, Search Bar, and Map
 - Users can search for businesses based on their name, category, or price
 - Shows a list of businesses based on filters or a search query, if specified, with their basic information and their locations on a map
@@ -86,7 +83,6 @@ The left-side price filters initially posed a bit of a challenge as each time a 
   }
  ```  
 
-<br/>
 # Bonus Features
 - Add feature for reacting to a review ('helpful', 'funny', etc)
 - Add a user show page to display all their reviews
