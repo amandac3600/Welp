@@ -28,7 +28,7 @@
 
 ![Reviews](app/assets/images/crud_gif.gif)
 
-I wanted the picture of the star ratings to dynamically change based on the ratings for a particular business, so I created a function that returns a className string based on the business's average rating.  Then, I used CSS on each className to render the corresponding part of a star-ratings sprite sheet image I pulled from Yelp.
+I wanted the picture of the star ratings on the business index and business show pages to dynamically change based on the ratings for a particular business, so I created a function that returns a className string based on the business's average rating.  Then, I used CSS on each className to render the corresponding part of a star-ratings sprite sheet image I pulled from Yelp.
 ```js
     Object.keys(this.props.business).forEach(key => {
       if (key === "reviews") {
