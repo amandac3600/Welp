@@ -30,30 +30,7 @@
 
 ![Reviews](app/assets/images/crud_gif.gif)
 
-
-### Business Index, Search Bar, and Map
-- Users can search for businesses based on their name, category, or price
-- Shows a list of businesses based on filters or a search query, if specified, with their basic information and their locations on a map
-
-![BusinessIndex](app/assets/images/busindex_gif.gif)
-
-The left-side price filters initially posed a bit of a challenge as each time a new price filter was clicked, new markers to keep getting added to the map, leading to too many  markers and duplicate numbers, so I had to figure out a way to remove the previous filters' markers upon the user clicking a new filter.
-```js
-  updateMarkers(businesses) {
-    Object.keys(this.markers).forEach(markerKey => {
-      this.markers[markerKey].setMap(null)
-      delete this.markers[markerKey]
-    })
-    
-    businesses.forEach(business => {
-      if (!this.markers[business.id]) {
-        let index = businesses.indexOf(business) + 1
-        this.createMarkerFromBusiness(business, index)
-      }
-    })
-  }
- ```
-I also wanted the picture of the star ratings to dynamically change based on the ratings for a particular business, so I created a function that returns a className string based on the business's average rating.  Then, I used CSS on each className to render the corresponding part of a star-ratings sprite sheet image I pulled from Yelp.
+I wanted the picture of the star ratings to dynamically change based on the ratings for a particular business, so I created a function that returns a className string based on the business's average rating.  Then, I used CSS on each className to render the corresponding part of a star-ratings sprite sheet image I pulled from Yelp.
 ```js
     Object.keys(this.props.business).forEach(key => {
       if (key === "reviews") {
@@ -82,6 +59,30 @@ I also wanted the picture of the star ratings to dynamically change based on the
     } else if (rating >= 0.75) {
       return "business-item-rating-1"
     } 
+  }
+ ```
+
+
+### Business Index, Search Bar, and Map
+- Users can search for businesses based on their name, category, or price
+- Shows a list of businesses based on filters or a search query, if specified, with their basic information and their locations on a map
+
+![BusinessIndex](app/assets/images/busindex_gif.gif)
+
+The left-side price filters initially posed a bit of a challenge as each time a new price filter was clicked, new markers to keep getting added to the map, leading to too many  markers and duplicate numbers, so I had to figure out a way to remove the previous filters' markers upon the user clicking a new filter.
+```js
+  updateMarkers(businesses) {
+    Object.keys(this.markers).forEach(markerKey => {
+      this.markers[markerKey].setMap(null)
+      delete this.markers[markerKey]
+    })
+    
+    businesses.forEach(business => {
+      if (!this.markers[business.id]) {
+        let index = businesses.indexOf(business) + 1
+        this.createMarkerFromBusiness(business, index)
+      }
+    })
   }
  ```
  
