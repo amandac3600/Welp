@@ -3,7 +3,7 @@
 ![Logo](app/assets/images/readmelogo.png)
 
 [Welp](https://welp0.herokuapp.com/#/) is a fullstack clone of Yelp.com, a website that allows users to search for businesses in a specified location and leave ratings and reviews for those businesses.  
-<br>
+<br/>
 
 # Technologies
 #### Backend: Ruby on Rails
@@ -13,7 +13,7 @@
 #### Image Hosting: Amazon S3
 #### Design and Styling: HTML and CSS  
 
-<br>
+<br/>
 # Key Features
 
 ### User Auth
@@ -62,7 +62,7 @@ I wanted the picture of the star ratings to dynamically change based on the rati
   }
  ```  
 
-
+<br/>
 ### Business Index, Search Bar, and Map
 - Users can search for businesses based on their name, category, or price
 - Shows a list of businesses based on filters or a search query, if specified, with their basic information and their locations on a map
@@ -86,7 +86,7 @@ The left-side price filters initially posed a bit of a challenge as each time a 
   }
  ```  
 
-
+<br/>
 # Bonus Features
 - Add feature for reacting to a review ('helpful', 'funny', etc)
 - Add a user show page to display all their reviews
