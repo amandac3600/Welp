@@ -5,6 +5,7 @@ export default class ReviewIndex extends React.Component {
   componentDidMount() {
     this.props.fetchUsers()
     this.props.fetchReviews(this.props.business.id)
+    console.log("component", this.props.users)
   }
 
   render() {

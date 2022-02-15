@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import NavContainer from "../nav/nav_container";
 import { AiFillStar } from 'react-icons/ai';
 
-
 export default class UpdateReviewForm extends React.Component {
   constructor(props) {
     super(props);

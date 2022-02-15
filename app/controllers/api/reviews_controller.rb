@@ -13,11 +13,10 @@ class Api::ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review.user_id = current_user.id
     if @review.save
       render :show
     else
-      render json: @review.errors.full_messages, status: 404
+      render json: @review.errors.full_messages, status: 422
     end
   end
 
@@ -26,7 +25,7 @@ class Api::ReviewsController < ApplicationController
     if @review.update(review_params)
       render :show
     else
-      render json: @review.errors.full_messages, status: 404
+      render json: @review.errors.full_messages, status: 422
     end
   end
 

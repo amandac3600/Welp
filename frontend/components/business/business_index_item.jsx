@@ -44,7 +44,6 @@ class BusinessIndexItem extends React.Component {
             {[this.props.business.photo_urls[0]].map((photo_url, idx) => <img key={idx} className="business-index-photo" src={photo_url} alt=""/>)}
               <div className="business-item-title-container">
                 <h2 className="business-item-title">{idx}. {this.props.business.name}</h2>
-              <div className="business-item-rating-container">
                 <p id="business-item-rating" className={`${this.starRating()}`}></p>
                 <p className="business-item-rating-length">{this.props.business.reviews.length}</p>
               </div>

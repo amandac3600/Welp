@@ -47,7 +47,6 @@ export default class CreateReviewForm extends React.Component {
     }
     if (!this.props.business) return null;
     
-    console.log(this.state.rating)
     return (
       <div>
         <div className="red-nav">
@@ -56,6 +55,7 @@ export default class CreateReviewForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="create-review-form">
           <Link className="create-review-title" to={`/businesses/${this.props.business.id}`}>{this.props.business.name}</Link>
           <div className="create-form-rating-container">
+
             <div className="create-form-rating-container-2">
               <input id="radio5" type="radio" value="5" name="rating" onChange={this.handleChange("rating")} />
               <label htmlFor="radio5" id="create-form-rating" className="create-form-rating-5"><AiFillStar className="rating-star" /></label>
