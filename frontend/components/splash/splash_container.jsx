@@ -7,7 +7,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => {
-  console.log(clearErrors)
   return {
   clearErrors: () => dispatch(clearErrors())
 }};
