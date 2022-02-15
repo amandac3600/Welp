@@ -1,0 +1,143 @@
+
+.search-bar-form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 30px;
+}
+
+.red-search-bar-form {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 10px;
+  border: 1px solid #ebebeb;
+  box-shadow: 0 2px 18px #00000026;
+  border-radius: 4px;
+}
+
+.search-find-container {
+  background-color: white;
+  width: 410px;
+  min-width: 310px;
+  height: 16px;
+  border-radius: 4px 0 0 4px;
+  padding: 12px;
+}
+
+.search-near-container {
+  display: flex;
+  background-color: white;
+  width: 350px;
+  min-width: 310px;
+  height: 16px;
+  padding: 12px;
+}
+
+.red-search-find-container {
+  background-color: white;
+  width: 340px;
+  min-width: 310px;
+  height: 16px;
+  border-radius: 4px 0 0 4px;
+  padding: 12px;
+}
+
+.red-search-near-container {
+  background-color: white;
+  width: 310px;
+  min-width: 310px;
+  height: 16px;
+  padding: 12px;
+}
+
+.search-find-label, .search-near-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #666;
+}
+
+.search-near-label {
+  border-left: 1px solid rgb(214, 213, 213);
+  padding-left: 12px;
+  margin-left: -12px;
+}
+
+.search-find-input, .search-near-input {
+  border: none;
+  width: 250px;
+  margin-left: 10px;
+}
+
+.search-near-input {
+  color: #999;
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: -17px;
+  margin-left: 60px;
+}
+
+.red-search-near-input {
+  color: #999;
+  font-weight: 400;
+  font-size: 15px;
+  margin-top: 0px;
+  margin-left: -10px;
+  padding-left: 15px;
+  border-left: 1px solid rgb(199, 199, 199);
+}
+
+.search-find-input:focus, .search-near-input:focus {
+  border: none;
+  outline: none;
+}
+
+.search-find-input::placeholder {
+  color: #999;
+}
+
+.search-button {
+  padding-top: 5px;
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+  background-color: #d32323;
+  border: none;
+  width: 58px;
+  border-radius: 0 4px 4px 0;
+}
+
+.red-search-button {
+  padding-top: 5px;
+  font-size: 22px;
+  color: white;
+  background-color: #E00707;
+  border: none;
+  width: 48px;
+  border-radius: 0 4px 4px 0;
+}
+
+.search-errors {
+  margin-left: 150px;
+  margin-top: 100px;
+  width: 650px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  color: #333;
+}
+
+.suggestion {
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.suggestion-list {
+  margin-left: 20px;
+  list-style: inside;
+  color: #444;
+  font-size: 14px;
+  font-weight: 400;
+}

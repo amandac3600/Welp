@@ -5,9 +5,9 @@
   opacity: 0.85;
   z-index: -1000;
   width: 100vw;
-  min-width: 800px;
+  min-width: 830px;
   height: auto;
-  filter: brightness(70%);
+  filter: brightness(60%) saturate(110%);
 }
 
 .splash-nav #hidden{
@@ -21,9 +21,9 @@
 .splash-logo {
   cursor: pointer;
   display: flex;
-  position: absolute;
-  margin-left: 41%;
-  width: 100%;
+  position: relative;
+  justify-content: center;
+  // margin-left: 43%;
   vertical-align: baseline;
   padding: 12px 0;
   margin-top: 40px;
@@ -33,14 +33,16 @@
   cursor: pointer;
   text-decoration: none;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   color: black;
-  margin-top: 45px;
-  font-size: 50px;
+  margin-top: 48px;
+  font-size: 46px;
   filter: drop-shadow(3px 0 0 white) 
     drop-shadow(0 3px 0 white)
     drop-shadow(-2px 0 0 white) 
     drop-shadow(0 -2px 0 white);
+  font-family: Poppins;
+  letter-spacing: 0.2px;
 }
 
 .logo-2 {
@@ -59,16 +61,16 @@
   font-weight: 700;
   color: #d32323;
   justify-content: center;
-  margin-top: 520px;
+  margin-top: 320px;
   z-index: 999;
 }
 
 .block {
   display: flex;
   position: absolute;
-  margin-top: 475px;
-  width: 100%;
-  height: 330px;
+  margin-top: 275px;
+  width: 100vw;
+  height: 500px;
   z-index: 996;
   background-color: #f5f5f5;
 }
@@ -80,25 +82,69 @@
   margin-top: 20px;
 }
 
-.splash-best-bus-item {
-  height: 174px;
+.splash-best-bus-item-1, .splash-best-bus-item-2, .splash-best-bus-item-3, .splash-best-bus-item-4 {
+  height: 210px;
   width: 200px;
-  border: 1px solid #999;
   border-radius: 3px;
   color: #666;
   margin: 10px;
   z-index: 999;
   text-align: center;
   padding-top: 10px;
+  text-decoration: none;
+}
+
+.splash-best-bus-item-1:hover, .splash-best-bus-item-2:hover, .splash-best-bus-item-3:hover, .splash-best-bus-item-4:hover {
+  box-shadow: 0 0 10px #0000001a;
+}
+
+#splash-best-bus-item-1-pic, #splash-best-bus-item-2-pic, #splash-best-bus-item-3-pic, #splash-best-bus-item-4-pic {
+  height: 180px;
+  width: 200px;
+  margin-top: -10px;
+  border-radius: 4px 4px 0 0;
+}
+
+#splash-best-bus-item-1-pic {
+  background-image: url(chinesefood.jpg);
+  background-position: -80px -80px;
+}
+
+#splash-best-bus-item-2-pic {
+  background-image: url(korean.jpg);
+  background-position: -48px -5px;
+}
+
+#splash-best-bus-item-3-pic {
+  background-image: url(bingsoo.jpg);
+  background-position: -25px -30px;
+}
+
+#splash-best-bus-item-4-pic {
+  background-image: url(italian.jpg);
+  background-position: -70px 0px;
+}
+
+.splash-best-bus-item-1-label, .splash-best-bus-item-2-label, .splash-best-bus-item-3-label, .splash-best-bus-item-4-label {
+  height: 28px;
+  width: 200px;
+  background-color: white;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #e6e6e6;
+  font-size: 14px;
+  text-decoration: none;
+  padding-top: 12px;
+  font-weight: 700;
+  color: #333;
 }
 
 .block-2 {
   display: flex;
   position: absolute;
-  width: 100%;
-  height: 500px;
+  width: 100vw;
+  height: 510px;
   z-index: 997;
-  margin-top: 40px;
+  margin-top: 50px;
   background-color: white;
 }
 
@@ -110,7 +156,8 @@
   font-weight: 700;
   color: #d32323;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 90px;
+  padding-bottom: 40px;
   z-index: 999;
   padding-bottom: 20px;
   border-bottom: 1px solid #cccccc;
@@ -132,29 +179,44 @@
   display: flex;
   position: relative;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .splash-hot-new-item {
+  display: block;
   height: 174px;
   width: 250px;
-  height: 250px;
+  height: 265px;
   color: #666;
-  border: 1px solid #999;
+  border: 1px solid #ebebeb;
   border-radius: 3px;
   margin: 10px;
   z-index: 999;
-  text-align: center;
+  text-align: left;
   padding-top: 10px;
+  text-decoration: none;
+}
+
+.splash-hot-new-item:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px #0000001a;
+  transition: box-shadow 0.3s;
+}
+
+.hot-new-info-category {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #444;
 }
 
 .block-3 {
   display: flex;
   position: absolute;
-  width: 100%;
-  height: 200px;
+  width: 100vw;
+  height: 230px;
   z-index: 997;
-  margin-top: 50px;
+  margin-top: 70px;
   background-color: #f5f5f5;
 }
 
@@ -164,7 +226,7 @@
   font-size: 16px;
   font-weight: 600;
   color: rgb(54, 55, 56);
-  margin: 100px 20px 20px 40px;
+  margin: 100px 20px 15px 40px;
   margin-left: 25%;
 }
 
@@ -177,6 +239,14 @@
 }
 
 .splash-about-title, .splash-discover-title {
+  margin-bottom: 15px;
+}
+
+.splash-discover-links {
+  display: block;
+}
+
+.splash-discover-link {
   margin-bottom: 20px;
 }
 
@@ -187,3 +257,77 @@
   color: rgba(110,112,114,1);
 }
 
+.splash-discover-link-2 {
+  margin-top: 8px;
+}
+
+.hot-new-pic-1 {
+  margin-top: -10px;
+  width: 250px;
+  height: 180px;
+  background-image: url(MilkJar);
+  background-position: -20px;
+}
+
+.hot-new-pic-2 {
+  margin-top: -10px;
+  width: 250px;
+  height: 180px;
+  background-image: url(wood);
+  background-position: -15px -25px;
+}
+
+.hot-new-pic-3 {
+  margin-top: -10px;
+  width: 250px;
+  height: 180px;
+  background-image: url(masa);
+  background-position: -10px -160px;
+}
+
+.hot-new-pic-info {
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.hot-new-info-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0073bb;
+}
+
+.hot-new-info-title:hover {
+  text-decoration: underline;
+}
+
+.hot-new-info-rating-container-1, .hot-new-info-rating-container-2, .hot-new-info-rating-container-3 {
+  display: flex;
+}
+
+.hot-new-info-rating-1, .hot-new-info-rating-2, .hot-new-info-rating-3 {
+  height: 20px;
+  width: 120px;
+  background-image: url(star-ratings.png);
+}
+
+.hot-new-info-rating-1 {
+  margin-top: 8px;
+  background-position: 0 -500px;
+  margin-bottom: 3px;
+}
+
+.hot-new-info-rating-2 {
+  margin-top: 8px;
+  background-position: 0 -420px;
+  margin-bottom: 3px;
+}
+
+.hot-new-info-rating-3 {
+  margin-top: 8px;
+  background-position: 0 -460px;
+  margin-bottom: 3px;
+}
+
+.hot-new-info-reviews-1, .hot-new-info-reviews-2, .hot-new-info-reviews-3 {
+  margin-top: 12px;
+}

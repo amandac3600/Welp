@@ -12,7 +12,7 @@ export default class ReviewIndex extends React.Component {
     if (!this.props.reviews) return null
     return (
       <div>
-        {this.props.reviews.map(review => <ReviewIndexItem key={review.id} review={review} business={this.props.business} users={this.props.users} deleteReview={this.props.deleteReview}/>)}
+        {this.props.reviews.map(review => <ReviewIndexItem key={review.id} review={review} business={this.props.business} users={this.props.users} currentUser={this.props.currentUser} deleteReview={this.props.deleteReview}/>)}
       </div>
     )
   }

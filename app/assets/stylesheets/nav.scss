@@ -4,14 +4,18 @@ button {
 
 .nav-user {
   display: flex;
+  margin-left: 15%;
+  margin-top: 10px;
 }
 
 .nav-user-bar {
   display: flex;
+  top: 0;
 }
 
 .nav-bar {
   display: flex;
+  top: 0;
 }
 
 .nav-user-bar-link {
@@ -22,6 +26,7 @@ button {
   color: white;
   margin-left: 30px;
   margin-top: 17px;
+  font-family: Poppins;
 }
 
 .nav-bar-link {
@@ -30,6 +35,8 @@ button {
   font-size: 20px;
   font-weight: 600;
   color: white;
+  font-family: Poppins;
+  margin-top: 5px;
 }
 
 .nav-user-bar-logo {
@@ -37,7 +44,7 @@ button {
   drop-shadow(0 1px 0 white)
   drop-shadow(-0.5px 0 0 white) 
   drop-shadow(0 -0.5px 0 white);
-  margin-top: 12px;
+  margin-top: 14px;
 }
 
 .nav-bar-logo {
@@ -45,20 +52,42 @@ button {
   drop-shadow(0 1px 0 white)
   drop-shadow(-0.5px 0 0 white) 
   drop-shadow(0 -0.5px 0 white);
+  margin-top: 2px;
 }
 
 .nav-user-logout {
+  white-space: nowrap;
   display: flex;
   margin-top: 10px;
   font-size: 14px;
   z-index: 1000;
 }
 
+.red-nav-user-logout {
+  white-space: nowrap;
+  display: flex;
+  margin-top: 8px;
+  font-size: 14px;
+  z-index: 1000;
+  margin-left: 5%;
+}
+
 .nav-user-welcome {
+  margin-left: 50%;
   font-size: 14px;
   font-weight: 600;
   color: white;
   margin-top: 10px;
+  white-space: nowrap;
+}
+
+.red-nav-user-welcome {
+  margin-left: 40%;
+  margin-right: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #d32323;
+  margin-top: 25px;
   white-space: nowrap;
 }
 
@@ -77,7 +106,7 @@ button {
 .nav {
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 98%;
   margin: 10px;
   padding: 10px;
   top: 0;
@@ -90,7 +119,18 @@ button {
   font-weight: 700;
   background: none;
   margin-right: 10px;
-  margin-top: 5px;
+  margin-top: 8px;
+  text-decoration: none;
+  padding: 7px 15px 8px 15px;
+}
+
+.splash-businesses {
+  color: white;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  background: none;
+  margin-left: 11%;
   text-decoration: none;
   padding: 7px 15px 8px 15px;
 }
@@ -108,7 +148,7 @@ button {
 .nav-login-signup {
   display: flex;
   height: 33px;
-  margin-right: 5%;
+  margin-right: 15%;
   white-space: nowrap;
 }
 
@@ -118,17 +158,42 @@ button {
   font-weight: 700;
   background: none;
   text-decoration: none;
-  padding: 7px 15px 8px 15px;
+  padding: 7px 15px 7px 15px;
 }
 
-.nav-login:hover, .nav-businesses:hover, .nav-user-button:hover{ 
+.red-nav, .red-nav-user {
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 20px;
+}
+
+.red-nav-login {
+  color: #2D2E2F;
+  font-size: 14px;
+  font-weight: 700;
+  background: none;
+  text-decoration: none;
+  padding: 7px 15px 7px 15px;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.red-nav-login:hover {
+  background-color: rgba(0,0,0,0.12);
+  color: rgba(45,46,47,1);
+}
+
+.nav-login:hover, .nav-businesses:hover, .nav-user-button:hover, .splash-businesses:hover { 
   padding: 7px 15px 5px 15px;
   border-bottom: 2px solid white;
 }
 
-.nav-login:active, .nav-businesses:active, .nav-user-button:active {
+.nav-login:active, .nav-businesses:active, .nav-user-button:active, .splash-businesses:active {
   color: #999;
   border-bottom: 2px solid transparent;
+}
+
+.red-nav-user-button:hover {
+  box-shadow: 0 1px 4px 0 rgba(27, 27, 27, 0.3);
 }
 
 .nav-signup {
@@ -142,6 +207,34 @@ button {
   text-decoration: none;
 }
 
+.red-nav-signup {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #E00707;
+  border-radius: 4px;
+  padding: 8px 15px 8px 15px;  //top right bottom left
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.red-nav-user-button {
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: #E00707;
+  border-radius: 4px;
+  padding: 4px 10px; 
+  margin-bottom: 1px;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+.red-nav-signup:hover {
+  box-shadow: 0 1px 4px 0 rgba(27, 27, 27, 0.3);
+}
+
 .nav-signup:hover {
   background: #fff;
   color: #666;
@@ -153,10 +246,52 @@ button {
   color: #999;
 }
 
-.red-nav {
-  display: block;
+.red-nav, .red-nav-user{
+  display: flex;
+  position: fixed;
   height: 55px;
   width: 100%;
-  background-color: #d23232;
   top: 0;
+  min-width: 1100px;
+  background-color: white;
+  z-index: 1000;
 }
+
+.bus-nav-bar {
+  margin-left: 3%;
+  padding-top: 12px;
+  white-space: nowrap;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.bus-nav-bar-link {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+}
+
+.bus-nav-bar-logo {
+  margin-top: 15px;
+}
+
+.bus-nav-login-signup {
+  position: relative;
+  margin-left: 5%;
+  margin-top: 30px;
+  white-space: nowrap;
+}
+
+.red-nav-search {
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 30px;
+  margin-top: 7px;
+}
+
+
