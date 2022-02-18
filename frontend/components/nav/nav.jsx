@@ -4,13 +4,10 @@ import { withRouter } from 'react-router-dom';
 import SearchBar from '../search/search_bar';
 import SearchBarContainer from '../search/search_bar_container';
 
-class Nav extends React.Component {
-
 
 class Nav extends React.Component {
   
   render() {
-    console.log(this.props.match.path)
     let nav;
     if (this.props.currentUser && this.props.history.location.pathname === '/') {
       nav = <nav className='nav-user'>

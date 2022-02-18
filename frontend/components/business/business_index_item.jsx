@@ -57,9 +57,7 @@ class BusinessIndexItem extends React.Component {
                   <p className="business-item-review-icon">💬</p>
                   <p className="business-item-review">"{Object.values(this.props.business.reviews)[0].body}"</p>
                 </div>
-              </div>
           </div>
-          
         </Link>
       </div>
     )
