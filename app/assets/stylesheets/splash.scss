@@ -214,7 +214,7 @@
   display: flex;
   position: absolute;
   width: 100vw;
-  height: 230px;
+  height: 130px;
   z-index: 997;
   margin-top: 70px;
   background-color: #f5f5f5;
@@ -234,6 +234,10 @@
   z-index: 999;
 }
 
+.splash-about {
+  display: block;
+}
+
 .splash-discover {
   margin-left: 52%;
 }
@@ -247,7 +251,7 @@
 }
 
 .splash-discover-link {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .splash-about-link, .splash-discover-link {
@@ -257,8 +261,13 @@
   color: rgba(110,112,114,1);
 }
 
+.splash-about-link {
+  display: block;
+  margin-bottom: 10px;
+}
+
 .splash-discover-link-2 {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .hot-new-pic-1 {

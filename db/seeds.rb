@@ -20,11 +20,12 @@ user3 = User.create!(first_name: 'Jim', last_name: 'Halpert', email: 'jhalpert@m
 user4 = User.create!(first_name: 'Demo', last_name: 'User', email: 'demo@user.com', password: 'demouser')
 
 
-business1 = Business.create!(name: "MILK+T", lat: 34.04902647130193, lng: -118.24157912402251, address: "310 E 2nd St", city: "Los Angeles", state: "CA", zip_code: "90012", phone_number: "(323) 884-1164", website: "http://www.milkandt.com", open: "12:00PM", close: "10:00PM", category: "Bubble Tea", price: "$")
+business1 = Business.new(name: "MILK+T", lat: 34.04902647130193, lng: -118.24157912402251, address: "310 E 2nd St", city: "Los Angeles", state: "CA", zip_code: "90012", phone_number: "(323) 884-1164", website: "http://www.milkandt.com", open: "12:00PM", close: "10:00PM", category: "Bubble Tea", price: "$")
 business1.photos.attach(io: open('https://welp-development.s3.us-west-1.amazonaws.com/MILK%2BT.jpg'), filename: 'MILK+T.jpg')
 business1.photos.attach(io: open('https://welp-development.s3.us-west-1.amazonaws.com/MILK%2BT2.jpg'), filename: 'MILK+T2.jpg')
 business1.photos.attach(io: open('https://welp-development.s3.us-west-1.amazonaws.com/MilkT3.jpg'), filename: 'MilkT3.jpg')
 business1.photos.attach(io: open('https://welp-development.s3.us-west-1.amazonaws.com/milktmap.png'), filename: 'milktmap.png')
+business1.save!
 
 business2 = Business.create!(name: "Dingle Berries Coffee and Tea", lat: 34.07206593133195, lng: -118.36504580007829, address: "8036 W 3rd St", city: "Los Angeles", state: "CA", zip_code: "90048", phone_number: "(323) 413-2604", website: "https://dingleberriescoffeeandtea.com", open: "12:00PM", close: "7:00PM", category: "Bubble Tea", price: "$")
 business2.photos.attach(io: open("https://welp-development.s3.us-west-1.amazonaws.com/Dingle_Berries.jpg"), filename: "Dingle_Berries.jpg")
@@ -136,7 +137,7 @@ business19.photos.attach(io: open('https://welp-development.s3.us-west-1.amazona
 
 business20 = Business.create!(name: "Pho 87", lat: 34.067535818848604, lng: -118.23552604055266, address: "1019 N Broadway", city: "Los Angeles", state: "CA", zip_code: "90012", phone_number: "(323) 227-0758", open: "11:00AM", close: "8:00PM", category: "Vietnamese", price: "$$")
 business20.photos.attach(io: open("https://welp-development.s3.us-west-1.amazonaws.com/Pho87.jpg"), filename: "Pho87.jpg")
-business20.photos.attach(io: open("https://welp-development.s3.us-west-1.amazonaws.com/Pho87.jpg"), filename: 'Pho87.jpg')
+business20.photos.attach(io: open("https://welp-development.s3.us-west-1.amazonaws.com/Pho872.jpg"), filename: 'Pho872.jpg')
 business20.photos.attach(io: open('https://welp-development.s3.us-west-1.amazonaws.com/pho3.jpg'), filename: 'pho3.jpg')
 business20.photos.attach(io: open('https://welp-development.s3.us-west-1.amazonaws.com/phomap.png'), filename: 'phomap.png')
 
