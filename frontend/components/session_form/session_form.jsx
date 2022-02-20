@@ -39,7 +39,6 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     let errors;
     if (this.props.errors[0].length) {
       errors = this.props.errors[0].map((error, index)=> 

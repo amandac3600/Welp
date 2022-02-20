@@ -4,8 +4,9 @@ import { withRouter } from 'react-router-dom';
 import SearchBar from '../search/search_bar';
 import SearchBarContainer from '../search/search_bar_container';
 
-class Nav extends React.Component {
 
+class Nav extends React.Component {
+  
   render() {
     let nav;
     if (this.props.currentUser && this.props.history.location.pathname === '/') {

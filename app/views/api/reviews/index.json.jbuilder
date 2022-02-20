@@ -5,3 +5,4 @@
         json.author_last_name review.author.last_name
     end
 end
+
