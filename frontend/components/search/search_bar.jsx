@@ -20,6 +20,10 @@ class SearchBar extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    if (this.state.find === "") {
+      this.props.history.push('/businesses');
+      return;
+    }
     this.props.searchBusinesses(this.state.find)
       .then(() => this.props.history.push(`/search/${this.state.find}`))
       .fail(() => this.props.history.push(`/search/${this.state.find}`))

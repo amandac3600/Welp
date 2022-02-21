@@ -130,6 +130,11 @@
   display: flex;
 }
 
+.business-item-inner-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .business-item-title-container {
   display: block;
 }
