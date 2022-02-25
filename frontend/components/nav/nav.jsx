@@ -10,7 +10,6 @@ class Nav extends React.Component {
   render() {
     let nav;
     if (this.props.currentUser && this.props.history.location.pathname === '/') {
-      console.log('first');
       nav = <nav className='nav-user'>
         <Link id="hidden-bus" className="nav-businesses" to='/businesses'>Businesses</Link>
         <div className='nav-user-logout'>
@@ -19,7 +18,6 @@ class Nav extends React.Component {
         </div>
       </nav>
     } else if (!this.props.currentUser && this.props.history.location.pathname === '/') {
-      console.log('second');
       nav = <nav className='nav'>
         <Link id='hidden-bus' className="splash-businesses" to='/businesses'>Businesses</Link>
         <div className="nav-login-signup">
@@ -28,7 +26,6 @@ class Nav extends React.Component {
         </div>
        </nav>
     } else if (!this.props.currentUser && this.props.history.location.pathname !== '/') {
-      console.log('third');
       nav = <nav className='red-nav'>
         <div className='bus-nav-bar'>
           <Link className="bus-nav-bar-link" to="/">welp</Link>
@@ -43,7 +40,6 @@ class Nav extends React.Component {
         </div>
       </nav>
     } else if (this.props.currentUser && this.props.history.location.pathname !== '/') {
-      console.log('fourth');
       nav = <nav className='red-nav-user'>
         <div className='bus-nav-bar'>
           <Link className="bus-nav-bar-link" to="/">welp</Link>
