@@ -4,12 +4,12 @@ import { connect } from "react-redux";
 import {Route} from 'react-router-dom';
 import { Redirect } from "react-router-dom";
 
-const Auth = ({ component: Component, path, loggedIn, exact }) => (
+const Auth = ({ component: Component, path, currentUser, exact }) => (
   <Route
     path={path}
     exact={exact}
     render={props =>
-      !loggedIn ? <Component {...props} /> : <Redirect to="/" />
+      !currentUser ? <Component {...props} /> : <Redirect to="/" />
     }
   />
 );

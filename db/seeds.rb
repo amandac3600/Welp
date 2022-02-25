@@ -86,7 +86,7 @@ business11.photos.attach(io: open('https://welp-development.s3.us-west-1.amazona
 business11.photos.attach(io: open('https://welp-development.s3.us-west-1.amazonaws.com/laperg3.jpg'), filename: 'laperg3.jpg')
 business11.photos.attach(io: open('https://welp-development.s3.us-west-1.amazonaws.com/lapermap.png'), filename: 'lapermap.png')
 
-business12 = Business.create!(name: "Full Moon House", lat: 34.06617148340184, lng: -118.23756630007857, address: "960 N Hill St", city: "Los Angeles", state: "CA", zip_code: "90012", phone_number: "(213) 537-0792", website: "https://fullmoonhouserestaurantinla.weebly.com/", open: "11:00AM", close: "12:00AM (Next day)", category: "Chinese", price: "$$")
+business12 = Business.create!(name: "Full Moon House", lat: 34.06617148340184, lng: -118.23756630007857, address: "960 N Hill St", city: "Los Angeles", state: "CA", zip_code: "90012", phone_number: "(213) 537-0792", website: "https://tinyurl.com/fullmoonhousela", open: "11:00AM", close: "12:00AM (Next day)", category: "Chinese", price: "$$")
 business12.photos.attach(io: open("https://welp-development.s3.us-west-1.amazonaws.com/Full_Moon_House.jpg"), filename: "Full_Moon_House.jpg")
 business12.photos.attach(io: open('https://welp-development.s3.us-west-1.amazonaws.com/fullmoon2.jpg'), filename: 'fullmoon2.jpg')
 business12.photos.attach(io: open('https://welp-development.s3.us-west-1.amazonaws.com/fulllmoon3.jpg'), filename: 'fulllmoon3.jpg')
